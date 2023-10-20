@@ -1,4 +1,10 @@
-# React + Vite
+# Website for Sahil Jindal, Composer
+
+
+
+
+
+## Vite + React Information
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
