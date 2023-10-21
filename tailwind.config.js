@@ -16,6 +16,9 @@ export default {
       gray: colors.neutral,
       orange: colors.orange,
       yellow: colors.yellow,
+      purple: colors.purple,
+      red: colors.red,
+      blue: colors.blue,
     },
     extend: {
       fontFamily: {
@@ -38,12 +41,21 @@ export default {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+        "gradient": {
+          "0% 100%": {
+            transform: "translateX(0%)",
+          },
+          "50%": {
+            transform: "translateX(-50%)",
+          },
+        },
       },
       animation: {
         "fade-in-left": "logo-left 0.75s ease-in-out",
         "fade-in-middle": "logo-middle 0.3s ease-in-out",
         "fade-in-right": "logo-right 0.65s ease-in-out",
-        "appear-slow": "appear-slow 0.9s ease-in-out 0.35s both"
+        "appear-slow": "appear-slow 0.9s ease-in-out 0.35s both",
+        "gradient": "gradient 12s ease-in-out infinite"
       },
     },
   },
