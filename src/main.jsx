@@ -6,6 +6,7 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 
 //  TODO: integrate Fromer Motion to slide-fade gracefully between pages
+// on Desktop
 const router = createBrowserRouter([
   {
     path: "/",

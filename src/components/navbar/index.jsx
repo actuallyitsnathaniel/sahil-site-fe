@@ -3,7 +3,8 @@ import { usePageTitle } from "../../utilities/usePageTitle";
 
 export const NavBar = () => {
   let pageTitle = usePageTitle(useLocation().pathname);
-
+  // TODO: create modal navbar when header navbar is not in viewport
+  //        darken and blur background when focused
   return (
     <nav className="flex whitespace-nowrap text-2xl justify-around animate-appear-slow">
       <ul className="flex text-center flex-wrap flex-col md:flex-row md:justify-around p-4 max-w-xl">
