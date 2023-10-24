@@ -30,7 +30,6 @@ export const SahilLogo = () => {
             alt="logo-middle"
           />
         </div>
-
         <div id="right-wrapper" className="overflow-clip">
           <img
             className={`h-48 m-0 p-2 animate-fade-in-right`}

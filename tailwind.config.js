@@ -19,6 +19,9 @@ export default {
       purple: colors.purple,
       red: colors.red,
       blue: colors.blue,
+      green: colors.green,
+      emerald: colors.emerald,
+      cyan: colors.cyan
     },
     extend: {
       fontFamily: {
