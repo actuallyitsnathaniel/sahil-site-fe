@@ -1,18 +1,16 @@
-import { Link, useLocation } from "react-router-dom";
-import { usePageTitle } from "../../utilities/usePageTitle";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-export const NavBar = () => {
-  let pageTitle = usePageTitle(useLocation().pathname);
-  // TODO: create modal navbar when header navbar is not in viewport
-  //        darken and blur background when focused
+import HamburgerIcon from "../../assets/images/icons/navbar/hamburger-icon.svg";
+import CloseIcon from "../../assets/images/icons/navbar/close-icon.svg";
+
+const DesktopNav = () => {
   return (
-    <nav className="flex whitespace-nowrap text-2xl justify-around animate-appear-slow">
-      <ul className="flex text-center flex-wrap flex-col md:flex-row md:justify-around p-4 max-w-xl">
+    <nav className="sticky top-0 flex whitespace-nowrap text-2xl animate-appear-slow">
+      <ul className="flex text-center flex-wrap flex-col md:flex-row py-4 w-screen justify-evenly">
         <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
           <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light ${
-              pageTitle === "About Me" && "text-gray-500"
-            }`}
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
             to={`#about-me`}
           >
             About Me
@@ -20,9 +18,7 @@ export const NavBar = () => {
         </li>
         <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
           <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light ${
-              pageTitle === "Music" && "text-gray-500"
-            }`}
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
             to={`#music`}
           >
             Music
@@ -30,9 +26,7 @@ export const NavBar = () => {
         </li>
         <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
           <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light ${
-              pageTitle === "Credits" && "text-gray-500"
-            }`}
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
             to={`#credits`}
           >
             Credits
@@ -40,9 +34,7 @@ export const NavBar = () => {
         </li>
         <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
           <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light ${
-              pageTitle === "Connect" && "text-gray-500"
-            }`}
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
             to={`#connect`}
           >
             Connect
@@ -51,4 +43,104 @@ export const NavBar = () => {
       </ul>
     </nav>
   );
+};
+
+const MobileNav = () => {
+  const [expanded, setExpanded] = useState(false);
+  // const [title, setTitle] = useState("");
+
+  return (
+    <nav
+      className={`transition-transform duration-100 fixed top-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
+    >
+      <button
+        data-collapse-toggle="navbar"
+        id="navbar-icon"
+        type="button"
+        className={`transition-transform duration-100  p-4 fixed z-10 hover:scale-105 hover:-translate-y-1`}
+        aria-controls="navbar"
+        aria-expanded="false"
+        onClick={() => {
+          setExpanded(!expanded);
+        }}
+      >
+        {expanded ? (
+          <img src={CloseIcon} alt="close" />
+        ) : (
+          <img src={HamburgerIcon} alt="hamburger-icon" />
+        )}
+      </button>
+      <ul
+        className={`transition-transform duration-100 flex flex-col text-center py-6 w-screen clip-path-padding from-cyan-400 via-emerald-900 to-emerald-600 ${
+          expanded ? "scale-100" : "scale-0"
+        }`}
+      >
+        <li className=" hover:scale-105 hover:-translate-y-2">
+          <Link
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+            to={`#about-me`}
+            onClick={() => {
+              setExpanded(false);
+            }}
+          >
+            About Me
+          </Link>
+        </li>
+        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+          <Link
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+            to={`#music`}
+            onClick={() => {
+              setExpanded(false);
+            }}
+          >
+            Music
+          </Link>
+        </li>
+        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+          <Link
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+            to={`#credits`}
+            onClick={() => {
+              setExpanded(false);
+            }}
+          >
+            Credits
+          </Link>
+        </li>
+        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+          <Link
+            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+            to={`#connect`}
+            onClick={() => {
+              setExpanded(false);
+            }}
+          >
+            Connect
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export const NavBar = () => {
+  // TODO: fix unresponsive bug for screen width in here
+  // useEffect might fix it, otherwise go back to all CSS
+  const [windowDimension, setWindowDimension] = useState(null);
+
+  useEffect(() => {
+    setWindowDimension(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowDimension(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const isMobile = windowDimension <= 640;
+  return isMobile ? <MobileNav /> : <DesktopNav />;
 };
