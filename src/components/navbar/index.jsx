@@ -52,13 +52,14 @@ const MobileNav = () => {
   // most likely a modal from the side that overlays
   return (
     <nav
-      className={`transition-transform duration-100 fixed top-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
+      className={`z-20 transition-transform duration-100 fixed top-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
     >
+      {/* TODO: add backdrop blur somehow. tailwind isn't liking my attempts rn */}
       <button
         data-collapse-toggle="navbar"
         id="navbar-icon"
         type="button"
-        className={`transition-transform duration-100 fixed top-3 left-3 z-10 hover:scale-105 hover:-translate-y-1`}
+        className={`transition-transform duration-100 fixed top-3 left-3 z-20 hover:scale-105 hover:-translate-y-1`}
         aria-controls="navbar"
         aria-expanded="false"
         onClick={() => {
@@ -72,7 +73,7 @@ const MobileNav = () => {
         )}
       </button>
       <ul
-        className={` bg-white/30 fixed transition-transform duration-100 flex flex-col h-screen w-screen justify-around text-center py-6 ${
+        className={`bg-black/75 backdrop-blur-md fixed transition-transform duration-100 flex flex-col h-screen w-screen justify-around text-center py-6 ${
           expanded ? "scale-100" : "scale-0"
         }`}
       >
