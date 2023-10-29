@@ -58,7 +58,7 @@ const MobileNav = () => {
         data-collapse-toggle="navbar"
         id="navbar-icon"
         type="button"
-        className={`transition-transform duration-100 p-4 fixed z-10 hover:scale-105 hover:-translate-y-1`}
+        className={`transition-transform duration-100 fixed top-3 left-3 z-10 hover:scale-105 hover:-translate-y-1`}
         aria-controls="navbar"
         aria-expanded="false"
         onClick={() => {

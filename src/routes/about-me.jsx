@@ -1,8 +1,8 @@
 const AboutMe = () => {
   return (
-    <div id="about-me" className="p-10 min-h-screen">
+    <div id="about-me" className="w-screen min-h-screen">
       <h2 className="p-5 flex justify-center text-4xl">About Me</h2>
-      <p className="text-justify text-lg justify-center md:w-2/3 mx-auto">
+      <p className="text-justify text-lg md:w-2/3 mx-auto p-6">
         I am a composer, music editor, and orchestrator with a specialization
         towards film and television. As a graduate from the Berklee College of
         Music, I enjoy the challenge of creating unique soundscapes that combine
