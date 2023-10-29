@@ -67,9 +67,9 @@ const MobileNav = () => {
         }}
       >
         {expanded ? (
-          <img src={CloseIcon} className="h-14" alt="close" />
+          <img src={CloseIcon} className="h-16" alt="close" />
         ) : (
-          <img src={HamburgerIcon} className="h-14" alt="hamburger-icon" />
+          <img src={HamburgerIcon} className="h-16" alt="hamburger-icon" />
         )}
       </button>
       <ul
