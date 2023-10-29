@@ -58,7 +58,7 @@ const MobileNav = () => {
         data-collapse-toggle="navbar"
         id="navbar-icon"
         type="button"
-        className={`transition-transform duration-100  p-4 fixed z-10 hover:scale-105 hover:-translate-y-1`}
+        className={`transition-transform duration-100 p-4 fixed z-10 hover:scale-105 hover:-translate-y-1`}
         aria-controls="navbar"
         aria-expanded="false"
         onClick={() => {
@@ -66,13 +66,13 @@ const MobileNav = () => {
         }}
       >
         {expanded ? (
-          <img src={CloseIcon} alt="close" />
+          <img src={CloseIcon} className="h-14" alt="close" />
         ) : (
-          <img src={HamburgerIcon} alt="hamburger-icon" />
+          <img src={HamburgerIcon} className="h-14" alt="hamburger-icon" />
         )}
       </button>
       <ul
-        className={`transition-transform duration-100 flex flex-col text-center py-6 w-screen clip-path-padding from-cyan-400 via-emerald-900 to-emerald-600 ${
+        className={` bg-white/30 fixed transition-transform duration-100 flex flex-col h-screen w-screen justify-around text-center py-6 ${
           expanded ? "scale-100" : "scale-0"
         }`}
       >

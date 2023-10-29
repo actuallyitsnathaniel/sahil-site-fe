@@ -13,7 +13,7 @@ const Root = () => {
   return (
     <div
       id="root"
-      className="flex flex-wrap flex-row w-screen justify-center align-middle font-light"
+      className="flex flex-wrap flex-row w-screen justify-center align-middle font-light overflow-clip"
     >
       {/* TODO: fix url so it updates to the viewed section when manually scrolling */}
       <BackgroundGradient />
