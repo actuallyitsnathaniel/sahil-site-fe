@@ -48,7 +48,8 @@ const DesktopNav = () => {
 const MobileNav = () => {
   const [expanded, setExpanded] = useState(false);
   // const [title, setTitle] = useState("");
-
+  // TODO: come up with responsive navbar that doesn't clash with background.
+  // most likely a modal from the side that overlays
   return (
     <nav
       className={`transition-transform duration-100 fixed top-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
@@ -125,8 +126,6 @@ const MobileNav = () => {
 };
 
 export const NavBar = () => {
-  // TODO: fix unresponsive bug for screen width in here
-  // useEffect might fix it, otherwise go back to all CSS
   const [windowDimension, setWindowDimension] = useState(null);
 
   useEffect(() => {
