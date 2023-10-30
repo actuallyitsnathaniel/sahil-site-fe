@@ -69,7 +69,7 @@ const MobileNav = (props) => {
 };
 
 MobileNav.propTypes = {
-  setExpanded: PropTypes.object,
+  setExpanded: PropTypes.func,
   expanded: PropTypes.bool,
 };
 
