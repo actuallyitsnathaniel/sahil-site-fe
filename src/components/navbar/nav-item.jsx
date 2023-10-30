@@ -20,5 +20,5 @@ export const NavItem = (props) => {
 NavItem.propTypes = {
   text: PropTypes.string,
   link: PropTypes.string.isRequired,
-  setExpanded: PropTypes.func,
+  setExpanded: PropTypes.func.isRequired,
 };

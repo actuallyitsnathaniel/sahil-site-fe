@@ -10,6 +10,6 @@ export const AudioTrackPlayer = (props) => {
 };
 
 AudioTrackPlayer.propTypes = {
-  src: PropTypes.object.isRequired,
+  src: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };

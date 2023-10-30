@@ -29,11 +29,23 @@ const MobileNav = (props) => {
           props.expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
         }`}
       >
-        <NavItem text="Home" link={`#home`} />
-        <NavItem text="About Me" link={`#about-me`} />
-        <NavItem text="Music" link={`#music`} />
-        <NavItem text="Credits" link={`#credits`} />
-        <NavItem text="Connect" link={`#connect`} />
+        <NavItem text="Home" link={`#home`} setExpanded={props.setExpanded} />
+        <NavItem
+          text="About Me"
+          link={`#about-me`}
+          setExpanded={props.setExpanded}
+        />
+        <NavItem text="Music" link={`#music`} setExpanded={props.setExpanded} />
+        <NavItem
+          text="Credits"
+          link={`#credits`}
+          setExpanded={props.setExpanded}
+        />
+        <NavItem
+          text="Connect"
+          link={`#connect`}
+          setExpanded={props.setExpanded}
+        />
       </ul>
       <button
         data-collapse-toggle="navbar"
@@ -57,8 +69,8 @@ const MobileNav = (props) => {
 };
 
 MobileNav.propTypes = {
-  expanded: PropTypes.bool,
   setExpanded: PropTypes.func,
+  expanded: PropTypes.bool,
 };
 
 export const NavBar = () => {

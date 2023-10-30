@@ -17,7 +17,7 @@ export const CreditedWork = (props) => {
 };
 
 CreditedWork.propTypes = {
-  artwork: PropTypes.object.isRequired,
+  artwork: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string,
   alt: PropTypes.string.isRequired,
