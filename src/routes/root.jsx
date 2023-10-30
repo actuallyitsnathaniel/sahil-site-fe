@@ -24,6 +24,7 @@ const Root = () => {
       <Connect />
       <Footer />
       <NavBar />
+      
       <ScrollToHashElement />
     </div>
   );

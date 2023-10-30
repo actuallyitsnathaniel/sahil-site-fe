@@ -58,7 +58,7 @@ export default {
         "fade-in-middle": "logo-middle 0.3s ease-in-out",
         "fade-in-right": "logo-right 0.65s ease-in-out",
         "appear-slow": "appear-slow 0.9s ease-in-out 0.35s both",
-        "gradient": "gradient 10s ease-in-out infinite"
+        "gradient": "gradient 6s ease-in-out infinite"
       },
     },
   },
