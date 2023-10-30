@@ -17,15 +17,13 @@ const Root = () => {
     >
       {/* TODO: fix url so it updates to the viewed section when manually scrolling */}
       <BackgroundGradient />
-      <div className="z-0">
-        <NavBar />
-        <Home />
-        <AboutMe />
-        <Music />
-        <Credits />
-        <Connect />
-        <Footer />
-      </div>
+      <Home />
+      <AboutMe />
+      <Music />
+      <Credits />
+      <Connect />
+      <Footer />
+      <NavBar />
       <ScrollToHashElement />
     </div>
   );

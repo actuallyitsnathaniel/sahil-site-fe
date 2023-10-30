@@ -6,14 +6,14 @@ import CloseIcon from "../../assets/images/icons/navbar/close-icon.svg";
 
 const DesktopNav = () => {
   return (
-    <nav className="sticky top-0 flex whitespace-nowrap text-2xl animate-appear-slow">
+    <nav className="fixed flex top-0 left-0 whitespace-nowrap text-2xl animate-appear-slow">
       <ul className="flex text-center flex-wrap flex-col md:flex-row py-4 w-screen justify-evenly">
         <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
           <Link
             className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
-            to={`#about-me`}
+            to={`#home`}
           >
-            About Me
+            Home
           </Link>
         </li>
         <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
@@ -52,16 +52,16 @@ const MobileNav = () => {
   // most likely a modal from the side that overlays
   return (
     <nav
-      className={`z-20 transition-transform duration-100 fixed top-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
+      className={`transition-transform duration-100 fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
     >
       {/* TODO: add backdrop blur somehow. tailwind isn't liking my attempts rn */}
       <ul
-        className={`fixed origin-left transition-transform duration-100 flex flex-col bg-black/60 backdrop-blur-lg h-screen w-screen justify-around text-center py-6 ${
+        className={`backdrop-filter backdrop-blur-lg fixed origin-left transition-transform duration-100 flex flex-col bg-black/60 h-screen w-screen justify-around text-center py-6 ${
           expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
         }`}
       >
         <div className="flex flex-col justify-between h-2/3">
-        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+          <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
             <Link
               className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
               to={`#home`}
@@ -155,5 +155,5 @@ export const NavBar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   const isMobile = windowDimension <= 640;
-  return isMobile ? <MobileNav /> : <DesktopNav />;
+  return <div>{isMobile ? <MobileNav /> : <DesktopNav />}</div>
 };
