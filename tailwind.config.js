@@ -5,8 +5,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 import colors from "tailwindcss/colors";
 
 export default {
-  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  content: [],
+  content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
     colors: {
       transparent: "transparent",
@@ -21,7 +20,7 @@ export default {
       blue: colors.blue,
       green: colors.green,
       emerald: colors.emerald,
-      cyan: colors.cyan
+      cyan: colors.cyan,
     },
     extend: {
       fontFamily: {
@@ -44,7 +43,7 @@ export default {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
-        "gradient": {
+        gradient: {
           "0%, 100%": {
             transform: "translateX(0%)",
           },
@@ -58,7 +57,7 @@ export default {
         "fade-in-middle": "logo-middle 0.3s ease-in-out",
         "fade-in-right": "logo-right 0.65s ease-in-out",
         "appear-slow": "appear-slow 0.9s ease-in-out 0.35s both",
-        "gradient": "gradient 6s ease-in-out infinite"
+        gradient: "gradient 6s ease-in-out infinite",
       },
     },
   },
