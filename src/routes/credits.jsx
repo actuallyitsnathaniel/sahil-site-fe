@@ -3,7 +3,8 @@ import { CreditedWork } from "../components/credited-work";
 // Composer
 import academyGoldSound from "../assets/images/academy-gold-sound.png";
 import starTrekShortTreks from "../assets/images/star-trek-short-treks.jpeg";
-import placeholder from "../assets/images/placeholder.png";
+// import placeholder from "../assets/images/placeholder.png";
+import prisonerOfEarth from "../assets/images/prisoner-of-earth.jpeg";
 import voila from "../assets/images/voila.jpeg";
 import sunnyfieldKids from "../assets/images/sunnyfield-kids.png";
 import wolves from "../assets/images/wolves.jpeg";
@@ -15,7 +16,7 @@ import theMotherOfAllFlowers from "../assets/images/the-mother-of-all-flowers.jp
 import bridgerton from "../assets/images/bridgerton.png";
 import dmz from "../assets/images/dmz.jpg";
 import chevalier from "../assets/images/chevalier.png";
-import inventingAnna from "../assets/images/inventing-anna.png"
+import inventingAnna from "../assets/images/inventing-anna.png";
 import pasosDeValor from "../assets/images/pasos-de-valor.png";
 import tinderbox from "../assets/images/tinderbox.png";
 
@@ -26,7 +27,7 @@ const Credits = () => {
       className="flex flex-wrap max-w-screen min-h-screen justify-center"
     >
       <h2 className="p-5 text-4xl text-center">Credits</h2>
-      <div>
+      <div id="composer">
         <h3 className="text-3xl text-center">Composer (Selection)</h3>
         <div className="flex flex-wrap flex-row justify-center">
           <CreditedWork
@@ -40,11 +41,15 @@ const Credits = () => {
             alt={"star-trek-short-treks"}
           />
           <CreditedWork
-            artwork={placeholder}
+            artwork={prisonerOfEarth}
             title={"Prisoner of Earth (TV Episode)"}
             alt={"prisoner-of-earth-TV"}
           />
-          <CreditedWork artwork={voila} title={"Voilá! (Disney Short)"} alt={"voila-disney-short"} />
+          <CreditedWork
+            artwork={voila}
+            title={"Voilá! (Disney Short)"}
+            alt={"voila-disney-short"}
+          />
           <CreditedWork
             artwork={sunnyfieldKids}
             title={"Sunnyfield Kids (Feature Film - Upcoming)"}

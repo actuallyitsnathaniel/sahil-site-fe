@@ -1,4 +1,4 @@
-import { AudioTrackPlayer } from "../components/audio-track-player";
+import { AudioTrackItem } from "../components/audio-track-player";
 import aStoryAtSea from "../assets/audio/a-story-at-sea.mp3";
 import buddingRomance from "../assets/audio/budding-romance.mp3";
 import cinematography from "../assets/audio/cinematography.mp3";
@@ -23,6 +23,39 @@ import visitingLondon from "../assets/audio/visiting-london.mp3";
 import voila from "../assets/audio/voila.mp3";
 
 const Music = () => {
+  /* 
+    TODO:
+    - feature some of the tracks closer to the top.
+    - add the film name next to each of the tracks (so people know where it’s from)
+
+    - UPDATED TRACK ORDER AND TITLES:
+
+    A Story at Sea (Dear Watsonville) **
+    Main Title (Prisoner of Earth) **
+    Circuitry Overload (Star Trek) **
+    Dangerous Car Chase **
+    Main Title (Academy Gold) **
+    Violá! (Voilá!) **
+    Love and Loss (Prisoner of Earth) **
+    Monsters in the Closet **
+    Remembering Death (Prisoner of Earth)
+    Solace in Solitude **
+    Under Your Command (Star Trek) **
+    Tribbles (Star Trek) **
+    Budding Romance **
+    Farus Comes Home (Prisoner of Earth) **
+    I’m Not Dumb (Star Trek) **
+    End Credits (Prisoner of Earth) **
+    Cinematography (Academy Gold) **
+    Deadlines (Academy Gold) **
+    End Credits (Academy Gold) **
+    Visiting London (Academy Gold) **
+    The Hunted
+    Just Friends…I Think
+
+
+    - UPDATE CREDITS IMAGES (see text messages)
+  */
   return (
     <div
       id="music"
@@ -30,46 +63,86 @@ const Music = () => {
     >
       <h2 className="p-5 text-4xl text-center">Music</h2>
       <div className="flex flex-wrap justify-center">
-        <AudioTrackPlayer src={aStoryAtSea} title="A Story at Sea" />
-        <AudioTrackPlayer src={buddingRomance} title="Budding Romance" />
-        <AudioTrackPlayer src={cinematography} title="Cinematography" />
-        <AudioTrackPlayer src={circuitryOverload} title="Circuitry Overload" />
-        <AudioTrackPlayer src={dangerousCarChase} title="Dangerous Car Chase" />
-        <AudioTrackPlayer src={deadlines} title="Deadlines" />
-        <AudioTrackPlayer
-          src={endCreditsAcademyGold}
-          title="End Credits (Academy Gold)"
+        <AudioTrackItem
+          src={aStoryAtSea}
+          title="A Story at Sea"
+          film="Dear Watsonville"
         />
-        <AudioTrackPlayer
-          src={endCreditsPrisonerOfEarth}
-          title="End Credits (Prisoner of Earth)"
-        />
-        <AudioTrackPlayer src={farusComesHome} title="Farus Comes Home" />
-        <AudioTrackPlayer src={imNotDumb} title="I'm Not Dumb" />
-        <AudioTrackPlayer
-          src={justFriendsIThink}
-          title="Just Friends... I Think"
-        />
-        <AudioTrackPlayer src={loveAndLoss} title="Love and Loss" />
-        <AudioTrackPlayer
-          src={mainTitleAcademyGold}
-          title="Main Title (Academy Gold)"
-        />
-        <AudioTrackPlayer
+        <AudioTrackItem
           src={maintitlePrisonerOfEarth}
-          title="Main Title (Prisoner of Earth)"
+          title="Main Title"
+          film="Prisoner of Earth"
         />
-        <AudioTrackPlayer
+        <AudioTrackItem
+          src={circuitryOverload}
+          title="Circuitry Overload"
+          film="Star Trek"
+        />
+        <AudioTrackItem src={dangerousCarChase} title="Dangerous Car Chase" />
+        <AudioTrackItem
+          src={mainTitleAcademyGold}
+          title="Main Title"
+          film="Academy Gold"
+        />
+        <AudioTrackItem src={voila} title="Voilá!" film="Disney's Voilá!" />
+        <AudioTrackItem
+          src={loveAndLoss}
+          title="Love and Loss"
+          film="Prisoner of Earth"
+        />
+        <AudioTrackItem
           src={monstersInTheClost}
           title="Monsters in the Closet"
         />
-        <AudioTrackPlayer src={rememberingDeath} title="Remembering Death" />
-        <AudioTrackPlayer src={solaceInSolitude} title="Solace in Solitude" />
-        <AudioTrackPlayer src={theHunted} title="The Hunted" />
-        <AudioTrackPlayer src={tribbles} title="Tribbles" />
-        <AudioTrackPlayer src={underYourCommand} title="Under Your Command" />
-        <AudioTrackPlayer src={visitingLondon} title="Visiting London" />
-        <AudioTrackPlayer src={voila} title="Voilá!" />
+        <AudioTrackItem
+          src={rememberingDeath}
+          title="Remembering Death"
+          film="Prisoner of Earth"
+        />
+        <AudioTrackItem src={solaceInSolitude} title="Solace in Solitude" />
+        <AudioTrackItem
+          src={underYourCommand}
+          title="Under Your Command"
+          film="Star Trek"
+        />
+        <AudioTrackItem src={tribbles} title="Tribbles" film="Star Trek" />
+        <AudioTrackItem src={buddingRomance} title="Budding Romance" />
+        <AudioTrackItem
+          src={farusComesHome}
+          title="Farus Comes Home"
+          film="Prisoner of Earth"
+        />
+        <AudioTrackItem
+          src={imNotDumb}
+          title="I'm Not Dumb"
+          film="Stark Trek"
+        />
+        <AudioTrackItem
+          src={endCreditsPrisonerOfEarth}
+          title="End Credits"
+          film="Prisoner of Earth"
+        />
+        <AudioTrackItem
+          src={cinematography}
+          title="Cinematography"
+          film="Academy Gold"
+        />
+        <AudioTrackItem src={deadlines} title="Deadlines" film="Academy Gold" />
+        <AudioTrackItem
+          src={endCreditsAcademyGold}
+          title="End Credits"
+          film="Academy Gold"
+        />
+        <AudioTrackItem
+          src={visitingLondon}
+          title="Visiting London"
+          film="Academy Gold"
+        />
+        <AudioTrackItem src={theHunted} title="The Hunted" />
+        <AudioTrackItem
+          src={justFriendsIThink}
+          title="Just Friends... I Think"
+        />
       </div>
     </div>
   );
