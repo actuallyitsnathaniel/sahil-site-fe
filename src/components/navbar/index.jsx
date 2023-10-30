@@ -55,11 +55,74 @@ const MobileNav = () => {
       className={`z-20 transition-transform duration-100 fixed top-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
     >
       {/* TODO: add backdrop blur somehow. tailwind isn't liking my attempts rn */}
+      <ul
+        className={`fixed origin-left transition-transform duration-100 flex flex-col bg-black/60 backdrop-blur-lg h-screen w-screen justify-around text-center py-6 ${
+          expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
+        }`}
+      >
+        <div className="flex flex-col justify-between h-2/3">
+        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+            <Link
+              className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+              to={`#home`}
+              onClick={() => {
+                setExpanded(false);
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+            <Link
+              className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+              to={`#about-me`}
+              onClick={() => {
+                setExpanded(false);
+              }}
+            >
+              About Me
+            </Link>
+          </li>
+          <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+            <Link
+              className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+              to={`#music`}
+              onClick={() => {
+                setExpanded(false);
+              }}
+            >
+              Music
+            </Link>
+          </li>
+          <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+            <Link
+              className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+              to={`#credits`}
+              onClick={() => {
+                setExpanded(false);
+              }}
+            >
+              Credits
+            </Link>
+          </li>
+          <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
+            <Link
+              className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
+              to={`#connect`}
+              onClick={() => {
+                setExpanded(false);
+              }}
+            >
+              Connect
+            </Link>
+          </li>
+        </div>
+      </ul>
       <button
         data-collapse-toggle="navbar"
         id="navbar-icon"
         type="button"
-        className={`transition-transform duration-100 fixed top-3 left-3 z-20 hover:scale-105 hover:-translate-y-1`}
+        className={`transition-transform duration-100 fixed top-3 left-3 hover:scale-105 hover:-translate-y-1`}
         aria-controls="navbar"
         aria-expanded="false"
         onClick={() => {
@@ -72,56 +135,6 @@ const MobileNav = () => {
           <img src={HamburgerIcon} className="h-16" alt="hamburger-icon" />
         )}
       </button>
-      <ul
-        className={`bg-black/75 backdrop-blur-md fixed transition-transform duration-100 flex flex-col h-screen w-screen justify-around text-center py-6 ${
-          expanded ? "scale-100" : "scale-0"
-        }`}
-      >
-        <li className=" hover:scale-105 hover:-translate-y-2">
-          <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
-            to={`#about-me`}
-            onClick={() => {
-              setExpanded(false);
-            }}
-          >
-            About Me
-          </Link>
-        </li>
-        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
-          <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
-            to={`#music`}
-            onClick={() => {
-              setExpanded(false);
-            }}
-          >
-            Music
-          </Link>
-        </li>
-        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
-          <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
-            to={`#credits`}
-            onClick={() => {
-              setExpanded(false);
-            }}
-          >
-            Credits
-          </Link>
-        </li>
-        <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
-          <Link
-            className={`hover:text-orange-300 hover:scale-110 p-5 font-light`}
-            to={`#connect`}
-            onClick={() => {
-              setExpanded(false);
-            }}
-          >
-            Connect
-          </Link>
-        </li>
-      </ul>
     </nav>
   );
 };
