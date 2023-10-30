@@ -4,8 +4,10 @@ export const AudioTrackItem = (props) => {
   return (
     <div className="grid md:px-10 py-5 justify-items-center">
       <h5 className="">{props.title}</h5>
-      {props.film && (
+      {props.film ? (
         <p className="font-light text-sm">(from &quot;{props.film}&quot;)</p>
+      ) : (
+        <p className="font-light text-sm">(Original)</p>
       )}
       <audio src={props.src} controls controlsList="nodownload" />
     </div>
