@@ -3,7 +3,8 @@ import { CreditedWork } from "../components/credited-work";
 // Composer
 import academyGoldSound from "../assets/images/academy-gold-sound.png";
 import starTrekShortTreks from "../assets/images/star-trek-short-treks.jpeg";
-// import placeholder from "../assets/images/placeholder.png";
+// eslint-disable-next-line no-unused-vars
+import placeholder from "../assets/images/placeholder.png";
 import prisonerOfEarth from "../assets/images/prisoner-of-earth.jpeg";
 import voila from "../assets/images/voila.jpeg";
 import sunnyfieldKids from "../assets/images/sunnyfield-kids.png";
