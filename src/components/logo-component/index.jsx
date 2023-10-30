@@ -13,7 +13,7 @@ export const SahilLogo = () => {
     <Link to={`#home`}>
       <div
         id="logo-container"
-        className="flex justify-center align-middle px-10 overflow-clip"
+        className="flex justify-center align-middle px-7 md:px-10 overflow-clip"
         alt="sahil-jindal-logo"
       >
         <div id="left-wrapper" className="overflow-clip">
