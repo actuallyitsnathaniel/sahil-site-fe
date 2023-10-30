@@ -21,6 +21,7 @@ import tribbles from "../assets/audio/tribbles.mp3";
 import underYourCommand from "../assets/audio/under-your-command.mp3";
 import visitingLondon from "../assets/audio/visiting-london.mp3";
 import voila from "../assets/audio/voila.mp3";
+import noTheyDont from "../assets/audio/no-they-dont.wav";
 
 const Music = () => {
   return (
@@ -52,6 +53,7 @@ const Music = () => {
           film="Academy Gold"
         />
         <AudioTrackItem src={voila} title="Voilá!" film="Disney's Voilá!" />
+        <AudioTrackItem src={noTheyDont} title="No They Don't" film="Star Trek" />
         <AudioTrackItem
           src={loveAndLoss}
           title="Love and Loss"
