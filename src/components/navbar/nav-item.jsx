@@ -5,7 +5,7 @@ export const NavItem = (props) => {
   /**
    * TODO:
    * DESKTOP:
-   *   - current page should always be FOCUSED on navbar.
+   *   - current page title should always be FOCUSED on navbar.
    *   - effect:
    *       - onClick, set as active page, similar to hover, but maybe bolded and underlined.
    */
