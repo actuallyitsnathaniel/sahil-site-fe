@@ -23,39 +23,6 @@ import visitingLondon from "../assets/audio/visiting-london.mp3";
 import voila from "../assets/audio/voila.mp3";
 
 const Music = () => {
-  /* 
-    TODO:
-    - feature some of the tracks closer to the top.
-    - add the film name next to each of the tracks (so people know where it’s from)
-
-    - UPDATED TRACK ORDER AND TITLES:
-
-    A Story at Sea (Dear Watsonville) **
-    Main Title (Prisoner of Earth) **
-    Circuitry Overload (Star Trek) **
-    Dangerous Car Chase **
-    Main Title (Academy Gold) **
-    Violá! (Voilá!) **
-    Love and Loss (Prisoner of Earth) **
-    Monsters in the Closet **
-    Remembering Death (Prisoner of Earth)
-    Solace in Solitude **
-    Under Your Command (Star Trek) **
-    Tribbles (Star Trek) **
-    Budding Romance **
-    Farus Comes Home (Prisoner of Earth) **
-    I’m Not Dumb (Star Trek) **
-    End Credits (Prisoner of Earth) **
-    Cinematography (Academy Gold) **
-    Deadlines (Academy Gold) **
-    End Credits (Academy Gold) **
-    Visiting London (Academy Gold) **
-    The Hunted
-    Just Friends…I Think
-
-
-    - UPDATE CREDITS IMAGES (see text messages)
-  */
   return (
     <div
       id="music"

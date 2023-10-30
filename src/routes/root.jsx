@@ -17,7 +17,6 @@ const Root = () => {
     >
       {/* TODO: fix url so it updates to the viewed section when manually scrolling */}
       <BackgroundGradient />
-
       <Home />
       <AboutMe />
       <Music />
