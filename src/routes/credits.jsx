@@ -32,7 +32,7 @@ const Credits = () => {
   return (
     <div
       id="credits"
-      className="flex flex-wrap max-w-screen min-h-screen justify-center"
+      className="flex flex-wrap max-w-screen min-h-screen justify-center md:pt-16"
     >
       <h2 className="p-5 text-4xl text-center">Credits</h2>
       <div id="composer">

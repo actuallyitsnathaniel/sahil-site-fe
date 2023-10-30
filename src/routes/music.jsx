@@ -26,7 +26,7 @@ const Music = () => {
   return (
     <div
       id="music"
-      className="flex flex-wrap w-screen min-h-screen justify-center"
+      className="flex flex-wrap w-screen min-h-screen justify-center md:pt-16"
     >
       <h2 className="p-5 text-4xl text-center">Music</h2>
       <div className="flex flex-wrap justify-center">

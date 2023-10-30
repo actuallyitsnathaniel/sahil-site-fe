@@ -7,8 +7,8 @@ import CloseIcon from "../../assets/images/icons/navbar/close-icon.svg";
 
 const DesktopNav = () => {
   return (
-    <nav className="fixed flex top-0 left-0 whitespace-nowrap text-2xl animate-appear-slow overflow-visible">
-      <ul className="flex text-center flex-wrap flex-col md:flex-row py-4 w-screen justify-evenly">
+    <nav className="transition-transform duration-100 fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow">
+      <ul className="flex transition-transform duration-100 text-center flex-wrap flex-col md:flex-row py-4 w-screen justify-evenly">
         <NavItem text="Home" link={`#home`} />
         <NavItem text="About Me" link={`#about-me`} />
         <NavItem text="Music" link={`#music`} />
@@ -69,7 +69,7 @@ const MobileNav = (props) => {
 };
 
 MobileNav.propTypes = {
-  setExpanded: PropTypes.func,
+  setExpanded: PropTypes.object,
   expanded: PropTypes.bool,
 };
 

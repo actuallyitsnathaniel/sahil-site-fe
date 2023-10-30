@@ -15,7 +15,7 @@ export const NavItem = (props) => {
         className={`hover:text-orange-300 hover:scale-110 p-5 font-normal`}
         to={props.link}
         onClick={() => {
-          props.setExpanded(false);
+          props.setExpanded && props.setExpanded(false);
         }}
       >
         {props.text}

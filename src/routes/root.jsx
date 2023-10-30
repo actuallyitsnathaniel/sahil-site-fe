@@ -17,7 +17,7 @@ const Root = () => {
     >
       {/* TODO: fix url so it updates to the viewed section when manually scrolling */}
       <BackgroundGradient />
-      <div id="root-wrapper" className="md:pt-32">
+      <div id="root-wrapper">
         <Home />
         <AboutMe />
         <Music />

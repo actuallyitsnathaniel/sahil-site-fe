@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <div id="about-me" className="w-screen min-h-screen">
+    <div id="about-me" className="w-screen min-h-screen md:pt-16">
       <h2 className="p-5 flex justify-center text-4xl">About Me</h2>
       <p className="text-justify text-lg md:w-2/3 mx-auto p-6">
         I am a composer, music editor, and orchestrator with a specialization
