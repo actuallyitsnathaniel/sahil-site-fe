@@ -79,11 +79,7 @@ const Music = () => {
           title="Farus Comes Home"
           film="Prisoner of Earth"
         />
-        <AudioTrackItem
-          src={imNotDumb}
-          title="I'm Not Dumb"
-          film="Star Trek"
-        />
+        <AudioTrackItem src={imNotDumb} title="I'm Not Dumb" film="Star Trek" />
         <AudioTrackItem
           src={endCreditsPrisonerOfEarth}
           title="End Credits"
