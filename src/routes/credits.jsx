@@ -1,6 +1,8 @@
 import { CreditedWork } from "../components/credited-work";
 
 // Composer
+import unitedInGrief from "../assets/images/united-in-grief.jpeg";
+import whosTexting from "../assets/images/whos-texting.jpeg";
 import academyGoldSound from "../assets/images/academy-gold-sound.png";
 import starTrekShortTreks from "../assets/images/star-trek-short-treks.jpeg";
 // eslint-disable-next-line no-unused-vars
@@ -14,6 +16,11 @@ import lastSummer from "../assets/images/last-summer.jpeg";
 import theMotherOfAllFlowers from "../assets/images/the-mother-of-all-flowers.jpg";
 
 // Music Department
+import secretInvasion from "../assets/images/secret-invasion.jpeg";
+import origin from "../assets/images/origin.jpeg";
+import lastRepairShop from "../assets/images/the-last-repair-shop.jpeg";
+import disneyHauntedMansion from "../assets/images/disney-haunted-mansion.jpeg";
+import netflixQueenCharlotte from "../assets/images/netflix-queen-charlotte.jpeg";
 import bridgerton from "../assets/images/bridgerton.png";
 import dmz from "../assets/images/dmz.jpg";
 import chevalier from "../assets/images/chevalier.png";
@@ -31,6 +38,16 @@ const Credits = () => {
       <div id="composer">
         <h3 className="text-3xl text-center">Composer (Selection)</h3>
         <div className="flex flex-wrap flex-row justify-center">
+          <CreditedWork
+            artwork={unitedInGrief}
+            title={"United in Grief (Short)"}
+            alt={"united-in-grief-short"}
+          />
+          <CreditedWork
+            artwork={whosTexting}
+            title={"Who's Texting the Group Chat? (Short)"}
+            alt={"whos-texting-the-gc-short"}
+          />
           <CreditedWork
             artwork={academyGoldSound}
             title={"Academy Gold (Documentary Series)"}
@@ -78,9 +95,36 @@ const Credits = () => {
           />
         </div>
       </div>
-      <div>
+      <div id="music-dept">
         <h3 className="text-3xl text-center">Music Department</h3>
         <div className="flex flex-wrap flex-row justify-center">
+          <CreditedWork
+            artwork={secretInvasion}
+            title={"Marvel Studios: Secret Invasion (TV Series)"}
+            alt={"marvel-studios-secret-invasion"}
+          />
+          <CreditedWork
+            artwork={origin}
+            title={"Origin (Feature Film)"}
+            alt={"origin-film"}
+          />
+          <CreditedWork
+            artwork={lastRepairShop}
+            title={"The Last Repair Shop (Documentary Short)"}
+            alt={"the-last-repair-shop-documentary"}
+          />
+          <CreditedWork
+            artwork={disneyHauntedMansion}
+            title={"Disney's Haunted Mansion (Feature Film)"}
+            alt={"disney-haunted-mansion-film"}
+          />
+          <CreditedWork
+            artwork={netflixQueenCharlotte}
+            title={
+              "Netflix's Queen Charlotte: A Bridgerton Story (Limited Series)"
+            }
+            alt="netflix-queen-charlotte-bridgerton-limited-series"
+          />
           <CreditedWork
             artwork={bridgerton}
             title={"Bridgerton Season 2 (TV Series)"}
