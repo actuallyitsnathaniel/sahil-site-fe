@@ -1,6 +1,8 @@
 import { useMemo, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+// S/O to Nick Coughlin
+// https://ncoughlin.com/posts/react-router-v6-hash-links/
 const ScrollToHashElement = () => {
   let location = useLocation();
 
