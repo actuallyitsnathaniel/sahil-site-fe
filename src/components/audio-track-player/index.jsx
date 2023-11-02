@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
 import { PropTypes } from "prop-types";
+
 import { HandlePlayback } from "./playback";
 import ProgressBar from "./progress-bar";
+import Play from "../../assets/images/icons/audio-player/play.svg";
+import Pause from "../../assets/images/icons/audio-player/pause.svg";
 
 const AudioTrack = (props) => {
   const [timeProgress, setTimeProgress] = useState(0);
@@ -23,24 +26,33 @@ const AudioTrack = (props) => {
       ) : (
         <p className="font-light text-sm">(Original)</p>
       )}
-      <button onClick={() => HandlePlayback(props)}>
-        {props.currentTrack == props.index ? "PAUSE" : "PLAY"}
-        <audio
-          src={props.src}
-          ref={audioRef}
-          onLoadedMetadata={onLoadedMetadata}
-          id={`audio-${props.index}`}
+      <div id="controls" className="flex flex-row align-middle ">
+        <button
+          className="flex h-4 w-5 mt-1.5"
+          onClick={() => HandlePlayback(props)}
+        >
+          {props.currentTrack == props.index ? (
+            <img src={Pause} className="" alt="audio-pause" />
+          ) : (
+            <img src={Play} alt="audio-play" />
+          )}
+          <audio
+            src={props.src}
+            ref={audioRef}
+            onLoadedMetadata={onLoadedMetadata}
+            id={`audio-${props.index}`}
+          />
+        </button>
+        <ProgressBar
+          {...{
+            progressBarRef,
+            audioRef,
+            timeProgress,
+            setTimeProgress,
+            duration,
+          }}
         />
-      </button>
-      <ProgressBar
-        {...{
-          progressBarRef,
-          audioRef,
-          timeProgress,
-          setTimeProgress,
-          duration,
-        }}
-      />
+      </div>
     </div>
   );
 };
