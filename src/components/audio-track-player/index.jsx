@@ -4,7 +4,7 @@ import { HandlePlayback } from "./playback";
 
 const AudioTrack = (props) => {
   // TODO: create little single audio players.... again
-
+  // https://www.letsbuildui.dev/articles/building-an-audio-player-with-react-hooks/
   return (
     <div className="grid md:px-10 py-5 justify-items-center">
       <h5>{props.title}</h5>
