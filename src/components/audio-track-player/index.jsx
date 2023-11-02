@@ -1,22 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { PropTypes } from "prop-types";
+
 import { HandlePlayback } from "./playback";
+import ProgressBar from "./progress-bar";
+import Play from "../../assets/images/icons/audio-player/play.svg";
+import Pause from "../../assets/images/icons/audio-player/pause.svg";
 
 const AudioTrack = (props) => {
-  // TODO: create little single audio players.... again
-  // https://www.letsbuildui.dev/articles/building-an-audio-player-with-react-hooks/
+  const [timeProgress, setTimeProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const progressBarRef = useRef();
+  const audioRef = useRef();
+  const onLoadedMetadata = () => {
+    const seconds = audioRef.current.duration;
+    setDuration(seconds);
+    progressBarRef.current.max = seconds;
+  };
+
   return (
-    <div className="grid md:px-10 py-5 justify-items-center">
+    <div className="grid p-5 justify-items-center">
       <h5>{props.title}</h5>
       {props.film ? (
         <p className="font-light text-sm">(from &quot;{props.film}&quot;)</p>
       ) : (
         <p className="font-light text-sm">(Original)</p>
       )}
-      <button onClick={() => HandlePlayback(props)}>
-        {props.currentTrack == props.index ? "PAUSE" : "PLAY"}
-        <audio src={props.src} id={`audio-${props.index}`} />
-      </button>
+      <div id="controls" className="flex flex-row align-middle ">
+        <button
+          className="flex h-4 w-5 mt-1.5"
+          onClick={() => HandlePlayback(props)}
+        >
+          {props.currentTrack == props.index ? (
+            <img src={Pause} className="" alt="audio-pause" />
+          ) : (
+            <img src={Play} alt="audio-play" />
+          )}
+          <audio
+            src={props.src}
+            ref={audioRef}
+            onLoadedMetadata={onLoadedMetadata}
+            id={`audio-${props.index}`}
+          />
+        </button>
+        <ProgressBar
+          {...{
+            progressBarRef,
+            audioRef,
+            timeProgress,
+            setTimeProgress,
+            duration,
+          }}
+        />
+      </div>
     </div>
   );
 };
