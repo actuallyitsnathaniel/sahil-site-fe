@@ -1,4 +1,4 @@
-import { AudioTrackItem } from "../components/audio-track-player";
+import AudioPlayer from "../components/audio-track-player";
 import aStoryAtSea from "../assets/audio/a-story-at-sea.mp3";
 import buddingRomance from "../assets/audio/budding-romance.mp3";
 import cinematography from "../assets/audio/cinematography.mp3";
@@ -30,85 +30,100 @@ const Music = () => {
       className="flex flex-wrap w-screen min-h-screen justify-center md:pt-16"
     >
       <h2 className="p-5 text-4xl text-center">Music</h2>
-      <div className="flex flex-wrap justify-center">
-        <AudioTrackItem
+      <AudioPlayer>
+        <AudioPlayer.Track
           src={aStoryAtSea}
           title="A Story at Sea"
           film="Dear Watsonville"
         />
-        <AudioTrackItem
+        <AudioPlayer.Track
           src={maintitlePrisonerOfEarth}
           title="Main Title"
           film="Prisoner of Earth"
         />
-        <AudioTrackItem
+        <AudioPlayer.Track
           src={circuitryOverload}
           title="Circuitry Overload"
           film="Star Trek"
         />
-        <AudioTrackItem src={dangerousCarChase} title="Dangerous Car Chase" />
-        <AudioTrackItem
+        <AudioPlayer.Track
+          src={dangerousCarChase}
+          title="Dangerous Car Chase"
+        />
+        <AudioPlayer.Track
           src={mainTitleAcademyGold}
           title="Main Title"
           film="Academy Gold"
         />
-        <AudioTrackItem src={voila} title="Voilá!" film="Disney's Voilá!" />
-        <AudioTrackItem src={noTheyDont} title="No They Don't" film="Star Trek" />
-        <AudioTrackItem
+        <AudioPlayer.Track src={voila} title="Voilá!" film="Disney's Voilá!" />
+        <AudioPlayer.Track
+          src={noTheyDont}
+          title="No They Don't"
+          film="Star Trek"
+        />
+        <AudioPlayer.Track
           src={loveAndLoss}
           title="Love and Loss"
           film="Prisoner of Earth"
         />
-        <AudioTrackItem
+        <AudioPlayer.Track
           src={monstersInTheClost}
           title="Monsters in the Closet"
         />
-        <AudioTrackItem
+        <AudioPlayer.Track
           src={rememberingDeath}
           title="Remembering Death"
           film="Prisoner of Earth"
         />
-        <AudioTrackItem src={solaceInSolitude} title="Solace in Solitude" />
-        <AudioTrackItem
+        <AudioPlayer.Track src={solaceInSolitude} title="Solace in Solitude" />
+        <AudioPlayer.Track
           src={underYourCommand}
           title="Under Your Command"
           film="Star Trek"
         />
-        <AudioTrackItem src={tribbles} title="Tribbles" film="Star Trek" />
-        <AudioTrackItem src={buddingRomance} title="Budding Romance" />
-        <AudioTrackItem
+        <AudioPlayer.Track src={tribbles} title="Tribbles" film="Star Trek" />
+        <AudioPlayer.Track src={buddingRomance} title="Budding Romance" />
+        <AudioPlayer.Track
           src={farusComesHome}
           title="Farus Comes Home"
           film="Prisoner of Earth"
         />
-        <AudioTrackItem src={imNotDumb} title="I'm Not Dumb" film="Star Trek" />
-        <AudioTrackItem
+        <AudioPlayer.Track
+          src={imNotDumb}
+          title="I'm Not Dumb"
+          film="Star Trek"
+        />
+        <AudioPlayer.Track
           src={endCreditsPrisonerOfEarth}
           title="End Credits"
           film="Prisoner of Earth"
         />
-        <AudioTrackItem
+        <AudioPlayer.Track
           src={cinematography}
           title="Cinematography"
           film="Academy Gold"
         />
-        <AudioTrackItem src={deadlines} title="Deadlines" film="Academy Gold" />
-        <AudioTrackItem
+        <AudioPlayer.Track
+          src={deadlines}
+          title="Deadlines"
+          film="Academy Gold"
+        />
+        <AudioPlayer.Track
           src={endCreditsAcademyGold}
           title="End Credits"
           film="Academy Gold"
         />
-        <AudioTrackItem
+        <AudioPlayer.Track
           src={visitingLondon}
           title="Visiting London"
           film="Academy Gold"
         />
-        <AudioTrackItem src={theHunted} title="The Hunted" />
-        <AudioTrackItem
+        <AudioPlayer.Track src={theHunted} title="The Hunted" />
+        <AudioPlayer.Track
           src={justFriendsIThink}
           title="Just Friends... I Think"
         />
-      </div>
+      </AudioPlayer>
     </div>
   );
 };
