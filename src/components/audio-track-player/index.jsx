@@ -19,7 +19,7 @@ const AudioTrack = (props) => {
   };
 
   return (
-    <div className="grid p-5 justify-items-center">
+    <div className="grid py-5 sm:px-10 justify-items-center">
       <h5>{props.title}</h5>
       {props.film ? (
         <p className="font-light text-sm">(from &quot;{props.film}&quot;)</p>
@@ -28,7 +28,7 @@ const AudioTrack = (props) => {
       )}
       <div id="controls" className="flex flex-row align-middle ">
         <button
-          className="flex h-4 w-5 mt-1.5"
+          className="flex h-4 mt-1.5"
           onClick={() => HandlePlayback(props)}
         >
           {props.currentTrack == props.index ? (
@@ -82,7 +82,7 @@ const AudioPlayer = ({ children }) => {
     });
   });
 
-  return <div className="flex flex-wrap justify-center">{AudioTracks}</div>;
+  return <div className="flex flex-wrap justify-center overflow-clip">{AudioTracks}</div>;
 };
 
 AudioPlayer.propTypes = {

@@ -30,6 +30,7 @@ const Music = () => {
       className="flex flex-wrap w-screen min-h-screen justify-center md:pt-16"
     >
       <h2 className="p-5 text-4xl text-center">Music</h2>
+      {/* TODO: top left, have play/pause feature */}
       <AudioPlayer>
         <AudioPlayer.Track
           src={aStoryAtSea}
