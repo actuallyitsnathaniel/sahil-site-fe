@@ -4,13 +4,32 @@ import { PropTypes } from "prop-types";
 const AudioTrack = (props) => {
   // TODO: set up play pause toggling. add a little more logic
   // to only allow one thing to play at a time.
-  //    https://www.w3schools.com/jsref/met_audio_pause.asp
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(-1);
+  //    https://theshubhagrwl.medium.com/you-might-not-need-a-sound-library-for-react-a265870dabda
+  const selectedAudio = document.getElementById(`audio-${props.index}`);
+  const playingAudio = document.getElementById(`audio-${props.currentTrack}`);
 
-  const HandlePlayback = (e) => {
-    const track = document.getElementById(e.target.id);
-    if (currentTrackIndex !== track) setCurrentTrackIndex(e.target.id);
-    console.log(currentTrackIndex);
+  const HandlePlayback = () => {
+    if (!props.isPlaying) {
+      props.setCurrentTrack(props.index);
+      props.setIsPlaying(true);
+      selectedAudio.play();
+    }
+
+    if (props.isPlaying) {
+      if (props.currentTrack == props.index) {
+        selectedAudio.pause();
+        props.setIsPlaying(false);
+        props.setCurrentTrack(-1);
+      }
+
+      if (props.currentTrack != props.index) {
+        playingAudio.pause();
+        props.setIsPlaying(false);
+        props.setCurrentTrack(props.index);
+        selectedAudio.play();
+        props.setIsPlaying(true);
+      }
+    }
   };
 
   return (
@@ -21,13 +40,10 @@ const AudioTrack = (props) => {
       ) : (
         <p className="font-light text-sm">(Original)</p>
       )}
-
-      <audio
-        src={props.src}
-        controls
-        onPlay={(e) => HandlePlayback(e)}
-        id={props.index}
-      />
+      <button onClick={HandlePlayback}>
+        {props.currentTrack == props.index ? "PAUSE" : "PLAY"}
+        <audio src={props.src} id={`audio-${props.index}`} />
+      </button>
     </div>
   );
 };
@@ -37,18 +53,26 @@ AudioTrack.propTypes = {
   title: PropTypes.string.isRequired,
   film: PropTypes.string,
   index: PropTypes.number,
+  isPlaying: PropTypes.bool,
+  setIsPlaying: PropTypes.func,
+  currentTrack: PropTypes.number,
+  setCurrentTrack: PropTypes.func,
 };
 
 const AudioPlayer = ({ children }) => {
-  // TODO: limit audio playing to one track at a time
-  // https://medium.com/@justynazet/passing-props-to-props-children-using-react-cloneelement-and-render-props-pattern-896da70b24f6#:~:text=Let%E2%80%99s%20see%20it%20in%20code%3A
-  // this might help
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTrack, setCurrentTrack] = useState(-1);
 
   const AudioTracks = React.Children.map(children, (child, index) => {
     return React.cloneElement(child, {
       index,
+      isPlaying,
+      setIsPlaying,
+      currentTrack,
+      setCurrentTrack,
     });
   });
+
   return <div className="flex flex-wrap justify-center">{AudioTracks}</div>;
 };
 

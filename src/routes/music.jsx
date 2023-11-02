@@ -24,7 +24,6 @@ import voila from "../assets/audio/voila.mp3";
 import noTheyDont from "../assets/audio/no-they-dont.wav";
 
 const Music = () => {
-
   return (
     <div
       id="music"
