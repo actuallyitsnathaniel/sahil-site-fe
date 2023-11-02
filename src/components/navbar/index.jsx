@@ -24,29 +24,35 @@ const MobileNav = (props) => {
     <nav
       className={`transition-transform duration-100 fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
     >
-      <ul
-        className={`fixed origin-left transition-transform duration-100 flex flex-col bg-black/60 h-screen w-screen justify-around text-center ${
+      <div
+        className={`fixed origin-left transition-transform duration-100 flex flex-col bg-black/60 h-screen w-screen ${
           props.expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
         }`}
       >
-        <NavItem text="Home" link={`#home`} setExpanded={props.setExpanded} />
-        <NavItem
-          text="About Me"
-          link={`#about-me`}
-          setExpanded={props.setExpanded}
-        />
-        <NavItem text="Music" link={`#music`} setExpanded={props.setExpanded} />
-        <NavItem
-          text="Credits"
-          link={`#credits`}
-          setExpanded={props.setExpanded}
-        />
-        <NavItem
-          text="Connect"
-          link={`#connect`}
-          setExpanded={props.setExpanded}
-        />
-      </ul>
+        <ul className="flex flex-col h-[90%] justify-evenly text-center">
+          <NavItem text="Home" link={`#home`} setExpanded={props.setExpanded} />
+          <NavItem
+            text="About Me"
+            link={`#about-me`}
+            setExpanded={props.setExpanded}
+          />
+          <NavItem
+            text="Music"
+            link={`#music`}
+            setExpanded={props.setExpanded}
+          />
+          <NavItem
+            text="Credits"
+            link={`#credits`}
+            setExpanded={props.setExpanded}
+          />
+          <NavItem
+            text="Connect"
+            link={`#connect`}
+            setExpanded={props.setExpanded}
+          />
+        </ul>
+      </div>
       <button
         data-collapse-toggle="navbar"
         id="navbar-icon"
