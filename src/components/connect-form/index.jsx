@@ -31,7 +31,7 @@ export const ConnectForm = () => {
   };
 
   return (
-    <form id="connect-form" className="flex flex-wrap flex-col max-h-3/4">
+    <form id="connect-form" className="flex flex-wrap flex-row items-center">
       {!submitted ? (
         <div id="input-wrapper" className="flex flex-col justify-items-center">
           <h2 className="text-4xl p-6 text-center">
