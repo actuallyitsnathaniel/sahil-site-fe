@@ -34,7 +34,7 @@ const Credits = () => {
       id="credits"
       className="flex flex-wrap max-w-screen min-h-screen justify-center md:pt-16"
     >
-      <h2 className="p-5 text-4xl text-center">Credits</h2>
+      <h2 className="sticky top-1.5 py-5 text-4xl text-center">Credits</h2>
       <div id="composer">
         <h3 className="text-3xl text-center">Composer (Selection)</h3>
         <div className="flex flex-wrap flex-row justify-center">

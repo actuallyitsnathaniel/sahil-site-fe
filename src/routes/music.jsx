@@ -29,7 +29,9 @@ const Music = () => {
       id="music"
       className="flex flex-wrap w-screen min-h-screen justify-center md:pt-16"
     >
-      <h2 className="p-5 text-4xl text-center">Music</h2>
+      <h2 className="sticky top-1.5 md:hidden py-5 text-4xl text-center">
+        Music
+      </h2>
       {/* TODO: top left, have play/pause feature */}
       <AudioPlayer>
         <AudioPlayer.Track

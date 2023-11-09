@@ -1,7 +1,7 @@
 const AboutMe = () => {
   return (
-    <div id="about-me" className="w-screen min-h-screen md:pt-16">
-      <h2 className="p-5 flex justify-center text-4xl">About Me</h2>
+    <div id="about-me" className="min-h-screen">
+      <p className="sticky top-1.5 py-5 text-4xl text-center">About Me</p>
       <p className="text-justify text-lg md:w-2/3 mx-auto p-6">
         I am a composer, music editor, and orchestrator with a specialization
         towards film and television. As a graduate from the Berklee College of
@@ -27,8 +27,7 @@ const AboutMe = () => {
         . Recently, I scored a 6-part documentary series produced by the Academy
         of Motion Picture Arts and Sciences.
         <br />
-        <br />
-        I am currently based in Los Angeles, CA, working for Emmy-winning
+        <br />I am currently based in Los Angeles, CA, working for Emmy-winning
         composer Kris Bowers.
       </p>
     </div>
