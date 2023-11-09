@@ -2,9 +2,9 @@ import { SahilLogo } from "../logo-component";
 
 export const Header = () => {
   return (
-    <div id="header" className="absolute w-screen flex flex-col -mt-10">
+    <div id="header" className="absolute flex flex-col -mt-10">
       <SahilLogo />
-      <div className="flex-row justify-between py-3 md:py-10 text-center font-light animate-appear-slow [&>*]:px-2 [&>*:md]:px-2.5">
+      <div className="flex-row justify-between py-3 md:py-10 text-center font-light animate-appear-slow [&>*]:px-2 [&>*:md]:px-2.5 px-0 mx-0">
         <span>Composer</span>
         <span>|</span>
         <span>Orchestrator</span>
