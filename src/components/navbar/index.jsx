@@ -21,11 +21,9 @@ const DesktopNav = () => {
 
 const MobileNav = (props) => {
   return (
-    <nav
-      className={`fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow`}
-    >
+    <nav className="fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow">
       <div
-        className={`fixed origin-left transition-transform duration-200 flex flex-col bg-black/60 h-screen w-screen ${
+        className={`fixed origin-left transition-transform duration-200 backdrop-blur-lg flex flex-col bg-black/90 h-screen w-screen ${
           props.expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
         }`}
       >
@@ -100,7 +98,7 @@ export const NavBar = () => {
   return isMobile ? (
     <>
       <div
-        className={`fixed transition-all duration-100 h-screen w-screen backdrop-blur-sm brightness-80 bg-gradient-to-tr from-transparent via-transparent to-emerald-950 ${
+        className={`fixed transition-all duration-100 h-screen overflow-visible brightness-80 bg-gradient-to-tr from-transparent via-transparent to-emerald-950  ${
           !expanded && "hidden"
         }`}
       />

@@ -1,5 +1,4 @@
 export const HandlePlayback = (props) => {
-
   const selectedAudio = document.getElementById(`audio-${props.index}`);
   const playingAudio = document.getElementById(`audio-${props.currentTrack}`);
   if (!props.isPlaying) {

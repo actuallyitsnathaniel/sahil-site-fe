@@ -57,15 +57,22 @@ const AudioTrack = (props) => {
   );
 };
 
-AudioTrack.propTypes = {
-  src: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  film: PropTypes.string,
-  index: PropTypes.number,
-  isPlaying: PropTypes.bool,
-  setIsPlaying: PropTypes.func,
-  currentTrack: PropTypes.number,
-  setCurrentTrack: PropTypes.func,
+const AudioControls = (props) => {
+  const controls = true;
+  return (
+    <button
+      className={`fixed bottom-2 left-2 h-16 ${
+        props.currentTrack > -1 ? "visible" : "invisible"
+      }`}
+      onClick={() => HandlePlayback(props, controls)}
+    >
+      {props.isPlaying ? (
+        <img src={Pause} className="h-20" />
+      ) : (
+        <img src={Play} className="h-20" />
+      )}
+    </button>
+  );
 };
 
 const AudioPlayer = ({ children }) => {
@@ -82,11 +89,36 @@ const AudioPlayer = ({ children }) => {
     });
   });
 
-  return <div className="flex flex-wrap justify-center overflow-clip">{AudioTracks}</div>;
+  return (
+    <div>
+      {/* <AudioControls
+        {...{ isPlaying, setIsPlaying, currentTrack, setCurrentTrack }}
+      /> */}
+      <div className="flex flex-wrap justify-center">{AudioTracks}</div>
+    </div>
+  );
 };
 
 AudioPlayer.propTypes = {
   children: PropTypes.array,
+};
+
+AudioControls.propTypes = {
+  currentTrack: PropTypes.number,
+  isPlaying: PropTypes.bool,
+  setIsPlaying: PropTypes.func,
+  index: PropTypes.number,
+};
+
+AudioTrack.propTypes = {
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  film: PropTypes.string,
+  index: PropTypes.number,
+  isPlaying: PropTypes.bool,
+  setIsPlaying: PropTypes.func,
+  currentTrack: PropTypes.number,
+  setCurrentTrack: PropTypes.func,
 };
 
 AudioPlayer.Track = AudioTrack;
