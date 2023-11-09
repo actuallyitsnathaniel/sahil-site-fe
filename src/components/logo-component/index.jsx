@@ -13,7 +13,7 @@ export const SahilLogo = () => {
     <Link to={`#home`}>
       <div
         id="logo-container"
-        className="flex w-screen justify-center align-middle px-7 md:px-10"
+        className="flex mx-auto whitespace-nowrap justify-center align-middle px-7 md:px-10"
         alt="sahil-jindal-logo"
       >
         <div id="left-wrapper" className="overflow-clip">
@@ -23,7 +23,7 @@ export const SahilLogo = () => {
             alt="logo-left"
           />
         </div>
-        <div id="middle-wrapper" className="">
+        <div id="middle-wrapper">
           <img
             className={`h-48 m-0 p-[1px] sm:p-1.5 animate-fade-in-middle`}
             src={logoMiddle}
