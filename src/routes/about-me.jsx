@@ -1,7 +1,9 @@
 const AboutMe = () => {
   return (
-    <div id="about-me" className="min-h-screen">
-      <p className="sticky top-1.5 py-5 text-4xl text-center">About Me</p>
+    <div id="about-me" className="min-h-screen md:pt-14">
+      <p className="sticky md:hidden top-1.5 py-5 text-4xl text-center">
+        About Me
+      </p>
       <p className="text-justify text-lg md:w-2/3 mx-auto p-6">
         I am a composer, music editor, and orchestrator with a specialization
         towards film and television. As a graduate from the Berklee College of
