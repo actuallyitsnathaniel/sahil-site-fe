@@ -5,10 +5,11 @@ export const ConnectForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const inputStyle =
-    "flex mx-auto m-2 bg-opacity-20 rounded-md bg-white px-3 py-2 font-normal";
+    "flex mx-auto justify-between m-2 bg-opacity-20 rounded-md bg-white p-2 font-normal";
   const placeholderClasses =
     "placeholder:text-gray-400 placeholder:font-normal";
   const focusClasses = "focus-visible:outline-none focus:outline-white";
@@ -16,14 +17,14 @@ export const ConnectForm = () => {
   const HandleSubmit = (e) => {
     console.log("handleSubmit ran");
     e.preventDefault();
-    if (firstName != "" && lastName != "" && email != "") {
+    if (firstName != "" && lastName != "" && email != "" && message != "") {
       setSubmitted(true);
     }
   };
 
   const HandleDisabled = () => {
     if (!submitted) {
-      if (firstName != "" && lastName != "" && email != "") {
+      if (firstName != "" && lastName != "" && email != "" && message != "") {
         return false;
       }
     }
@@ -62,6 +63,15 @@ export const ConnectForm = () => {
             placeholder="email"
             onChange={(e) => {
               setEmail(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            id="message"
+            className={`${inputStyle} ${focusClasses} ${placeholderClasses} pb-28`}
+            placeholder="message"
+            onChange={(e) => {
+              setMessage(e.target.value);
             }}
           />
           <button
