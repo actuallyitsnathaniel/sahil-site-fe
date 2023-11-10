@@ -61,7 +61,7 @@ export const ConnectForm = () => {
               type="email"
               id="input-email"
               className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
-              placeholder="email"
+              placeholder="email@mail.com"
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
