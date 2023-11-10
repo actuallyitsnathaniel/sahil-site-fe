@@ -38,37 +38,39 @@ export const ConnectForm = () => {
           <h2 className="text-4xl p-6 text-center">
             Let&apos;s Make Something
           </h2>
-          <input
-            type="text"
-            id="input-firstName"
-            onChange={(e) => {
-              setFirstName(e.target.value);
-            }}
-            className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
-            placeholder="first name"
-          />
-          <input
-            type="text"
-            id="input-lastName"
-            className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
-            placeholder="last name"
-            onChange={(e) => {
-              setLastName(e.target.value);
-            }}
-          />
-          <input
-            type="email"
-            id="input-email"
-            className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
-            placeholder="email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
+          <div className="md:flex md:flex-row md:space-x-4">
+            <input
+              type="text"
+              id="input-firstName"
+              onChange={(e) => {
+                setFirstName(e.target.value);
+              }}
+              className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
+              placeholder="first name"
+            />
+            <input
+              type="text"
+              id="input-lastName"
+              className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
+              placeholder="last name"
+              onChange={(e) => {
+                setLastName(e.target.value);
+              }}
+            />
+            <input
+              type="email"
+              id="input-email"
+              className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
+              placeholder="email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </div>
           <input
             type="text"
             id="message"
-            className={`${inputStyle} ${focusClasses} ${placeholderClasses} pb-28`}
+            className={`${inputStyle} ${focusClasses} ${placeholderClasses} pb-28 md:w-full`}
             placeholder="message"
             onChange={(e) => {
               setMessage(e.target.value);
