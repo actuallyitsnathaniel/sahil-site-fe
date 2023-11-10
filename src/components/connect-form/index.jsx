@@ -10,6 +10,7 @@ export const ConnectForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useRef();
 
@@ -22,26 +23,26 @@ export const ConnectForm = () => {
   const focusClasses = "focus-visible:outline-none focus:outline-white";
 
   const HandleSubmit = (e) => {
-    console.log("handleSubmit ran");
     e.preventDefault();
-    console.log(form.current);
+    setIsSubmitting(true);
     if (firstName != "" && lastName != "" && email != "" && message != "") {
-      // emailjs
-      //   .sendForm(
-      //     import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      //     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      //     form.current,
-      //     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log(result.text);
-      setSubmitted(true);
-      //     },
-      //     (error) => {
-      //       console.log(error.text);
-      //     }
-      //   );
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setIsSubmitting(false);
+            setSubmitted(true);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     }
   };
 
@@ -56,7 +57,7 @@ export const ConnectForm = () => {
 
   return (
     <div className="flex flex-wrap flex-row align-middle py-30">
-      {!submitted ? (
+      {!isSubmitting ? (
         <form
           ref={form}
           id="connect-form"
@@ -107,19 +108,27 @@ export const ConnectForm = () => {
                 setMessage(e.target.value);
               }}
             />
-            <input
+            <button
               type="submit"
               className={
-                "flex font-semibold px-5 py-3 m-5 mx-auto rounded-lg outline outline-2 outline-white disabled:opacity-25"
+                "flex transition duration-75 font-semibold px-5 py-3 m-5 mx-auto rounded-lg outline outline-2 outline-white disabled:opacity-25 hover:enabled:-translate-y-1 hover:enabled:bg-gray-400 hover:enabled:bg-opacity-30 hover:enabled:outline-none"
               }
               disabled={HandleDisabled()}
               onClick={HandleSubmit}
-            />
+            >
+              Submit
+            </button>
           </div>
         </form>
-      ) : (
+      ) : submitted ? (
         <div className="flex flex-col md:my-auto">
           <EmailSent firstName={firstName} />
+        </div>
+      ) : (
+        <div className="flex flex-col md:my-auto">
+          <span>
+            Submitting... <p className="animate-bounce">📧</p>
+          </span>
         </div>
       )}
     </div>
