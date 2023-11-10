@@ -57,7 +57,7 @@ export const ConnectForm = () => {
 
   return (
     <div className="flex flex-wrap flex-row align-middle py-30">
-      {!isSubmitting ? (
+      {!isSubmitting && !submitted ? (
         <form
           ref={form}
           id="connect-form"
@@ -125,9 +125,9 @@ export const ConnectForm = () => {
           <EmailSent firstName={firstName} />
         </div>
       ) : (
-        <div className="flex flex-col md:my-auto">
-          <span>
-            Submitting... <p className="animate-bounce">📧</p>
+        <div className="flex flex-row md:my-auto">
+          <span className="flex text-3xl">
+            Submitting... <p className="animate-bounce px-5">📧</p>
           </span>
         </div>
       )}
