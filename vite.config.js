@@ -14,9 +14,6 @@ export default defineConfig(({ mode }) => {
       "process.env.VITE_EMAILJS_TEMPLATE_ID": JSON.stringify(
         env.VITE_EMAILJS_TEMPLATE_ID
       ),
-      "process.env.VITE_EMAILJS_PUBLIC_KEY": JSON.stringify(
-        env.VITE_EMAILJS_PUBLIC_KEY
-      ),
     },
     plugins: [react(), svgr()],
     server: {
