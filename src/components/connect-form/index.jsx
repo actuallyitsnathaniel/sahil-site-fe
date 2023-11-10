@@ -31,7 +31,7 @@ export const ConnectForm = () => {
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           form.current,
-          "M2SmZWsHMCtKWLk-e" // emailJS public key
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(
           (result) => {
