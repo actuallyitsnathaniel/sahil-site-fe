@@ -67,8 +67,7 @@ export const ConnectForm = () => {
               }}
             />
           </div>
-          <input
-            type="text"
+          <textarea
             id="message"
             className={`${inputStyle} ${focusClasses} ${placeholderClasses} pb-28 md:w-full`}
             placeholder="message"
