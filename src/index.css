@@ -19,9 +19,9 @@
 }
 
 /* DEBUG SPACINGS HERE */
-/* * {
+* {
   outline: 1px solid #f00 !important;
-} */
+}
 
 @media (prefers-color-scheme: light) {
   :root {

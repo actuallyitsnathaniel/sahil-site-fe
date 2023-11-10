@@ -1,4 +1,7 @@
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+import { capitalizeFirstLetter } from "../../utilities/util";
 import { EmailSent } from "./email-sent";
 
 export const ConnectForm = () => {
@@ -12,8 +15,10 @@ export const ConnectForm = () => {
 
   const inputStyle =
     "flex mx-auto justify-between m-2 bg-opacity-20 rounded-md bg-white p-2 font-normal";
+
   const placeholderClasses =
     "placeholder:text-gray-400 placeholder:font-normal";
+
   const focusClasses = "focus-visible:outline-none focus:outline-white";
 
   const HandleSubmit = (e) => {
@@ -21,7 +26,22 @@ export const ConnectForm = () => {
     e.preventDefault();
     console.log(form.current);
     if (firstName != "" && lastName != "" && email != "" && message != "") {
+      // emailjs
+      //   .sendForm(
+      //     import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      //     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      //     form.current,
+      //     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      //   )
+      //   .then(
+      //     (result) => {
+      //       console.log(result.text);
       setSubmitted(true);
+      //     },
+      //     (error) => {
+      //       console.log(error.text);
+      //     }
+      //   );
     }
   };
 
@@ -35,47 +55,44 @@ export const ConnectForm = () => {
   };
 
   return (
-    <div className="flex flex-wrap flex-row">
+    <div className="flex flex-wrap flex-row align-middle py-30">
       {!submitted ? (
         <form
           ref={form}
           id="connect-form"
-          className="flex flex-wrap flex-row items-center"
+          className="flex flex-col items-center md:my-auto"
         >
-          <div
-            id="input-wrapper"
-            className="flex flex-col justify-items-center"
-          >
-            <h2 className="text-4xl p-6 text-center">
-              Let&apos;s Make Something
-            </h2>
+          <h2 className="text-4xl p-6 text-center">
+            Let&apos;s Make Something
+          </h2>
+          <div id="input-wrapper" className="justify-items-center">
             <div className="md:flex md:flex-row md:space-x-4">
               <input
                 type="text"
                 id="input-firstName"
+                name="user_first_name"
                 className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
                 placeholder="first name"
-                value={firstName}
                 onChange={(e) => {
-                  setFirstName(e.target.value);
+                  setFirstName(capitalizeFirstLetter(e.target.value));
                 }}
               />
               <input
                 type="text"
                 id="input-lastName"
+                name="user_last_name"
                 className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
                 placeholder="last name"
-                value={lastName}
                 onChange={(e) => {
-                  setLastName(e.target.value);
+                  setLastName(capitalizeFirstLetter(e.target.value));
                 }}
               />
               <input
                 type="email"
                 id="input-email"
+                name="user_email"
                 className={`${inputStyle} ${focusClasses} ${placeholderClasses}`}
                 placeholder="email@mail.com"
-                value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
@@ -83,6 +100,7 @@ export const ConnectForm = () => {
             </div>
             <textarea
               id="message"
+              name="user_message"
               className={`${inputStyle} ${focusClasses} ${placeholderClasses} pb-28 md:w-full`}
               placeholder="message"
               onChange={(e) => {
@@ -100,7 +118,9 @@ export const ConnectForm = () => {
           </div>
         </form>
       ) : (
-        <EmailSent firstName={firstName} />
+        <div className="flex flex-col md:my-auto">
+          <EmailSent firstName={firstName} />
+        </div>
       )}
     </div>
   );

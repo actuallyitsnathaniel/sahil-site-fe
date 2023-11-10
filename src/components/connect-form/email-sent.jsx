@@ -2,11 +2,10 @@ import { PropTypes } from "prop-types";
 
 export const EmailSent = (props) => {
   return (
-    <div className="flex justify-center text-3xl text-center max-h-screen">
+    <div className="flex flex-col text-3xl text-center">
       <p>
         Thanks for connecting,&#xa0;
-        <span className="first-letter:uppercase">{props.firstName}</span>.
-        I&apos;ll reach out soon!
+        {props.firstName}.&#xa0;I&apos;ll reach out soon!
       </p>
     </div>
   );
