@@ -30,7 +30,15 @@ const AboutMe = () => {
         of Motion Picture Arts and Sciences.
         <br />
         <br />I am currently based in Los Angeles, CA, working for Emmy-winning
-        composer Kris Bowers.
+        composer,{" "}
+        <a
+          className="underline"
+          alt="kris-bowers-imdb"
+          href="https://www.imdb.com/name/nm3929283/?ref_=nv_sr_1"
+        >
+          Kris Bowers
+        </a>
+        .
       </p>
     </div>
   );
