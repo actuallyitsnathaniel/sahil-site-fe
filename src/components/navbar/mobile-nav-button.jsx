@@ -1,6 +1,4 @@
 import { PropTypes } from "prop-types";
-// import HamburgerIcon from "../../assets/images/icons/navbar/hamburger-icon.svg";
-// import CloseIcon from "../../assets/images/icons/navbar/close-icon.svg";
 
 export const MobileNavButton = (props) => {
   return (
