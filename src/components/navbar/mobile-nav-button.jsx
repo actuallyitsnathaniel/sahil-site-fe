@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
-import HamburgerIcon from "../../assets/images/icons/navbar/hamburger-icon.svg";
-import CloseIcon from "../../assets/images/icons/navbar/close-icon.svg";
+// import HamburgerIcon from "../../assets/images/icons/navbar/hamburger-icon.svg";
+// import CloseIcon from "../../assets/images/icons/navbar/close-icon.svg";
 
 export const MobileNavButton = (props) => {
   return (
@@ -8,23 +8,39 @@ export const MobileNavButton = (props) => {
       data-collapse-toggle="navbar"
       id="navbar-icon"
       type="button"
-      className={`transition-transform duration-100 fixed top-3 right-3 hover:scale-105 hover:-translate-y-1`}
+      className={`flex flex-col fixed top-3 right-3 m-4 z-[1] select-none duration-200 ${
+        props.expanded && "translate-x-2.5"
+      }`}
       aria-controls="navbar"
       aria-expanded="false"
       onClick={() => {
         props.setExpanded(!props.expanded);
       }}
     >
-      {props.expanded ? (
-        <img src={CloseIcon} className="h-16" alt="close" />
-      ) : (
-        <img src={HamburgerIcon} className="h-16" alt="hamburger-icon" />
-      )}
+      <span
+        className={`flex w-12 h-1 mb-2.5 relative bg-white rounded-sm origin-top-left duration-200 ${
+          props.expanded ? "rotate-45" : "rotate-0"
+        }`}
+      />
+      <span
+        className={`flex w-12 h-1 mb-2.5 relative bg-white rounded-sm origin-center duration-200 ${
+          props.expanded
+            ? "rotate-180 opacity-0 scale-0"
+            : "rotate-0 scale-100 opacity-100"
+        }`}
+      />
+      <span
+        className={`flex w-12 h-1 mb-2.5 relative bg-white rounded-sm origin-bottom-left duration-200 ${
+          props.expanded
+            ? "-rotate-45 translate-y-[5px]"
+            : "rotate-0 translate-y-0"
+        }`}
+      />
     </button>
   );
 };
 
 MobileNavButton.propTypes = {
   setExpanded: PropTypes.func,
-  expanded: PropTypes.func,
+  expanded: PropTypes.bool,
 };
