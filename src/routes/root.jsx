@@ -13,19 +13,17 @@ const Root = () => {
   return (
     <div
       id="root"
-      className="flex flex-wrap flex-col justify-center font-light"
+      className="flex flex-wrap flex-col justify-center font-light [&>*]:text-white"
     >
       {/* TODO: fix url so it updates to the viewed section when manually scrolling */}
       <BackgroundGradient />
-      <div id="root-wrapper">
-        <Home />
-        <AboutMe />
-        <Music />
-        <Credits />
-        <Connect />
-        <Footer />
-        <ScrollToHashElement />
-      </div>
+      <Home />
+      <AboutMe />
+      <Music />
+      <Credits />
+      <Connect />
+      <Footer />
+      <ScrollToHashElement />
       <NavBar />
     </div>
   );
