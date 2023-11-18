@@ -19,7 +19,7 @@ const AudioTrack = (props) => {
   };
 
   return (
-    <div className="grid py-5 sm:px-10 justify-items-center">
+    <div className="grid py-5 sm:px-10 justify-items-center basis-1/3">
       <h5>{props.title}</h5>
       {props.film ? (
         <p className="font-light text-sm">(from &quot;{props.film}&quot;)</p>
@@ -91,10 +91,10 @@ const AudioPlayer = ({ children }) => {
 
   return (
     <div>
-      {/* <AudioControls
-        {...{ isPlaying, setIsPlaying, currentTrack, setCurrentTrack }}
-      /> */}
-      <div className="flex flex-wrap justify-center">{AudioTracks}</div>
+      <div className="flex flex-wrap max-w-6xl justify-center">
+        <div id="audio-tracks" className="md:w-4/5"></div>
+        {AudioTracks}
+      </div>
     </div>
   );
 };
