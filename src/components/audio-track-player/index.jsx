@@ -27,11 +27,11 @@ const AudioTrack = (props) => {
         <p className="font-light text-sm">(Original)</p>
       )}
       <div id="controls" className="flex flex-row align-middle">
-        <button className="flex" onClick={() => HandlePlayback(props)}>
+        <button className="flex-shrink-0" onClick={() => HandlePlayback(props)}>
           {props.currentTrack == props.index ? (
             <img src={Pause} className="" alt="audio-pause" />
           ) : (
-            <img src={Play} alt="audio-play" />
+            <img src={Play} className="" alt="audio-play" />
           )}
           <audio
             src={props.src}
@@ -89,9 +89,7 @@ const AudioPlayer = ({ children }) => {
   return (
     <div>
       <div className="flex flex-wrap flex-col sm:flex-row sm:max-w-6xl justify-center">
-        {/* <div id="audio-tracks" className="flex flex-wrap flex-row md:flex-col"> */}
-        {AudioTracks}
-        {/* </div> */}
+        <div className="flex flex-wrap justify-center">{AudioTracks}</div>
       </div>
     </div>
   );
