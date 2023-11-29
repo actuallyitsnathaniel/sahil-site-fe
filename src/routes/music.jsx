@@ -27,7 +27,7 @@ const Music = () => {
   return (
     <div
       id="music"
-      className="flex flex-wrap min-h-screen justify-center md:pt-14"
+      className="flex flex-col w-full items-center flex-wrap min-h-screen md:pt-14"
     >
       <h2 className="sticky top-1.5 md:hidden py-5 text-4xl text-center">
         Music
