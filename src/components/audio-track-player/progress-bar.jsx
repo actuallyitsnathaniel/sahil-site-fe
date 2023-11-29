@@ -42,14 +42,14 @@ const ProgressBar = ({
   };
 
   return (
-    <div className="progress">
-      <span className="time current text-xs">{formatTime(timeProgress)}</span>
+    <div className="flex flex-nowrap text-center h-max">
+      <span className="flex h-full text-xs">{formatTime(timeProgress)}</span>
       <input
         type="range"
-        ref={progressBarRef} 
+        ref={progressBarRef}
         defaultValue={0}
         onChange={handleProgressChange}
-        className="appearance-none bg-transparent border-none align-middle mx-2 [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-black/25 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+        className="appearance-none bg-transparent border-none px-2 md:w-[100px] [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-black/25 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
       />
       <span className="time text-xs">{formatTime(duration)}</span>
     </div>
