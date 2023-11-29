@@ -42,8 +42,8 @@ const ProgressBar = ({
   };
 
   return (
-    <div className="flex text-center h-fit">
-      <span className="flex h-fit text-xs">{formatTime(timeProgress)}</span>
+    <div className="flex text-center w-fit">
+      <span className="flex text-xs">{formatTime(timeProgress)}</span>
       <input
         type="range"
         ref={progressBarRef}
