@@ -42,8 +42,8 @@ const ProgressBar = ({
   };
 
   return (
-    <div className="flex flex-nowrap text-center h-max">
-      <span className="flex h-full text-xs">{formatTime(timeProgress)}</span>
+    <div className="flex flex-nowrap text-center h-fit">
+      <span className="flex h-fit text-xs">{formatTime(timeProgress)}</span>
       <input
         type="range"
         ref={progressBarRef}
