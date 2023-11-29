@@ -88,10 +88,10 @@ const AudioPlayer = ({ children }) => {
 
   return (
     <div>
-      <div className="flex flex-wrap md:flex-row flex-col max-w-6xl justify-center">
-        <div id="audio-tracks" className="flex flex-wrap flex-col md:flex-row">
-          {AudioTracks}
-        </div>
+      <div className="flex flex-wrap flex-col sm:flex-row sm:max-w-6xl justify-center">
+        {/* <div id="audio-tracks" className="flex flex-wrap flex-row md:flex-col"> */}
+        {AudioTracks}
+        {/* </div> */}
       </div>
     </div>
   );
