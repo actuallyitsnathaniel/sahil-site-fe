@@ -1,11 +1,13 @@
 const Footer = () => {
   return (
-    <footer className="absolute w-full justify-center flex flex-wrap text-white text-center p-3">
+    <footer className="w-full justify-center flex flex-wrap text-white text-center p-3">
       <p className="grid md:text-md">
         Copyright © {new Date().getFullYear()} Sahil Jindal, powered by{" "}
         <a
           className="underline underline-offset-4"
-          href="mailto:nathanielrbowman@gmail.com"
+          href="https://dev.actuallyitsnathaniel.com"
+          target="_blank"
+          rel="noreferrer"
         >
           nathaniel bowman
         </a>
