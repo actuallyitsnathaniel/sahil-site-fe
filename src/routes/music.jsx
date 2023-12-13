@@ -37,7 +37,7 @@ const Music = () => {
       <AudioPlayer>
         <AudioPlayer.Track
           src={supermanDoesntSteal}
-          title="Main Title"
+          title="Superman Doesn't Steal"
           film="Superman Doesn't Steal"
         />
         <AudioPlayer.Track
