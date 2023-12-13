@@ -22,6 +22,7 @@ import underYourCommand from "../assets/audio/under-your-command.mp3";
 import visitingLondon from "../assets/audio/visiting-london.mp3";
 import voila from "../assets/audio/voila.mp3";
 import noTheyDont from "../assets/audio/no-they-dont.wav";
+import supermanDoesntSteal from "../assets/audio/superman-doesnt-steal-WIP-oct-17.mp3";
 
 const Music = () => {
   return (
@@ -34,6 +35,11 @@ const Music = () => {
       </h2>
       {/* TODO: top left, have play/pause feature */}
       <AudioPlayer>
+        <AudioPlayer.Track
+          src={supermanDoesntSteal}
+          title="Main Title"
+          film="Superman Doesn't Steal"
+        />
         <AudioPlayer.Track
           src={aStoryAtSea}
           title="A Story at Sea"
