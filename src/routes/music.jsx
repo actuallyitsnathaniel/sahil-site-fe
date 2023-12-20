@@ -23,6 +23,7 @@ import visitingLondon from "../assets/audio/visiting-london.mp3";
 import voila from "../assets/audio/voila.mp3";
 import noTheyDont from "../assets/audio/no-they-dont.wav";
 import supermanDoesntSteal from "../assets/audio/superman-doesnt-steal-WIP-oct-17.mp3";
+import reminiscence from "../assets/audio/Reminiscence.mp3";
 
 const Music = () => {
   return (
@@ -35,6 +36,11 @@ const Music = () => {
       </h2>
       {/* TODO: top left, have play/pause feature */}
       <AudioPlayer>
+        <AudioPlayer.Track
+          src={reminiscence}
+          title="Reminiscence"
+          film="Back to the Source"
+        />
         <AudioPlayer.Track
           src={supermanDoesntSteal}
           title="Superman Doesn't Steal"
