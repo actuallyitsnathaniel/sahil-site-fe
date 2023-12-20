@@ -37,9 +37,9 @@ const Music = () => {
       {/* TODO: top left, have play/pause feature */}
       <AudioPlayer>
         <AudioPlayer.Track
-          src={reminiscence}
-          title="Reminiscence"
-          film="Back to the Source"
+          src={aStoryAtSea}
+          title="A Story at Sea"
+          film="Dear Watsonville"
         />
         <AudioPlayer.Track
           src={supermanDoesntSteal}
@@ -47,9 +47,9 @@ const Music = () => {
           film="Superman Doesn't Steal"
         />
         <AudioPlayer.Track
-          src={aStoryAtSea}
-          title="A Story at Sea"
-          film="Dear Watsonville"
+          src={reminiscence}
+          title="Reminiscence"
+          film="Back to the Source"
         />
         <AudioPlayer.Track
           src={maintitlePrisonerOfEarth}
