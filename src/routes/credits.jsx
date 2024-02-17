@@ -5,6 +5,7 @@ import unitedInGrief from "../assets/images/united-in-grief.jpeg";
 import whosTexting from "../assets/images/whos-texting.jpeg";
 import academyGoldSound from "../assets/images/academy-gold-sound.png";
 import starTrekShortTreks from "../assets/images/star-trek-short-treks.jpeg";
+import supermanDoesntSteal from "../assets/images/superman-doesnt-steal.png";
 // eslint-disable-next-line no-unused-vars
 import placeholder from "../assets/images/placeholder.png";
 import prisonerOfEarth from "../assets/images/prisoner-of-earth.jpeg";
@@ -17,6 +18,7 @@ import theMotherOfAllFlowers from "../assets/images/the-mother-of-all-flowers.jp
 
 // Music Department
 import secretInvasion from "../assets/images/secret-invasion.jpeg";
+import theColorPurple from "../assets/images/the-color-purple.jpg";
 import origin from "../assets/images/origin.jpeg";
 import lastRepairShop from "../assets/images/the-last-repair-shop.jpeg";
 import disneyHauntedMansion from "../assets/images/disney-haunted-mansion.jpeg";
@@ -40,6 +42,11 @@ const Credits = () => {
       <div id="composer">
         <h3 className="text-3xl text-center">Composer (Selection)</h3>
         <div className="flex flex-wrap flex-row justify-center">
+          <CreditedWork
+            artwork={supermanDoesntSteal}
+            title={"Superman Doesn't Steal (Short)"}
+            alt={"superman-doesnt-steal"}
+          />
           <CreditedWork
             artwork={unitedInGrief}
             title={"United in Grief (Short)"}
@@ -104,6 +111,11 @@ const Credits = () => {
             artwork={secretInvasion}
             title={"Marvel Studios: Secret Invasion (TV Series)"}
             alt={"marvel-studios-secret-invasion"}
+          />
+          <CreditedWork
+            artwork={theColorPurple}
+            title={"The Color Purple"}
+            alt={"the-color-purple"}
           />
           <CreditedWork
             artwork={origin}

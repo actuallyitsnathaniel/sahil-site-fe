@@ -19,7 +19,8 @@ import solaceInSolitude from "../assets/audio/solace-in-solitude.mp3";
 import theHunted from "../assets/audio/the-hunted.mp3";
 import tribbles from "../assets/audio/tribbles.mp3";
 import underYourCommand from "../assets/audio/under-your-command.mp3";
-import visitingLondon from "../assets/audio/visiting-london.mp3";
+// import visitingLondon from "../assets/audio/visiting-london.mp3";
+import stellarReverie from "../assets/audio/stellar-reverie.mp3";
 import voila from "../assets/audio/voila.mp3";
 import noTheyDont from "../assets/audio/no-they-dont.wav";
 import supermanDoesntSteal from "../assets/audio/superman-doesnt-steal-WIP-oct-17.mp3";
@@ -128,11 +129,7 @@ const Music = () => {
           title="End Credits"
           film="Academy Gold"
         />
-        <AudioPlayer.Track
-          src={visitingLondon}
-          title="Visiting London"
-          film="Academy Gold"
-        />
+        <AudioPlayer.Track src={stellarReverie} title="Stellar Reverie" />
         <AudioPlayer.Track src={theHunted} title="The Hunted" />
         <AudioPlayer.Track
           src={justFriendsIThink}
