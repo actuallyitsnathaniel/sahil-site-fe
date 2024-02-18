@@ -5,7 +5,7 @@ import unitedInGrief from "../assets/images/united-in-grief.jpeg";
 import whosTexting from "../assets/images/whos-texting.jpeg";
 import academyGoldSound from "../assets/images/academy-gold-sound.png";
 import starTrekShortTreks from "../assets/images/star-trek-short-treks.jpeg";
-import supermanDoesntSteal from "../assets/images/superman-doesnt-steal.png";
+import supermanDoesntSteal from "../assets/images/superman-doesnt-steal.jpeg";
 // eslint-disable-next-line no-unused-vars
 import placeholder from "../assets/images/placeholder.png";
 import prisonerOfEarth from "../assets/images/prisoner-of-earth.jpeg";
