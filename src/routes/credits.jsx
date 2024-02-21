@@ -1,13 +1,15 @@
 import { CreditedWork } from "../components/credited-work";
 
+// eslint-disable-next-line no-unused-vars
+import placeholder from "../assets/images/placeholder.png";
+
 // Composer
 import unitedInGrief from "../assets/images/united-in-grief.jpeg";
 import whosTexting from "../assets/images/whos-texting.jpeg";
 import academyGoldSound from "../assets/images/academy-gold-sound.png";
 import starTrekShortTreks from "../assets/images/star-trek-short-treks.jpeg";
 import supermanDoesntSteal from "../assets/images/superman-doesnt-steal.jpeg";
-// eslint-disable-next-line no-unused-vars
-import placeholder from "../assets/images/placeholder.png";
+import goldDigger from "../assets/images/gold-digger-poster-landscape.jpg";
 import prisonerOfEarth from "../assets/images/prisoner-of-earth.jpeg";
 import voila from "../assets/images/voila.jpeg";
 import sunnyfieldKids from "../assets/images/sunnyfield-kids.png";
@@ -46,6 +48,11 @@ const Credits = () => {
             artwork={supermanDoesntSteal}
             title={"Superman Doesn't Steal (Short)"}
             alt={"superman-doesnt-steal"}
+          />
+          <CreditedWork
+            artwork={goldDigger}
+            title={"Gold Digger"}
+            alt="gold-digger"
           />
           <CreditedWork
             artwork={unitedInGrief}
