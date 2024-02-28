@@ -4,6 +4,8 @@ import { CreditedWork } from "../components/credited-work";
 import placeholder from "../assets/images/placeholder.png";
 
 // Composer
+import dearWatsonville from "/src/assets/images/dear-watsonville.jpg";
+import backToTheSource from "/src/assets/images/back-to-the-source.jpeg";
 import unitedInGrief from "../assets/images/united-in-grief.jpeg";
 import whosTexting from "../assets/images/whos-texting.jpeg";
 import academyGoldSound from "../assets/images/academy-gold-sound.png";
@@ -44,6 +46,16 @@ const Credits = () => {
       <div id="composer">
         <h3 className="text-3xl text-center">Composer (Selection)</h3>
         <div className="flex flex-wrap flex-row justify-center">
+          <CreditedWork
+            artwork={dearWatsonville}
+            title={"Dear Watsonville (Short)"}
+            alt={"dear-watsonville"}
+          />
+          <CreditedWork
+            artwork={backToTheSource}
+            title={"Back To the Source (Short)"}
+            alt={"back-to-the-source"}
+          />
           <CreditedWork
             artwork={supermanDoesntSteal}
             title={"Superman Doesn't Steal (Short)"}

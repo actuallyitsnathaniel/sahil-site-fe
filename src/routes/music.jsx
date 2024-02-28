@@ -1,4 +1,7 @@
 import AudioPlayer from "../components/audio-track-player";
+
+import berryFields from "/src/assets/audio/berry-fields.mp3";
+import captainsLog from "/src/assets/audio/captains-log.mp3";
 import aStoryAtSea from "../assets/audio/a-story-at-sea.mp3";
 import buddingRomance from "../assets/audio/budding-romance.mp3";
 import cinematography from "../assets/audio/cinematography.mp3";
@@ -18,7 +21,7 @@ import rememberingDeath from "../assets/audio/remembering-death.mp3";
 import solaceInSolitude from "../assets/audio/solace-in-solitude.mp3";
 import theHunted from "../assets/audio/the-hunted.mp3";
 import tribbles from "../assets/audio/tribbles.mp3";
-import underYourCommand from "../assets/audio/under-your-command.mp3";
+// import underYourCommand from "../assets/audio/under-your-command.mp3";
 // import visitingLondon from "../assets/audio/visiting-london.mp3";
 import stellarReverie from "../assets/audio/stellar-reverie.mp3";
 import voila from "../assets/audio/voila.mp3";
@@ -37,6 +40,16 @@ const Music = () => {
       </h2>
       {/* TODO: top left, have play/pause feature */}
       <AudioPlayer>
+        <AudioPlayer.Track
+          src={berryFields}
+          title="Berry Fields"
+          film="Dear Watsonville"
+        />
+        <AudioPlayer.Track
+          src={captainsLog}
+          title="Captain's Log"
+          film="Star Trek"
+        />
         <AudioPlayer.Track
           src={aStoryAtSea}
           title="A Story at Sea"
@@ -92,11 +105,6 @@ const Music = () => {
           film="Prisoner of Earth"
         />
         <AudioPlayer.Track src={solaceInSolitude} title="Solace in Solitude" />
-        <AudioPlayer.Track
-          src={underYourCommand}
-          title="Under Your Command"
-          film="Star Trek"
-        />
         <AudioPlayer.Track src={tribbles} title="Tribbles" film="Star Trek" />
         <AudioPlayer.Track src={buddingRomance} title="Budding Romance" />
         <AudioPlayer.Track
