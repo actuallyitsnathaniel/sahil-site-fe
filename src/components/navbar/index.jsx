@@ -6,7 +6,7 @@ import { MobileNavButton } from "./mobile-nav-button";
 
 const DesktopNav = () => {
   return (
-    <nav className="transition-transform duration-100 fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow">
+    <nav className="transition-transform duration-100 fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow bg-gradient-to-b from-emerald-800 from-5% via-15% to-transparent to-110%">
       <ul className="flex transition-transform duration-100 text-center flex-wrap flex-col md:flex-row py-4 w-screen justify-evenly">
         <NavItem text="Home" link={`#home`} />
         <NavItem text="About Me" link={`#about-me`} />
