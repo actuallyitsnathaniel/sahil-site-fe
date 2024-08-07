@@ -1,25 +1,28 @@
 import AudioPlayer from "../components/audio-track-player";
 
-import berryFields from "/src/assets/audio/berry-fields.mp3";
+// import berryFields from "/src/assets/audio/berry-fields.mp3";
 import captainsLog from "/src/assets/audio/captains-log.mp3";
+import carolineInTrance from "/src/assets/audio/caroline-in-trance.mp3";
+import dadsMessages from "/src/assets/audio/dads-messages.mp3";
 import aStoryAtSea from "../assets/audio/a-story-at-sea.mp3";
 import buddingRomance from "../assets/audio/budding-romance.mp3";
 import cinematography from "../assets/audio/cinematography.mp3";
 import circuitryOverload from "../assets/audio/circuitry-overload.mp3";
 import dangerousCarChase from "../assets/audio/dangerous-car-chase.mp3";
 import deadlines from "../assets/audio/deadlines.mp3";
-import endCreditsAcademyGold from "../assets/audio/end-credits-academy-gold.mp3";
+// import endCreditsAcademyGold from "../assets/audio/end-credits-academy-gold.mp3";
 import endCreditsPrisonerOfEarth from "../assets/audio/end-credits-prisoner-of-earth.mp3";
 import farusComesHome from "../assets/audio/farus-comes-home.mp3";
-import imNotDumb from "../assets/audio/i'm-not-dumb.mp3";
-import justFriendsIThink from "../assets/audio/just-friends-i-think.mp3";
+// import imNotDumb from "../assets/audio/i'm-not-dumb.mp3";
+// import justFriendsIThink from "../assets/audio/just-friends-i-think.mp3";
 import loveAndLoss from "../assets/audio/love-and-loss.mp3";
 import mainTitleAcademyGold from "../assets/audio/main-title-academy-gold.mp3";
 import maintitlePrisonerOfEarth from "../assets/audio/main-title-prisoner-of-earth.mp3";
 import monstersInTheClost from "../assets/audio/monsters-in-the-closet.mp3";
-import rememberingDeath from "../assets/audio/remembering-death.mp3";
+// import rememberingDeath from "../assets/audio/remembering-death.mp3";
 import solaceInSolitude from "../assets/audio/solace-in-solitude.mp3";
-import theHunted from "../assets/audio/the-hunted.mp3";
+// import theHunted from "../assets/audio/the-hunted.mp3";
+import theWoods from "/src/assets/audio/the-woods.mp3";
 import tribbles from "../assets/audio/tribbles.mp3";
 // import underYourCommand from "../assets/audio/under-your-command.mp3";
 // import visitingLondon from "../assets/audio/visiting-london.mp3";
@@ -41,19 +44,39 @@ const Music = () => {
       {/* TODO: top left, have play/pause feature */}
       <AudioPlayer>
         <AudioPlayer.Track
-          src={berryFields}
-          title="Berry Fields"
-          film="Dear Watsonville"
-        />
-        <AudioPlayer.Track
-          src={captainsLog}
-          title="Captain's Log"
-          film="Star Trek"
+          src={maintitlePrisonerOfEarth}
+          title="Main Title"
+          film="Prisoner of Earth"
         />
         <AudioPlayer.Track
           src={aStoryAtSea}
           title="A Story at Sea"
           film="Dear Watsonville"
+        />
+        <AudioPlayer.Track
+          src={circuitryOverload}
+          title="Circuitry Overload"
+          film="Star Trek"
+        />
+        <AudioPlayer.Track
+          src={dadsMessages}
+          title="Dad's Messages"
+          film="Wrong Side Up"
+        />
+        <AudioPlayer.Track
+          src={carolineInTrance}
+          title="Caroline in Trance"
+          film="Sunnyfield Kids"
+        />
+        <AudioPlayer.Track
+          src={theWoods}
+          title="The Woods"
+          film="Superman Doesn't Steal"
+        />
+        <AudioPlayer.Track
+          src={captainsLog}
+          title="Captain's Log"
+          film="Star Trek"
         />
         <AudioPlayer.Track
           src={supermanDoesntSteal}
@@ -64,16 +87,6 @@ const Music = () => {
           src={reminiscence}
           title="Reminiscence"
           film="Back to the Source"
-        />
-        <AudioPlayer.Track
-          src={maintitlePrisonerOfEarth}
-          title="Main Title"
-          film="Prisoner of Earth"
-        />
-        <AudioPlayer.Track
-          src={circuitryOverload}
-          title="Circuitry Overload"
-          film="Star Trek"
         />
         <AudioPlayer.Track
           src={dangerousCarChase}
@@ -99,11 +112,6 @@ const Music = () => {
           src={monstersInTheClost}
           title="Monsters in the Closet"
         />
-        <AudioPlayer.Track
-          src={rememberingDeath}
-          title="Remembering Death"
-          film="Prisoner of Earth"
-        />
         <AudioPlayer.Track src={solaceInSolitude} title="Solace in Solitude" />
         <AudioPlayer.Track src={tribbles} title="Tribbles" film="Star Trek" />
         <AudioPlayer.Track src={buddingRomance} title="Budding Romance" />
@@ -111,11 +119,6 @@ const Music = () => {
           src={farusComesHome}
           title="Farus Comes Home"
           film="Prisoner of Earth"
-        />
-        <AudioPlayer.Track
-          src={imNotDumb}
-          title="I'm Not Dumb"
-          film="Star Trek"
         />
         <AudioPlayer.Track
           src={endCreditsPrisonerOfEarth}
@@ -132,17 +135,7 @@ const Music = () => {
           title="Deadlines"
           film="Academy Gold"
         />
-        <AudioPlayer.Track
-          src={endCreditsAcademyGold}
-          title="End Credits"
-          film="Academy Gold"
-        />
         <AudioPlayer.Track src={stellarReverie} title="Stellar Reverie" />
-        <AudioPlayer.Track src={theHunted} title="The Hunted" />
-        <AudioPlayer.Track
-          src={justFriendsIThink}
-          title="Just Friends... I Think"
-        />
       </AudioPlayer>
     </div>
   );
