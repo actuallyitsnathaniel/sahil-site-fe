@@ -21,6 +21,7 @@ import lastSummer from "../assets/images/last-summer.jpeg";
 import theMotherOfAllFlowers from "../assets/images/the-mother-of-all-flowers.jpg";
 
 // Music Department
+import theWildRobot from "../assets/images/the-wild-robot.jpg";
 import secretInvasion from "../assets/images/secret-invasion.jpeg";
 import theColorPurple from "../assets/images/the-color-purple.jpg";
 import origin from "../assets/images/origin.jpeg";
@@ -125,7 +126,12 @@ const Credits = () => {
       </div>
       <div id="music-dept">
         <h3 className="text-3xl text-center">Music Department</h3>
-        <div className="flex flex-wrap flex-row justify-center">
+        <div className="flex flex-wrap flex-row justify-center gap-x-3">
+          <CreditedWork
+            artwork={theWildRobot}
+            title="Dreamworks: The Wild Robot (Feature Film)"
+            alt={"dreamworks-the-wild-robot"}
+          />
           <CreditedWork
             artwork={secretInvasion}
             title={"Marvel Studios: Secret Invasion (TV Series)"}
