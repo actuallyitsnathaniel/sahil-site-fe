@@ -2,14 +2,11 @@ import AudioPlayer from "../components/audio-track-player";
 
 // import berryFields from "/src/assets/audio/berry-fields.mp3";
 import captainsLog from "/src/assets/audio/captains-log.mp3";
-import carolineInTrance from "/src/assets/audio/caroline-in-trance.mp3";
 import dadsMessages from "/src/assets/audio/dads-messages.mp3";
 import aStoryAtSea from "../assets/audio/a-story-at-sea.mp3";
 import buddingRomance from "../assets/audio/budding-romance.mp3";
-import cinematography from "../assets/audio/cinematography.mp3";
 import circuitryOverload from "../assets/audio/circuitry-overload.mp3";
 import dangerousCarChase from "../assets/audio/dangerous-car-chase.mp3";
-import deadlines from "../assets/audio/deadlines.mp3";
 // import endCreditsAcademyGold from "../assets/audio/end-credits-academy-gold.mp3";
 import endCreditsPrisonerOfEarth from "../assets/audio/end-credits-prisoner-of-earth.mp3";
 import farusComesHome from "../assets/audio/farus-comes-home.mp3";
@@ -62,11 +59,6 @@ const Music = () => {
           src={dadsMessages}
           title="Dad's Messages"
           film="Wrong Side Up"
-        />
-        <AudioPlayer.Track
-          src={carolineInTrance}
-          title="Caroline in Trance"
-          film="Sunnyfield Kids"
         />
         <AudioPlayer.Track
           src={theWoods}
@@ -124,16 +116,6 @@ const Music = () => {
           src={endCreditsPrisonerOfEarth}
           title="End Credits"
           film="Prisoner of Earth"
-        />
-        <AudioPlayer.Track
-          src={cinematography}
-          title="Cinematography"
-          film="Academy Gold"
-        />
-        <AudioPlayer.Track
-          src={deadlines}
-          title="Deadlines"
-          film="Academy Gold"
         />
         <AudioPlayer.Track src={stellarReverie} title="Stellar Reverie" />
       </AudioPlayer>
