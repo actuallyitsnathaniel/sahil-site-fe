@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { LegacyRef, MouseEventHandler, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { capitalizeFirstLetter } from "../../utilities/util";
@@ -12,7 +12,7 @@ export const ConnectForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const form = useRef();
+  const form = useRef<string | HTMLFormElement>(null);
 
   const inputStyle =
     "flex mx-auto justify-between m-2 bg-opacity-20 rounded-md bg-white p-2 font-normal";
@@ -22,7 +22,7 @@ export const ConnectForm = () => {
 
   const focusClasses = "focus-visible:outline-none focus:outline-white";
 
-  const HandleSubmit = (e) => {
+  const HandleSubmit = (e: MouseEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     if (firstName != "" && lastName != "" && email != "" && message != "") {
@@ -30,7 +30,7 @@ export const ConnectForm = () => {
         .sendForm(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form.current,
+          form.current!,
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(
@@ -59,7 +59,7 @@ export const ConnectForm = () => {
     <div className="flex flex-wrap flex-row align-middle py-30">
       {!isSubmitting && !submitted ? (
         <form
-          ref={form}
+          ref={form as LegacyRef<HTMLFormElement> | undefined}
           id="connect-form"
           className="flex flex-col items-center md:my-auto"
         >
@@ -114,7 +114,7 @@ export const ConnectForm = () => {
                 "flex transition duration-75 font-semibold px-5 py-3 m-5 mx-auto rounded-lg outline outline-2 outline-white disabled:opacity-25 hover:enabled:-translate-y-1 hover:enabled:bg-gray-400 hover:enabled:bg-opacity-30 hover:enabled:outline-none"
               }
               disabled={HandleDisabled()}
-              onClick={HandleSubmit}
+              onClick={() => HandleSubmit}
             >
               Submit
             </button>

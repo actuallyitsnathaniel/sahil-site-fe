@@ -14,7 +14,7 @@ export const SahilLogo = () => {
       <div
         id="logo-container"
         className="flex mx-auto whitespace-nowrap justify-center align-middle px-7 md:px-10"
-        alt="sahil-jindal-logo"
+        aria-label="sahil-jindal-logo"
       >
         <div id="left-wrapper" className="overflow-clip">
           <img

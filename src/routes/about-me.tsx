@@ -33,7 +33,7 @@ const AboutMe = () => {
         composer,{" "}
         <a
           className="underline"
-          alt="kris-bowers-imdb"
+          aria-label="kris-bowers-imdb"
           href="https://www.imdb.com/name/nm3929283/?ref_=nv_sr_1"
         >
           Kris Bowers

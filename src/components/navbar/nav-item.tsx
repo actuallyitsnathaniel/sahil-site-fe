@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Dispatch, SetStateAction } from "react";
 
-export const NavItem = (props) => {
+export const NavItem = ({
+  text,
+  link,
+  setExpanded,
+}: {
+  text?: string;
+  link: string;
+  setExpanded?: Dispatch<SetStateAction<boolean>>;
+}) => {
   /**
    * TODO:
    * DESKTOP:
@@ -13,12 +22,12 @@ export const NavItem = (props) => {
     <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-2">
       <Link
         className={`hover:text-orange-300 hover:scale-110 p-5 font-normal`}
-        to={props.link}
+        to={link}
         onClick={() => {
-          props.setExpanded && props.setExpanded(false);
+          setExpanded && setExpanded(false);
         }}
       >
-        {props.text}
+        {text}
       </Link>
     </li>
   );

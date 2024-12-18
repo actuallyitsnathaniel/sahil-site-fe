@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { PropTypes } from "prop-types";
+import { useState, useEffect, SetStateAction, Dispatch } from "react";
 
 import { NavItem } from "./nav-item";
 import { MobileNavButton } from "./mobile-nav-button";
@@ -18,53 +17,39 @@ const DesktopNav = () => {
   );
 };
 
-const MobileNav = (props) => {
+const MobileNav = ({
+  setExpanded,
+  expanded,
+}: {
+  setExpanded: Dispatch<SetStateAction<boolean>>;
+  expanded: boolean;
+}) => {
   return (
     <nav className="fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow">
       <div
         className={`fixed origin-left transition-transform duration-200 backdrop-blur-lg flex flex-col bg-black/90 h-screen w-screen ${
-          props.expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
+          expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
         }`}
       >
         <ul className="flex flex-col h-[90%] justify-evenly text-center">
-          <NavItem text="Home" link={`#home`} setExpanded={props.setExpanded} />
+          <NavItem text="Home" link={`#home`} setExpanded={setExpanded} />
           <NavItem
             text="About Me"
             link={`#about-me`}
-            setExpanded={props.setExpanded}
+            setExpanded={setExpanded}
           />
-          <NavItem
-            text="Music"
-            link={`#music`}
-            setExpanded={props.setExpanded}
-          />
-          <NavItem
-            text="Credits"
-            link={`#credits`}
-            setExpanded={props.setExpanded}
-          />
-          <NavItem
-            text="Connect"
-            link={`#connect`}
-            setExpanded={props.setExpanded}
-          />
+          <NavItem text="Music" link={`#music`} setExpanded={setExpanded} />
+          <NavItem text="Credits" link={`#credits`} setExpanded={setExpanded} />
+          <NavItem text="Connect" link={`#connect`} setExpanded={setExpanded} />
         </ul>
       </div>
-      <MobileNavButton
-        expanded={props.expanded}
-        setExpanded={props.setExpanded}
-      />
+      <MobileNavButton expanded={expanded} setExpanded={setExpanded} />
     </nav>
   );
 };
 
-MobileNav.propTypes = {
-  setExpanded: PropTypes.func,
-  expanded: PropTypes.bool,
-};
-
 export const NavBar = () => {
-  const [windowDimension, setWindowDimension] = useState(null);
+  const [windowDimension, setWindowDimension] = useState(window.innerWidth);
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
