@@ -17,12 +17,12 @@ const AudioTrack = ({
 }: {
   src: string;
   title: string;
-  film: string;
-  index: number;
-  isPlaying: boolean;
-  setIsPlaying: Dispatch<SetStateAction<boolean>>;
-  currentTrack: number;
-  setCurrentTrack: Dispatch<SetStateAction<number>>;
+  film?: string;
+  index?: number;
+  isPlaying?: boolean;
+  setIsPlaying?: Dispatch<SetStateAction<boolean>>;
+  currentTrack?: number;
+  setCurrentTrack?: Dispatch<SetStateAction<number>>;
 }) => {
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -61,7 +61,7 @@ const AudioTrack = ({
             })
           }
         >
-          {currentTrack === index ? (
+          {currentTrack === index && isPlaying ? (
             <img src={Pause} alt="audio-pause" />
           ) : (
             <img src={Play} alt="audio-play" />

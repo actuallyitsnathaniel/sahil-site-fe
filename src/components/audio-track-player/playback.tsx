@@ -7,11 +7,11 @@ export const HandlePlayback = ({
   isPlaying,
   setIsPlaying,
 }: {
-  index: number;
-  currentTrack: number;
-  setCurrentTrack: Dispatch<SetStateAction<number>>;
-  isPlaying: boolean;
-  setIsPlaying: Dispatch<SetStateAction<boolean>>;
+  index?: number;
+  currentTrack?: number;
+  setCurrentTrack?: Dispatch<SetStateAction<number>>;
+  isPlaying?: boolean;
+  setIsPlaying?: Dispatch<SetStateAction<boolean>>;
 }) => {
   const selectedAudio = document.getElementById(
     `audio-${index}`
@@ -29,16 +29,16 @@ export const HandlePlayback = ({
       selectedAudio.load();
       selectedAudio.play();
     }
-    setCurrentTrack(index);
-    setIsPlaying(true);
+    setCurrentTrack!(index!);
+    setIsPlaying!(true);
   } else {
     if (selectedAudio) {
       if (isPlaying) {
         selectedAudio.pause();
-        setIsPlaying(false);
+        setIsPlaying!(false);
       } else {
         selectedAudio.play();
-        setIsPlaying(true);
+        setIsPlaying!(true);
       }
     }
   }
