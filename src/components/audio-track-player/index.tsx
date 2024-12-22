@@ -120,7 +120,7 @@ const FloatingPlayPauseButton = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isMobile = windowDimension <= 640;
+  const isMobile = windowDimension <= 785;
 
   return (
     <button

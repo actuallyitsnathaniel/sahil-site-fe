@@ -41,7 +41,7 @@ const Credits = () => {
       id="credits"
       className="flex flex-wrap min-h-screen justify-center md:pt-14"
     >
-      <h2 className="sticky md:hidden top-1.5 py-5 text-4xl text-center">
+      <h2 className="sticky md:hidden top-1.5 py-5 text-4xl text-center z-[1]">
         Credits
       </h2>
       <div id="composer">

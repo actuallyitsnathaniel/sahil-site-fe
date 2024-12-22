@@ -35,7 +35,7 @@ const Music = () => {
       id="music"
       className="flex flex-col w-full items-center flex-wrap min-h-screen md:pt-14"
     >
-      <h2 className="sticky top-1.5 md:hidden py-5 text-4xl text-center">
+      <h2 className="sticky top-1.5 md:hidden py-5 text-4xl text-center z-[1]">
         Music
       </h2>
       {/* TODO: top left, have play/pause feature */}

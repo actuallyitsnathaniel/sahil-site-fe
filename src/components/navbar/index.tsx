@@ -6,7 +6,7 @@ import { MobileNavButton } from "./mobile-nav-button";
 const DesktopNav = () => {
   return (
     <nav className="transition-transform duration-100 fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow bg-gradient-to-b from-emerald-800 from-5% via-15% to-transparent to-110%">
-      <ul className="flex transition-transform duration-100 text-center flex-wrap flex-col md:flex-row py-4 w-screen justify-evenly">
+      <ul className="flex transition-transform duration-100 text-center flex-wrap flex-row py-4 w-screen justify-evenly">
         <NavItem text="Home" link={`#home`} />
         <NavItem text="About Me" link={`#about-me`} />
         <NavItem text="Music" link={`#music`} />
@@ -64,10 +64,11 @@ export const NavBar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const isMobile = windowDimension <= 640;
+  const isMobile = windowDimension <= 785;
 
   return isMobile ? (
     <>
+      <div className="fixed top-0 h-20 w-screen bg-gradient-to-b from-emerald-800 from-5% via-15% to-transparent to-110% pointer-events-none" />
       <div
         className={`fixed transition-all duration-100 h-screen overflow-visible brightness-80 bg-gradient-to-tr from-transparent via-transparent to-emerald-950  ${
           !expanded && "hidden"
