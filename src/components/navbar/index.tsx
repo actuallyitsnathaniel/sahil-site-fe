@@ -25,7 +25,7 @@ const MobileNav = ({
   expanded: boolean;
 }) => {
   return (
-    <nav className="fixed top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow">
+    <nav className="fixed z-[2] top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow">
       <div
         className={`fixed origin-left transition-transform duration-200 backdrop-blur-lg flex flex-col bg-black/90 h-screen w-screen ${
           expanded ? "translate-x-[0%]" : "translate-x-[-100%]"
@@ -68,7 +68,7 @@ export const NavBar = () => {
 
   return isMobile ? (
     <>
-      <div className="fixed top-0 h-20 w-screen bg-gradient-to-b from-emerald-800 from-5% via-15% to-transparent to-110% pointer-events-none" />
+      <div className="fixed top-0 h-40 w-screen bg-gradient-to-b from-emerald-800 from-15% via-60% to-transparent to-110% pointer-events-none" />
       <div
         className={`fixed transition-all duration-100 h-screen overflow-visible brightness-80 bg-gradient-to-tr from-transparent via-transparent to-emerald-950  ${
           !expanded && "hidden"
