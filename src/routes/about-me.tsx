@@ -1,45 +1,59 @@
+import { useState, useEffect } from "react";
+import { getAboutPage } from "../api/getAboutData";
+import RichTextRenderer from "../components/rich-text-renderer";
+
+type RichTextNode =
+  | { type: "text"; text: string }
+  | { type: "link"; url: string; children: RichTextNode[] }
+  | { type: "paragraph"; children: RichTextNode[] };
+
+type Photo = {
+  url: string;
+};
+
+type ResponseObject = {
+  description: RichTextNode[];
+  aboutPhotos: Photo[];
+} | null;
+
 const AboutMe = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [about, setAbout] = useState<ResponseObject>(null);
+
+  useEffect(() => {
+    const fetchAboutPage = async () => {
+      setIsLoading(true);
+      try {
+        const response = await getAboutPage();
+        setAbout(response);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+        console.log("ABOUT STUFF:", about);
+      }
+    };
+    fetchAboutPage();
+  }, []);
+
   return (
     <div id="about-me" className="h-full md:pt-14">
       <p className="sticky md:hidden top-1.5 py-5 text-4xl text-center z-[1]">
         About Me
       </p>
-      <p className="text-justify text-lg md:w-4/5 mx-auto p-6">
-        I am a composer, music editor, and orchestrator with a specialization
-        towards film and television. As a graduate from the Berklee College of
-        Music, I enjoy the challenge of creating unique soundscapes that combine
-        traditional orchestral scoring with contemporary, synthetic elements.
-        <br />
-        <br />
-        My music can be heard across various projects for film & television,
-        including the Emmy-nominated series{" "}
-        <a
-          className="underline"
-          href="https://www.paramountplus.com/shows/star-trek-short-treks/video/zS2a7flzoQ4z_T_jkaJa_duNQ9jwDdW3/-the-trouble-with-edward-star-trek-short-treks/"
-        >
-          Star Trek: Short Treks
-        </a>
-        , and the Disney-animated short,{" "}
-        <a
-          className="underline"
-          href="https://www.facebook.com/DisneyAnimationCareers/videos/voil%C3%A0-2018-summer-interns/1100926096733828/?extid=SEO----"
-        >
-          Voilá!
-        </a>
-        . Recently, I scored a 6-part documentary series produced by the Academy
-        of Motion Picture Arts and Sciences.
-        <br />
-        <br />I am currently based in Los Angeles, CA, working for Emmy-winning
-        composer,{" "}
-        <a
-          className="underline"
-          aria-label="kris-bowers-imdb"
-          href="https://www.imdb.com/name/nm3929283/?ref_=nv_sr_1"
-        >
-          Kris Bowers
-        </a>
-        .
-      </p>
+      {isLoading ? (
+        <div className="animate-bounce mx-auto">Loading...</div>
+      ) : (
+        <>
+          {about?.aboutPhotos[0] && (
+            <img
+              className="hidden w-4/5 md:w-3/5 mx-auto flex-shrink"
+              src={about.aboutPhotos[0].url}
+            />
+          )}
+          <RichTextRenderer content={about?.description} />
+        </>
+      )}
     </div>
   );
 };
