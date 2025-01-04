@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getAboutPage } from "../api/getAboutData";
 import RichTextRenderer from "../components/rich-text-renderer";
+import Loading from "../components/loading";
 
 type RichTextNode =
   | { type: "text"; text: string }
@@ -11,14 +12,14 @@ type Photo = {
   url: string;
 };
 
-type ResponseObject = {
+type AboutMeResponse = {
   description: RichTextNode[];
   aboutPhotos: Photo[];
 } | null;
 
 const AboutMe = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [about, setAbout] = useState<ResponseObject>(null);
+  const [about, setAbout] = useState<AboutMeResponse>(null);
 
   useEffect(() => {
     const fetchAboutPage = async () => {
@@ -30,7 +31,6 @@ const AboutMe = () => {
         console.error("Error fetching data:", error);
       } finally {
         setIsLoading(false);
-        console.log("ABOUT STUFF:", about);
       }
     };
     fetchAboutPage();
@@ -42,7 +42,7 @@ const AboutMe = () => {
         About Me
       </p>
       {isLoading ? (
-        <div className="animate-bounce mx-auto">Loading...</div>
+        <Loading />
       ) : (
         <>
           {about?.aboutPhotos[0] && (

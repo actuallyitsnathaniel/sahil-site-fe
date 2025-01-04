@@ -35,7 +35,6 @@ export const ConnectForm = () => {
         )
         .then(
           (result) => {
-            console.log(result.text);
             setIsSubmitting(false);
             setSubmitted(true);
           },
