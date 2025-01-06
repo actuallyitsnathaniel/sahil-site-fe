@@ -47,7 +47,7 @@ export const NavItem = ({
     <li className="transition-all duration-100 hover:scale-105 hover:-translate-y-1">
       <Link
         className={`hover:text-orange-300 hover:scale-110 p-5 font-normal
-            ${isActivePage && "underline underline-offset-2"}
+            ${isActivePage && "underline underline-offset-2 font-semibold"}
           `}
         to={link}
         onClick={HandleOnClick}

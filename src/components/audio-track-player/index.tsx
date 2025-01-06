@@ -37,8 +37,10 @@ const AudioPlayer = ({ children }: { children: [] }) => {
       <FloatingPlayPauseButton
         {...{ isPlaying, setIsPlaying, currentTrack, setCurrentTrack }}
       />
-      <div className="flex flex-wrap flex-col sm:flex-row sm:max-w-6xl justify-center">
-        <div className="flex flex-wrap justify-center">{AudioTracks}</div>
+      <div className="flex flex-wrap sm:max-w-6xl justify-center">
+        <div className="flex flex-row flex-wrap justify-center gap-16 row-span-3">
+          {AudioTracks}
+        </div>
       </div>
     </div>
   );

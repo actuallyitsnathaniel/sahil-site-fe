@@ -41,7 +41,7 @@ const AudioTrack = ({
   };
 
   return (
-    <div className="grid py-5 px-5 justify-items-center basis-1/3">
+    <div className="grid justify-items-center">
       <h5>{title}</h5>
       {film ? (
         <p className="font-light text-sm">(from &quot;{film}&quot;)</p>
@@ -50,7 +50,7 @@ const AudioTrack = ({
       )}
       <div id="controls" className="flex flex-row align-middle">
         <button
-          className="flex-shrink-0"
+          className="flex-shrink-0 p-2 -m-2"
           onClick={() =>
             HandlePlayback({
               index,
