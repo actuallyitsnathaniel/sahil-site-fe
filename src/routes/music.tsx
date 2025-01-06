@@ -4,21 +4,16 @@ import { getMusicPage } from "../api/getMusicData";
 import { useState, useEffect } from "react";
 import Loading from "../components/loading";
 
-type MusicTrack = {
-  audioTrack: { url: string };
-  trackTitle: string;
-  trackSource: string;
-};
 const Music = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [music, setMusic] = useState<MusicTrack[]>([]); // Initialized as empty array
+  const [music, setMusic] = useState<[]>([]);
 
   useEffect(() => {
     const fetchMusicPage = async () => {
       setIsLoading(true);
       try {
-        const { musicTrack } = await getMusicPage();
-        setMusic(musicTrack);
+        const response = await getMusicPage();
+        setMusic(response.musicTrack);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -36,21 +31,7 @@ const Music = () => {
       <h2 className="sticky top-1.5 md:hidden py-5 text-4xl text-center z-[1]">
         Music
       </h2>
-      <AudioPlayer>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <>
-            {music.map(({ audioTrack, trackTitle, trackSource }) => (
-              <AudioPlayer.Track
-                src={audioTrack.url}
-                title={trackTitle}
-                film={trackSource}
-              />
-            ))}
-          </>
-        )}
-      </AudioPlayer>
+      {isLoading ? <Loading /> : <AudioPlayer>{music}</AudioPlayer>}
     </div>
   );
 };
