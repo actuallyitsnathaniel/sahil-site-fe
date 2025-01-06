@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getAboutPage } from "../api/getAboutData";
 import RichTextRenderer from "../components/rich-text-renderer";
 import Loading from "../components/loading";
+import pageTransition from "../utilities/motionPage";
 
 type RichTextNode =
   | { type: "text"; text: string }
@@ -38,7 +39,7 @@ const AboutMe = () => {
 
   return (
     <div id="about-me" className="h-full md:pt-14">
-      <p className="sticky md:hidden top-1.5 py-5 text-4xl text-center z-[1]">
+      <p className="sticky md:hidden top-1.5 py-5 pb-10 text-4xl text-center z-[1]">
         About Me
       </p>
       {isLoading ? (
@@ -58,4 +59,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default pageTransition(AboutMe);

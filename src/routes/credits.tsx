@@ -34,6 +34,7 @@ import chevalier from "../assets/images/chevalier.png";
 import inventingAnna from "../assets/images/inventing-anna.png";
 import pasosDeValor from "../assets/images/pasos-de-valor.png";
 import tinderbox from "../assets/images/tinderbox.png";
+import pageTransition from "../utilities/motionPage";
 
 const Credits = () => {
   return (
@@ -200,4 +201,4 @@ const Credits = () => {
   );
 };
 
-export default Credits;
+export default pageTransition(Credits);

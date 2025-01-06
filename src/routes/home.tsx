@@ -1,4 +1,5 @@
 import { Header } from "../components/header";
+import pageTransition from "../utilities/motionPage";
 const Home = () => {
   return (
     <div
@@ -10,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default pageTransition(Home);

@@ -68,7 +68,7 @@ export const NavBar = () => {
 
   return isMobile ? (
     <>
-      <div className="fixed top-0 h-40 w-screen bg-gradient-to-b from-emerald-800 from-15% via-60% to-transparent to-110% pointer-events-none" />
+      <div className="fixed top-0 h-40 w-screen bg-gradient-to-b from-emerald-800 from-0% to-transparent to-100% pointer-events-none" />
       <div
         className={`fixed transition-all duration-100 h-screen overflow-visible brightness-80 bg-gradient-to-tr from-transparent via-transparent to-emerald-950  ${
           !expanded && "hidden"

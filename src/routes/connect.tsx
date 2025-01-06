@@ -1,4 +1,5 @@
 import { ConnectForm } from "../components/connect-form";
+import pageTransition from "../utilities/motionPage";
 
 const Connect = () => {
   return (
@@ -14,4 +15,4 @@ const Connect = () => {
   );
 };
 
-export default Connect;
+export default pageTransition(Connect);
