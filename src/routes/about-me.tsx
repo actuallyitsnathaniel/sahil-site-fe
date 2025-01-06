@@ -45,15 +45,16 @@ const AboutMe = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <>
+        <div className="py-16">
           {about?.aboutPhotos[0] && (
             <img
               className="hidden w-4/5 md:w-3/5 mx-auto flex-shrink"
               src={about.aboutPhotos[0].url}
             />
           )}
+
           <RichTextRenderer content={about?.description} />
-        </>
+        </div>
       )}
     </div>
   );
