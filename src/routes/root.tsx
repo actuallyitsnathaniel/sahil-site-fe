@@ -9,7 +9,6 @@ import { BackgroundGradient } from "../components/background-gradient";
 import ScrollToHashElement from "../utilities/ScrollToHashElement";
 
 const Root = () => {
-  // TODO: add timeline scroller for more friendly cross-platform experience
   return (
     <div
       id="root"

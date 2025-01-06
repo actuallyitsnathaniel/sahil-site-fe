@@ -2,7 +2,7 @@ export const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-export const formatHash = (hash: string): string => {
+export const formatToCopy = (hash: string): string => {
   return hash
     .replace(/^#/, "") // Remove leading '#'
     .split("-") // Split by '-'

@@ -2,11 +2,7 @@ import logoLeft from "../../assets/logo/sahil-logo-split/logo-left.svg";
 import logoMiddle from "../../assets/logo/sahil-logo-split/logo-middle.svg";
 import logoRight from "../../assets/logo/sahil-logo-split/logo-right.svg";
 
-// import { usePageTitle } from "../../utilities/util";
-import {
-  Link,
-  // useLocation
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const SahilLogo = () => {
   return (

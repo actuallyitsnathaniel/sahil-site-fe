@@ -5,8 +5,6 @@ import "./index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 
-//  TODO: integrate Fromer Motion to slide-fade gracefully between pages
-// on Desktop
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,7 +21,7 @@ const router = createBrowserRouter([
         path: "#music",
       },
       {
-        path: "#about-me"
+        path: "#about-me",
       },
       {
         path: "#connect",
@@ -32,7 +30,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
