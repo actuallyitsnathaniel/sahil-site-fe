@@ -6,7 +6,7 @@ import { getCreditsPage } from "../api/getCreditsData";
 import Loading from "../components/loading";
 import { formatToHash } from "../utilities/util";
 
-type CreditedWorkType = {
+export type CreditedWorkType = {
   creditType: string;
   creditedWorkPoster: { url: string };
   creditedWorkType: string;
@@ -31,7 +31,6 @@ const Credits = () => {
     };
     fetchCreditsPage();
   }, []);
-  console.log(credits);
 
   return (
     <div
@@ -48,7 +47,7 @@ const Credits = () => {
           <div id="composer">
             <h3 className="text-3xl text-center">Composer (Selection)</h3>
             <div className="flex flex-wrap flex-row justify-center">
-              {credits.map((composerWork: any) => {
+              {credits.map((composerWork: any, index) => {
                 if (composerWork.creditType === "Composer")
                   return (
                     <CreditedWork
@@ -56,6 +55,7 @@ const Credits = () => {
                       title={composerWork.creditedWorkTitle}
                       workType={composerWork.creditedWorkType}
                       alt={formatToHash(composerWork.creditedWorkTitle)}
+                      key={`composer-${index}`}
                     />
                   );
               })}
@@ -64,7 +64,7 @@ const Credits = () => {
           <div>
             <h3 className="text-3xl text-center">Music Department</h3>
             <div className="flex flex-wrap flex-row justify-center">
-              {credits.map((composerWork: any) => {
+              {credits.map((composerWork: any, index) => {
                 if (composerWork.creditType === "Music Department")
                   return (
                     <CreditedWork
@@ -72,6 +72,7 @@ const Credits = () => {
                       title={composerWork.creditedWorkTitle}
                       workType={composerWork.creditedWorkType}
                       alt={formatToHash(composerWork.creditedWorkTitle)}
+                      key={`music-department-${index}`}
                     />
                   );
               })}

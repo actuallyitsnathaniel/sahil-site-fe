@@ -1,0 +1,135 @@
+{
+  "data": {
+    "id": 3,
+    "documentId": "o2kwcmsx2kqnbn5opgpck29t",
+    "createdAt": "2024-12-22T04:17:04.634Z",
+    "updatedAt": "2024-12-23T10:24:19.668Z",
+    "publishedAt": "2024-12-23T10:24:19.457Z",
+    "description": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "I am a composer, music editor, and orchestrator with a specialization towards film and television. As a graduate from the Berklee College of Music, I enjoy the challenge of creating unique soundscapes that combine traditional orchestral scoring with contemporary, synthetic elements.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "My music can be heard across various projects for film & television, including the Emmy-nominated series ",
+            "type": "text"
+          },
+          {
+            "url": "https://www.paramountplus.com/shows/star-trek-short-treks/video/zS2a7flzoQ4z_T_jkaJa_duNQ9jwDdW3/-the-trouble-with-edward-star-trek-short-treks/",
+            "type": "link",
+            "children": [
+              {
+                "text": "Star Trek: Short Treks",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "text": ", and the Disney-animated short, ",
+            "type": "text"
+          },
+          {
+            "url": "https://www.facebook.com/DisneyAnimationCareers/videos/voil%C3%A0-2018-summer-interns/1100926096733828/?extid=SEO----",
+            "type": "link",
+            "children": [
+              {
+                "text": "Voilá!",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "text": ". Recently, I scored a 6-part documentary series produced by the Academy of Motion Picture Arts and Sciences.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "I am currently based in Los Angeles, CA, working for Emmy-winning composer, ",
+            "type": "text"
+          },
+          {
+            "url": "https://www.imdb.com/name/nm3929283/?ref_=nv_sr_1",
+            "type": "link",
+            "children": [
+              {
+                "text": "Kris Bowers",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "text": ".",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "aboutPhotos": [
+      {
+        "id": 84,
+        "documentId": "do7139auf5lqh7615gra0a9t",
+        "name": "IMG_6988.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 2048,
+        "height": 1154,
+        "formats": {
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_IMG_6988.jpg-thumbnail_IMG_6988_0ee19a738d.jpg",
+            "hash": "thumbnail_IMG_6988_0ee19a738d",
+            "mime": "image/jpeg",
+            "name": "thumbnail_IMG_6988.jpg",
+            "path": null,
+            "size": 7.3,
+            "width": 245,
+            "height": 138,
+            "sizeInBytes": 7298
+          }
+        },
+        "hash": "IMG_6988_0ee19a738d",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 546.6,
+        "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/IMG_6988.jpg-IMG_6988_0ee19a738d.jpg",
+        "previewUrl": null,
+        "provider": "strapi-provider-upload-supabase",
+        "provider_metadata": null,
+        "createdAt": "2024-12-23T10:24:10.874Z",
+        "updatedAt": "2024-12-23T10:24:10.874Z",
+        "publishedAt": "2024-12-23T10:24:10.875Z"
+      }
+    ]
+  },
+  "meta": {}
+}

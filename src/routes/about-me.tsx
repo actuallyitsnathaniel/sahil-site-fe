@@ -4,16 +4,16 @@ import RichTextRenderer from "../components/rich-text-renderer";
 import Loading from "../components/loading";
 import pageTransition from "../utilities/motionPage";
 
-type RichTextNode =
+export type RichTextNode =
   | { type: "text"; text: string }
   | { type: "link"; url: string; children: RichTextNode[] }
   | { type: "paragraph"; children: RichTextNode[] };
 
-type Photo = {
+export type Photo = {
   url: string;
 };
 
-type AboutMeResponse = {
+export type AboutMeResponse = {
   description: RichTextNode[];
   aboutPhotos: Photo[];
 } | null;

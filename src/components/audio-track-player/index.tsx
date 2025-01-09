@@ -3,21 +3,19 @@ import { useState } from "react";
 import AudioTrack from "./audio-track";
 import { FloatingPlayPauseButton } from "./playback";
 
+export type AudioTrackType = {
+  audioTrack: { url: string };
+  trackSource: string;
+  trackTitle: string;
+};
+
 const AudioPlayer = ({ children }: { children: [] }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(-1);
 
   const AudioTracks = children?.map(
     (
-      {
-        audioTrack: { url },
-        trackSource,
-        trackTitle,
-      }: {
-        audioTrack: { url: string };
-        trackSource: string;
-        trackTitle: string;
-      },
+      { audioTrack: { url }, trackSource, trackTitle }: AudioTrackType,
       index
     ) => {
       return (

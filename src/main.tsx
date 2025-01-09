@@ -5,6 +5,10 @@ import "./index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 
+if (process.env.NODE_ENV === "development") {
+  const { worker } = await import("../mocks/browser");
+  worker.start();
+}
 const router = createBrowserRouter([
   {
     path: "/",

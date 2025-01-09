@@ -1,0 +1,1126 @@
+{
+  "data": [
+    [
+      {
+        "id": 78,
+        "creditedWorkTitle": "Dear Watsonville",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 28,
+          "documentId": "im6f06aqtebtp9v1ovp2ror1",
+          "name": "dear-watsonville.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1400,
+          "height": 2100,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_dear-watsonville.jpg-thumbnail_dear_watsonville_9e0982297c.jpg",
+              "hash": "thumbnail_dear_watsonville_9e0982297c",
+              "mime": "image/jpeg",
+              "name": "thumbnail_dear-watsonville.jpg",
+              "path": null,
+              "size": 3.7,
+              "width": 104,
+              "height": 156,
+              "sizeInBytes": 3699
+            }
+          },
+          "hash": "dear_watsonville_9e0982297c",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 146.54,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/dear-watsonville.jpg-dear_watsonville_9e0982297c.jpg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:47.909Z",
+          "updatedAt": "2024-12-23T10:16:47.909Z",
+          "publishedAt": "2024-12-23T10:16:47.909Z"
+        }
+      },
+      {
+        "id": 79,
+        "creditedWorkTitle": "Back to the Source",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 27,
+          "documentId": "c870zld625esk8uaa6ujkq7i",
+          "name": "back-to-the-source.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1920,
+          "height": 1080,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_back-to-the-source.jpeg-thumbnail_back_to_the_source_8296e4272d.jpeg",
+              "hash": "thumbnail_back_to_the_source_8296e4272d",
+              "mime": "image/jpeg",
+              "name": "thumbnail_back-to-the-source.jpeg",
+              "path": null,
+              "size": 5.62,
+              "width": 245,
+              "height": 138,
+              "sizeInBytes": 5620
+            }
+          },
+          "hash": "back_to_the_source_8296e4272d",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 263.56,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/back-to-the-source.jpeg-back_to_the_source_8296e4272d.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:47.892Z",
+          "updatedAt": "2024-12-23T10:16:47.892Z",
+          "publishedAt": "2024-12-23T10:16:47.894Z"
+        }
+      },
+      {
+        "id": 80,
+        "creditedWorkTitle": "Superman Doesn't Steal",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 47,
+          "documentId": "c77wj26yunrkwwzw52tfx4ce",
+          "name": "superman-doesnt-steal.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1800,
+          "height": 2400,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_superman-doesnt-steal.jpeg-thumbnail_superman_doesnt_steal_7c67ea3965.jpeg",
+              "hash": "thumbnail_superman_doesnt_steal_7c67ea3965",
+              "mime": "image/jpeg",
+              "name": "thumbnail_superman-doesnt-steal.jpeg",
+              "path": null,
+              "size": 8.66,
+              "width": 117,
+              "height": 156,
+              "sizeInBytes": 8664
+            }
+          },
+          "hash": "superman_doesnt_steal_7c67ea3965",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 1107.26,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/superman-doesnt-steal.jpeg-superman_doesnt_steal_7c67ea3965.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:51.247Z",
+          "updatedAt": "2024-12-23T10:16:51.247Z",
+          "publishedAt": "2024-12-23T10:16:51.247Z"
+        }
+      },
+      {
+        "id": 81,
+        "creditedWorkTitle": "Gold Digger",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 39,
+          "documentId": "e8yvipj94oghdetdbmxstc9u",
+          "name": "gold-digger-poster-landscape.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 5400,
+          "height": 3600,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_gold-digger-poster-landscape.jpg-thumbnail_gold_digger_poster_landscape_43bd5f873d.jpg",
+              "hash": "thumbnail_gold_digger_poster_landscape_43bd5f873d",
+              "mime": "image/jpeg",
+              "name": "thumbnail_gold-digger-poster-landscape.jpg",
+              "path": null,
+              "size": 6.01,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 6012
+            }
+          },
+          "hash": "gold_digger_poster_landscape_43bd5f873d",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 1268,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/gold-digger-poster-landscape.jpg-gold_digger_poster_landscape_43bd5f873d.jpg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:49.914Z",
+          "updatedAt": "2024-12-23T10:16:49.914Z",
+          "publishedAt": "2024-12-23T10:16:49.914Z"
+        }
+      },
+      {
+        "id": 82,
+        "creditedWorkTitle": "United in Grief",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 49,
+          "documentId": "ghrgoy6814c7uir634958ozq",
+          "name": "united-in-grief.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1000,
+          "height": 1482,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_united-in-grief.jpeg-thumbnail_united_in_grief_245c1c982d.jpeg",
+              "hash": "thumbnail_united_in_grief_245c1c982d",
+              "mime": "image/jpeg",
+              "name": "thumbnail_united-in-grief.jpeg",
+              "path": null,
+              "size": 3.54,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 3536
+            }
+          },
+          "hash": "united_in_grief_245c1c982d",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 134.59,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/united-in-grief.jpeg-united_in_grief_245c1c982d.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:51.628Z",
+          "updatedAt": "2024-12-23T10:16:51.628Z",
+          "publishedAt": "2024-12-23T10:16:51.628Z"
+        }
+      },
+      {
+        "id": 83,
+        "creditedWorkTitle": "Who's Texting the Group Chat",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 52,
+          "documentId": "t3c9h1qhgks91j40iayizslu",
+          "name": "whos-texting.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 2700,
+          "height": 3600,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_whos-texting.jpeg-thumbnail_whos_texting_353e864113.jpeg",
+              "hash": "thumbnail_whos_texting_353e864113",
+              "mime": "image/jpeg",
+              "name": "thumbnail_whos-texting.jpeg",
+              "path": null,
+              "size": 5.04,
+              "width": 117,
+              "height": 156,
+              "sizeInBytes": 5044
+            }
+          },
+          "hash": "whos_texting_353e864113",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 1009.14,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/whos-texting.jpeg-whos_texting_353e864113.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:52.384Z",
+          "updatedAt": "2024-12-23T10:16:52.384Z",
+          "publishedAt": "2024-12-23T10:16:52.384Z"
+        }
+      },
+      {
+        "id": 84,
+        "creditedWorkTitle": "Academy Gold",
+        "creditedWorkType": "Documentary Series",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 25,
+          "documentId": "yjxsga1e7phbifb73wvdfi4b",
+          "name": "academy-gold-sound.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 300,
+          "height": 416,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_academy-gold-sound.png-thumbnail_academy_gold_sound_3a1ad135fa.png",
+              "hash": "thumbnail_academy_gold_sound_3a1ad135fa",
+              "mime": "image/png",
+              "name": "thumbnail_academy-gold-sound.png",
+              "path": null,
+              "size": 21.88,
+              "width": 113,
+              "height": 156,
+              "sizeInBytes": 21883
+            }
+          },
+          "hash": "academy_gold_sound_3a1ad135fa",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 35.68,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/academy-gold-sound.png-academy_gold_sound_3a1ad135fa.png",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:47.747Z",
+          "updatedAt": "2024-12-23T10:16:47.747Z",
+          "publishedAt": "2024-12-23T10:16:47.748Z"
+        }
+      },
+      {
+        "id": 85,
+        "creditedWorkTitle": "Star Trek: Short Treks",
+        "creditedWorkType": "TV Episode",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 41,
+          "documentId": "top7whgnywi76prrfqzlfk4g",
+          "name": "star-trek-short-treks.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 300,
+          "height": 499,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_star-trek-short-treks.jpeg-thumbnail_star_trek_short_treks_2b37956f48.jpeg",
+              "hash": "thumbnail_star_trek_short_treks_2b37956f48",
+              "mime": "image/jpeg",
+              "name": "thumbnail_star-trek-short-treks.jpeg",
+              "path": null,
+              "size": 5.74,
+              "width": 94,
+              "height": 156,
+              "sizeInBytes": 5738
+            }
+          },
+          "hash": "star_trek_short_treks_2b37956f48",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 43.31,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/star-trek-short-treks.jpeg-star_trek_short_treks_2b37956f48.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:50.093Z",
+          "updatedAt": "2024-12-23T10:16:50.093Z",
+          "publishedAt": "2024-12-23T10:16:50.093Z"
+        }
+      },
+      {
+        "id": 86,
+        "creditedWorkTitle": "Prisoner of Earth",
+        "creditedWorkType": "TV Episode",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 38,
+          "documentId": "m3m67lz8xx3mk5u7rjtrecr9",
+          "name": "prisoner-of-earth.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1000,
+          "height": 687,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_prisoner-of-earth.jpeg-thumbnail_prisoner_of_earth_951b402cde.jpeg",
+              "hash": "thumbnail_prisoner_of_earth_951b402cde",
+              "mime": "image/jpeg",
+              "name": "thumbnail_prisoner-of-earth.jpeg",
+              "path": null,
+              "size": 2.89,
+              "width": 227,
+              "height": 156,
+              "sizeInBytes": 2888
+            }
+          },
+          "hash": "prisoner_of_earth_951b402cde",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 25.87,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/prisoner-of-earth.jpeg-prisoner_of_earth_951b402cde.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:49.739Z",
+          "updatedAt": "2024-12-23T10:16:49.739Z",
+          "publishedAt": "2024-12-23T10:16:49.739Z"
+        }
+      },
+      {
+        "id": 87,
+        "creditedWorkTitle": "Disney: Voilá!",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 48,
+          "documentId": "jhgl0dszkw5v8n01xzplx6j5",
+          "name": "voila.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 678,
+          "height": 380,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_voila.jpeg-thumbnail_voila_fe7ace2792.jpeg",
+              "hash": "thumbnail_voila_fe7ace2792",
+              "mime": "image/jpeg",
+              "name": "thumbnail_voila.jpeg",
+              "path": null,
+              "size": 5.86,
+              "width": 245,
+              "height": 137,
+              "sizeInBytes": 5857
+            }
+          },
+          "hash": "voila_fe7ace2792",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 28.95,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/voila.jpeg-voila_fe7ace2792.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:51.455Z",
+          "updatedAt": "2024-12-23T10:16:51.455Z",
+          "publishedAt": "2024-12-23T10:16:51.455Z"
+        }
+      },
+      {
+        "id": 88,
+        "creditedWorkTitle": "Sunnyfield Kids",
+        "creditedWorkType": "Feature Film",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 43,
+          "documentId": "q4v4x9a1ed16a93e1hnfboqo",
+          "name": "sunnyfield-kids.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 956,
+          "height": 1576,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_sunnyfield-kids.png-thumbnail_sunnyfield_kids_f78ea07057.png",
+              "hash": "thumbnail_sunnyfield_kids_f78ea07057",
+              "mime": "image/png",
+              "name": "thumbnail_sunnyfield-kids.png",
+              "path": null,
+              "size": 33.36,
+              "width": 95,
+              "height": 156,
+              "sizeInBytes": 33359
+            }
+          },
+          "hash": "sunnyfield_kids_f78ea07057",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 575.58,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/sunnyfield-kids.png-sunnyfield_kids_f78ea07057.png",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:50.689Z",
+          "updatedAt": "2024-12-23T10:16:50.689Z",
+          "publishedAt": "2024-12-23T10:16:50.689Z"
+        }
+      },
+      {
+        "id": 89,
+        "creditedWorkTitle": "Wolves",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 50,
+          "documentId": "tbr1eie1o0pr0qxtpexxmmk7",
+          "name": "wolves.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 500,
+          "height": 741,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_wolves.jpeg-thumbnail_wolves_a1cae1d6bf.jpeg",
+              "hash": "thumbnail_wolves_a1cae1d6bf",
+              "mime": "image/jpeg",
+              "name": "thumbnail_wolves.jpeg",
+              "path": null,
+              "size": 5.04,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 5035
+            }
+          },
+          "hash": "wolves_a1cae1d6bf",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 69.48,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/wolves.jpeg-wolves_a1cae1d6bf.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:51.718Z",
+          "updatedAt": "2024-12-23T10:16:51.718Z",
+          "publishedAt": "2024-12-23T10:16:51.718Z"
+        }
+      },
+      {
+        "id": 90,
+        "creditedWorkTitle": "Age is a Killer",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 24,
+          "documentId": "vccndvoobrprt2qehzdqd9vo",
+          "name": "age-is-a-killer.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 500,
+          "height": 626,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_age-is-a-killer.jpeg-thumbnail_age_is_a_killer_d58112abbe.jpeg",
+              "hash": "thumbnail_age_is_a_killer_d58112abbe",
+              "mime": "image/jpeg",
+              "name": "thumbnail_age-is-a-killer.jpeg",
+              "path": null,
+              "size": 7.62,
+              "width": 125,
+              "height": 156,
+              "sizeInBytes": 7616
+            }
+          },
+          "hash": "age_is_a_killer_d58112abbe",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 83.16,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/age-is-a-killer.jpeg-age_is_a_killer_d58112abbe.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:47.676Z",
+          "updatedAt": "2024-12-23T10:16:47.676Z",
+          "publishedAt": "2024-12-23T10:16:47.678Z"
+        }
+      },
+      {
+        "id": 91,
+        "creditedWorkTitle": "Last Summer",
+        "creditedWorkType": "Short",
+        "creditType": null,
+        "creditedWorkPoster": {
+          "id": 30,
+          "documentId": "bks4numqi0zf490juzd267ya",
+          "name": "last-summer.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 750,
+          "height": 421,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_last-summer.jpeg-thumbnail_last_summer_c958d88b52.jpeg",
+              "hash": "thumbnail_last_summer_c958d88b52",
+              "mime": "image/jpeg",
+              "name": "thumbnail_last-summer.jpeg",
+              "path": null,
+              "size": 5.36,
+              "width": 245,
+              "height": 137,
+              "sizeInBytes": 5355
+            }
+          },
+          "hash": "last_summer_c958d88b52",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 25.42,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/last-summer.jpeg-last_summer_c958d88b52.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:48.541Z",
+          "updatedAt": "2024-12-23T10:16:48.541Z",
+          "publishedAt": "2024-12-23T10:16:48.542Z"
+        }
+      },
+      {
+        "id": 92,
+        "creditedWorkTitle": "The Mother of All Flowers",
+        "creditedWorkType": "Short",
+        "creditType": "Composer",
+        "creditedWorkPoster": {
+          "id": 45,
+          "documentId": "rjauuco01ciwh67hswoaduyn",
+          "name": "the-mother-of-all-flowers.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 500,
+          "height": 714,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_the-mother-of-all-flowers.jpg-thumbnail_the_mother_of_all_flowers_5f3a172054.jpg",
+              "hash": "thumbnail_the_mother_of_all_flowers_5f3a172054",
+              "mime": "image/jpeg",
+              "name": "thumbnail_the-mother-of-all-flowers.jpg",
+              "path": null,
+              "size": 4.12,
+              "width": 109,
+              "height": 156,
+              "sizeInBytes": 4119
+            }
+          },
+          "hash": "the_mother_of_all_flowers_5f3a172054",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 76.27,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/the-mother-of-all-flowers.jpg-the_mother_of_all_flowers_5f3a172054.jpg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:50.934Z",
+          "updatedAt": "2024-12-23T10:16:50.934Z",
+          "publishedAt": "2024-12-23T10:16:50.934Z"
+        }
+      },
+      {
+        "id": 93,
+        "creditedWorkTitle": "Dreamworks: The Wild Robot",
+        "creditedWorkType": "Feature Film",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 46,
+          "documentId": "gzm7kpd7wjy6k3nashw7uwfp",
+          "name": "the-wild-robot.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 560,
+          "height": 880,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_the-wild-robot.jpg-thumbnail_the_wild_robot_2792c94c54.jpg",
+              "hash": "thumbnail_the_wild_robot_2792c94c54",
+              "mime": "image/jpeg",
+              "name": "thumbnail_the-wild-robot.jpg",
+              "path": null,
+              "size": 4.94,
+              "width": 99,
+              "height": 156,
+              "sizeInBytes": 4943
+            }
+          },
+          "hash": "the_wild_robot_2792c94c54",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 105.97,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/the-wild-robot.jpg-the_wild_robot_2792c94c54.jpg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:51.022Z",
+          "updatedAt": "2024-12-23T10:16:51.022Z",
+          "publishedAt": "2024-12-23T10:16:51.022Z"
+        }
+      },
+      {
+        "id": 94,
+        "creditedWorkTitle": "Marvel Studios: Secret Invasion",
+        "creditedWorkType": "TV Series",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 40,
+          "documentId": "lgg358p1p22i110et2ql262l",
+          "name": "secret-invasion.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 844,
+          "height": 1250,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_secret-invasion.jpeg-thumbnail_secret_invasion_e18c3ee766.jpeg",
+              "hash": "thumbnail_secret_invasion_e18c3ee766",
+              "mime": "image/jpeg",
+              "name": "thumbnail_secret-invasion.jpeg",
+              "path": null,
+              "size": 4.46,
+              "width": 106,
+              "height": 156,
+              "sizeInBytes": 4462
+            }
+          },
+          "hash": "secret_invasion_e18c3ee766",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 152.06,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/secret-invasion.jpeg-secret_invasion_e18c3ee766.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:50.042Z",
+          "updatedAt": "2024-12-23T10:16:50.042Z",
+          "publishedAt": "2024-12-23T10:16:50.042Z"
+        }
+      },
+      {
+        "id": 95,
+        "creditedWorkTitle": "The Color Purple",
+        "creditedWorkType": "Feature Film",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 42,
+          "documentId": "qlj638ibsh2xepedki3ue0gu",
+          "name": "the-color-purple.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 258,
+          "height": 387,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_the-color-purple.jpg-thumbnail_the_color_purple_21098ea8e3.jpg",
+              "hash": "thumbnail_the_color_purple_21098ea8e3",
+              "mime": "image/jpeg",
+              "name": "thumbnail_the-color-purple.jpg",
+              "path": null,
+              "size": 5.92,
+              "width": 104,
+              "height": 156,
+              "sizeInBytes": 5921
+            }
+          },
+          "hash": "the_color_purple_21098ea8e3",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 26.94,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/the-color-purple.jpg-the_color_purple_21098ea8e3.jpg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:50.312Z",
+          "updatedAt": "2024-12-23T10:16:50.312Z",
+          "publishedAt": "2024-12-23T10:16:50.312Z"
+        }
+      },
+      {
+        "id": 96,
+        "creditedWorkTitle": "Origin",
+        "creditedWorkType": "Feature Film",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 36,
+          "documentId": "uzc2qrtfefs4uhazej0j92db",
+          "name": "origin.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 640,
+          "height": 949,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_origin.jpeg-thumbnail_origin_9f95164654.jpeg",
+              "hash": "thumbnail_origin_9f95164654",
+              "mime": "image/jpeg",
+              "name": "thumbnail_origin.jpeg",
+              "path": null,
+              "size": 2.4,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 2398
+            }
+          },
+          "hash": "origin_9f95164654",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 35.13,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/origin.jpeg-origin_9f95164654.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:49.518Z",
+          "updatedAt": "2024-12-23T10:16:49.518Z",
+          "publishedAt": "2024-12-23T10:16:49.519Z"
+        }
+      },
+      {
+        "id": 97,
+        "creditedWorkTitle": "The Last Repair Shop",
+        "creditedWorkType": "Documentary Short",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 44,
+          "documentId": "wfc76oqu2ghjy84w7a2gsyy5",
+          "name": "the-last-repair-shop.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1000,
+          "height": 1481,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_the-last-repair-shop.jpeg-thumbnail_the_last_repair_shop_acd1ae5d11.jpeg",
+              "hash": "thumbnail_the_last_repair_shop_acd1ae5d11",
+              "mime": "image/jpeg",
+              "name": "thumbnail_the-last-repair-shop.jpeg",
+              "path": null,
+              "size": 5.04,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 5038
+            }
+          },
+          "hash": "the_last_repair_shop_acd1ae5d11",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 328.39,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/the-last-repair-shop.jpeg-the_last_repair_shop_acd1ae5d11.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:50.835Z",
+          "updatedAt": "2024-12-23T10:16:50.835Z",
+          "publishedAt": "2024-12-23T10:16:50.835Z"
+        }
+      },
+      {
+        "id": 98,
+        "creditedWorkTitle": "Disney: Haunted Mansion",
+        "creditedWorkType": "Feature Film",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 32,
+          "documentId": "jfhmt83h64m7coou28l4l171",
+          "name": "disney-haunted-mansion.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 864,
+          "height": 1280,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_disney-haunted-mansion.jpeg-thumbnail_disney_haunted_mansion_c1f463b2dd.jpeg",
+              "hash": "thumbnail_disney_haunted_mansion_c1f463b2dd",
+              "mime": "image/jpeg",
+              "name": "thumbnail_disney-haunted-mansion.jpeg",
+              "path": null,
+              "size": 4.91,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 4906
+            }
+          },
+          "hash": "disney_haunted_mansion_c1f463b2dd",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 231.5,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/disney-haunted-mansion.jpeg-disney_haunted_mansion_c1f463b2dd.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:48.838Z",
+          "updatedAt": "2024-12-23T10:16:48.838Z",
+          "publishedAt": "2024-12-23T10:16:48.838Z"
+        }
+      },
+      {
+        "id": 99,
+        "creditedWorkTitle": "Netflix | Queen Charlotte: A Bridgerton Story",
+        "creditedWorkType": "Limited Series",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 33,
+          "documentId": "nysv7hkxhprtv493j5tezo8w",
+          "name": "netflix-queen-charlotte.jpeg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1500,
+          "height": 2222,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpeg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_netflix-queen-charlotte.jpeg-thumbnail_netflix_queen_charlotte_827a0f671e.jpeg",
+              "hash": "thumbnail_netflix_queen_charlotte_827a0f671e",
+              "mime": "image/jpeg",
+              "name": "thumbnail_netflix-queen-charlotte.jpeg",
+              "path": null,
+              "size": 5.7,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 5701
+            }
+          },
+          "hash": "netflix_queen_charlotte_827a0f671e",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "size": 737.76,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/netflix-queen-charlotte.jpeg-netflix_queen_charlotte_827a0f671e.jpeg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:49.011Z",
+          "updatedAt": "2024-12-23T10:16:49.011Z",
+          "publishedAt": "2024-12-23T10:16:49.011Z"
+        }
+      },
+      {
+        "id": 100,
+        "creditedWorkTitle": "Bridgerton Season 2",
+        "creditedWorkType": "TV Series",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 29,
+          "documentId": "j9rwc3tb66p2vo5z68lgxfae",
+          "name": "bridgerton.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 500,
+          "height": 741,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_bridgerton.png-thumbnail_bridgerton_ffa24df398.png",
+              "hash": "thumbnail_bridgerton_ffa24df398",
+              "mime": "image/png",
+              "name": "thumbnail_bridgerton.png",
+              "path": null,
+              "size": 43.76,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 43763
+            }
+          },
+          "hash": "bridgerton_ffa24df398",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 214.49,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/bridgerton.png-bridgerton_ffa24df398.png",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:47.939Z",
+          "updatedAt": "2024-12-23T10:16:47.939Z",
+          "publishedAt": "2024-12-23T10:16:47.939Z"
+        }
+      },
+      {
+        "id": 101,
+        "creditedWorkTitle": "DMZ",
+        "creditedWorkType": "TV Miniseries",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 31,
+          "documentId": "iv5398weifvrjlupf2rr8v3v",
+          "name": "dmz.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 500,
+          "height": 741,
+          "formats": {
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_dmz.jpg-thumbnail_dmz_9dbc0b8e59.jpg",
+              "hash": "thumbnail_dmz_9dbc0b8e59",
+              "mime": "image/jpeg",
+              "name": "thumbnail_dmz.jpg",
+              "path": null,
+              "size": 5.81,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 5805
+            }
+          },
+          "hash": "dmz_9dbc0b8e59",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 92.51,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/dmz.jpg-dmz_9dbc0b8e59.jpg",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:48.675Z",
+          "updatedAt": "2024-12-23T10:16:48.675Z",
+          "publishedAt": "2024-12-23T10:16:48.675Z"
+        }
+      },
+      {
+        "id": 102,
+        "creditedWorkTitle": "Chevalier",
+        "creditedWorkType": "Feature Film",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 26,
+          "documentId": "i8ihb3a16zpiyexrrgng5qvn",
+          "name": "chevalier.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 500,
+          "height": 740,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_chevalier.png-thumbnail_chevalier_d39f00ff98.png",
+              "hash": "thumbnail_chevalier_d39f00ff98",
+              "mime": "image/png",
+              "name": "thumbnail_chevalier.png",
+              "path": null,
+              "size": 15.92,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 15924
+            }
+          },
+          "hash": "chevalier_d39f00ff98",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 56.54,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/chevalier.png-chevalier_d39f00ff98.png",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:47.801Z",
+          "updatedAt": "2024-12-23T10:16:47.801Z",
+          "publishedAt": "2024-12-23T10:16:47.802Z"
+        }
+      },
+      {
+        "id": 103,
+        "creditedWorkTitle": "Inventing Anna",
+        "creditedWorkType": "TV Series",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 34,
+          "documentId": "to4l9un3pk2vqifv4pgi7vxv",
+          "name": "inventing-anna.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1066,
+          "height": 1584,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_inventing-anna.png-thumbnail_inventing_anna_76443255a7.png",
+              "hash": "thumbnail_inventing_anna_76443255a7",
+              "mime": "image/png",
+              "name": "thumbnail_inventing-anna.png",
+              "path": null,
+              "size": 44.26,
+              "width": 105,
+              "height": 156,
+              "sizeInBytes": 44257
+            }
+          },
+          "hash": "inventing_anna_76443255a7",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 745.48,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/inventing-anna.png-inventing_anna_76443255a7.png",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:49.271Z",
+          "updatedAt": "2024-12-23T10:16:49.271Z",
+          "publishedAt": "2024-12-23T10:16:49.271Z"
+        }
+      },
+      {
+        "id": 104,
+        "creditedWorkTitle": "Pasos de Valor",
+        "creditedWorkType": "Short",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 37,
+          "documentId": "orll5ulpnf7o6vm16je90p3k",
+          "name": "pasos-de-valor.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 456,
+          "height": 724,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_pasos-de-valor.png-thumbnail_pasos_de_valor_8f2395106f.png",
+              "hash": "thumbnail_pasos_de_valor_8f2395106f",
+              "mime": "image/png",
+              "name": "thumbnail_pasos-de-valor.png",
+              "path": null,
+              "size": 30.88,
+              "width": 98,
+              "height": 156,
+              "sizeInBytes": 30883
+            }
+          },
+          "hash": "pasos_de_valor_8f2395106f",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 92.8,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/pasos-de-valor.png-pasos_de_valor_8f2395106f.png",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:49.661Z",
+          "updatedAt": "2024-12-23T10:16:49.661Z",
+          "publishedAt": "2024-12-23T10:16:49.661Z"
+        }
+      },
+      {
+        "id": 105,
+        "creditedWorkTitle": "Tinderbox",
+        "creditedWorkType": "Short",
+        "creditType": "Music Department",
+        "creditedWorkPoster": {
+          "id": 51,
+          "documentId": "hyqxp45j3pp9r4kw6jtbzymo",
+          "name": "tinderbox.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1266,
+          "height": 1580,
+          "formats": {
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/thumbnail_tinderbox.png-thumbnail_tinderbox_34a630db9b.png",
+              "hash": "thumbnail_tinderbox_34a630db9b",
+              "mime": "image/png",
+              "name": "thumbnail_tinderbox.png",
+              "path": null,
+              "size": 44.74,
+              "width": 125,
+              "height": 156,
+              "sizeInBytes": 44736
+            }
+          },
+          "hash": "tinderbox_34a630db9b",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 621.33,
+          "url": "https://uexukjowgugjndiemxbj.supabase.co/storage/v1/object/public/media/uploadsJWT_SECRET=UbRXJqARIGXRr/nmfssQvg==/tinderbox.png-tinderbox_34a630db9b.png",
+          "previewUrl": null,
+          "provider": "strapi-provider-upload-supabase",
+          "provider_metadata": null,
+          "createdAt": "2024-12-23T10:16:52.137Z",
+          "updatedAt": "2024-12-23T10:16:52.137Z",
+          "publishedAt": "2024-12-23T10:16:52.137Z"
+        }
+      }
+    ]
+  ]
+}
