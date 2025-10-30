@@ -29,5 +29,6 @@ export default defineConfig(({ mode }) => {
       },
       outDir: "./build",
     },
+    assetsInclude: ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.svg"],
   };
 });

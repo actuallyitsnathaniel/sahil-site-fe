@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHead, UnheadProvider } from "@unhead/react/client";
 import "./index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
@@ -34,8 +35,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+const head = createHead();
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UnheadProvider head={head}>
+      <RouterProvider router={router} />
+    </UnheadProvider>
   </React.StrictMode>
 );
