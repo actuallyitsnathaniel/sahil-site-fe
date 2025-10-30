@@ -28,6 +28,9 @@ export default defineConfig(({ mode }) => {
         transformMixedEsModules: false,
       },
       outDir: "./build",
+      rollupOptions: {
+        external: (id) => id.includes('/mocks/'),
+      },
     },
     assetsInclude: ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.svg"],
   };
