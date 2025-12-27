@@ -1,5 +1,4 @@
 import { LegacyRef, MouseEvent as ReactMouseEvent, MouseEventHandler, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 import { capitalizeFirstLetter } from "../../utilities/util";
 import { EmailSent } from "./email-sent";
@@ -13,7 +12,7 @@ export const ConnectForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string>("");
 
-  const form = useRef<string | HTMLFormElement>(null);
+  const form = useRef<HTMLFormElement>(null);
 
   const inputStyle =
     "flex mx-auto justify-between m-2 bg-opacity-20 rounded-md bg-white p-2 font-normal";
@@ -23,29 +22,35 @@ export const ConnectForm = () => {
 
   const focusClasses = "focus-visible:outline-none focus:outline-white";
 
-  const HandleSubmit = (e: ReactMouseEvent<HTMLButtonElement>) => {
+  const HandleSubmit = async (e: ReactMouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setError("");  // Clear any previous errors
     setIsSubmitting(true);
+
     if (firstName != "" && lastName != "" && email != "" && message != "") {
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form.current!,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-        .then(
-          (result) => {
-            setIsSubmitting(false);
-            setSubmitted(true);
-          },
-          (error) => {
-            console.error("EmailJS submission failed:", error.text);
-            setIsSubmitting(false);  // Reset submitting state so user can retry
-            setError("Failed to send message. Please try again or contact me directly.");
-          }
-        );
+      try {
+        const formData = new FormData(form.current!);
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          setIsSubmitting(false);
+          setSubmitted(true);
+        } else {
+          console.error("Web3Forms submission failed:", data);
+          setIsSubmitting(false);
+          setError("Failed to send message. Please try again or contact me directly.");
+        }
+      } catch (error) {
+        console.error("Form submission error:", error);
+        setIsSubmitting(false);
+        setError("Failed to send message. Please try again or contact me directly.");
+      }
     }
   };
 
@@ -66,6 +71,18 @@ export const ConnectForm = () => {
           id="connect-form"
           className="flex flex-col items-center md:my-auto"
         >
+          {/* Web3Forms required fields */}
+          <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} />
+          <input type="hidden" name="subject" value="New Contact Form Submission from sahiljindal.com" />
+          <input type="hidden" name="from_name" value="Sahil Jindal Portfolio" />
+          {/* Honeypot spam protection - hidden from users */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{ display: 'none' }}
+          />
+
           <h2 className="text-4xl p-6 text-center">
             Let&apos;s Make Something
           </h2>
