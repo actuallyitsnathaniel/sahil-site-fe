@@ -39,7 +39,6 @@ export const NavItem = ({
   }, [text]);
 
   const HandleOnClick = () => {
-    console.log("CLICKED");
     setExpanded && setExpanded(false);
   };
 

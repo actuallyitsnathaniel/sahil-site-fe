@@ -1,4 +1,4 @@
-import { LegacyRef, MouseEventHandler, useRef, useState } from "react";
+import { LegacyRef, MouseEvent as ReactMouseEvent, MouseEventHandler, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { capitalizeFirstLetter } from "../../utilities/util";
@@ -11,6 +11,7 @@ export const ConnectForm = () => {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string>("");
 
   const form = useRef<string | HTMLFormElement>(null);
 
@@ -22,8 +23,9 @@ export const ConnectForm = () => {
 
   const focusClasses = "focus-visible:outline-none focus:outline-white";
 
-  const HandleSubmit = (e: MouseEvent) => {
+  const HandleSubmit = (e: ReactMouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    setError("");  // Clear any previous errors
     setIsSubmitting(true);
     if (firstName != "" && lastName != "" && email != "" && message != "") {
       emailjs
@@ -39,7 +41,9 @@ export const ConnectForm = () => {
             setSubmitted(true);
           },
           (error) => {
-            console.log(error.text);
+            console.error("EmailJS submission failed:", error.text);
+            setIsSubmitting(false);  // Reset submitting state so user can retry
+            setError("Failed to send message. Please try again or contact me directly.");
           }
         );
     }
@@ -113,7 +117,7 @@ export const ConnectForm = () => {
                 "flex transition duration-75 font-semibold px-5 py-3 m-5 mx-auto rounded-lg outline outline-2 outline-white disabled:opacity-25 hover:enabled:-translate-y-1 hover:enabled:bg-gray-400 hover:enabled:bg-opacity-30 hover:enabled:outline-none"
               }
               disabled={HandleDisabled()}
-              onClick={() => HandleSubmit}
+              onClick={(e) => HandleSubmit(e)}
             >
               Submit
             </button>
@@ -128,6 +132,11 @@ export const ConnectForm = () => {
           <span className="flex text-3xl">
             Submitting... <p className="animate-bounce px-5">📧</p>
           </span>
+        </div>
+      )}
+      {error && (
+        <div className="flex flex-col md:my-auto">
+          <p className="text-red-400 text-center p-4">{error}</p>
         </div>
       )}
     </div>
