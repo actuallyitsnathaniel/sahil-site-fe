@@ -59,7 +59,7 @@ export const ConnectForm = () => {
   };
 
   return (
-    <div className="flex flex-wrap flex-row align-middle py-30">
+    <div className="flex flex-col items-center py-30">
       {!isSubmitting && !submitted ? (
         <form
           ref={form as LegacyRef<HTMLFormElement> | undefined}
