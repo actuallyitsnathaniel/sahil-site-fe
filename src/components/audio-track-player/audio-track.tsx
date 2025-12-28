@@ -69,7 +69,7 @@ const AudioTrack = ({
           <audio
             src={src}
             ref={audioRef}
-            preload="auto"
+            preload="none"
             onLoadedMetadata={onLoadedMetadata}
             id={`audio-${index}`}
           />
