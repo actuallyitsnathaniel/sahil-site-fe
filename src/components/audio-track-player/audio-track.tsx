@@ -26,6 +26,7 @@ const AudioTrack = ({
 }) => {
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [isPreloaded, setIsPreloaded] = useState(false);
 
   const progressBarRef = useRef<HTMLInputElement & { seconds?: number }>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -40,6 +41,13 @@ const AudioTrack = ({
     }
   };
 
+  const handlePreload = () => {
+    if (!isPreloaded && audioRef.current) {
+      audioRef.current.load(); // Trigger preload
+      setIsPreloaded(true);
+    }
+  };
+
   return (
     <div className="grid justify-items-center">
       <h5>{title}</h5>
@@ -51,6 +59,8 @@ const AudioTrack = ({
       <div id="controls" className="flex flex-row align-middle">
         <button
           className="flex-shrink-0 p-2 -m-2"
+          onMouseEnter={handlePreload}  // Desktop: preload on hover
+          onTouchStart={handlePreload}   // Mobile: preload on touch
           onClick={() =>
             HandlePlayback({
               index,
