@@ -56,9 +56,9 @@ const AboutMe = () => {
         }}
       />
       <div id="about-me" className="h-full md:pt-14">
-        <h1 className="sticky md:hidden top-1.5 py-5 pb-10 text-4xl text-center z-[1]">
+        <h2 className="sticky md:hidden top-1.5 py-5 pb-10 text-4xl text-center z-[1]">
           About Me
-        </h1>
+        </h2>
         {isLoading ? (
           <Loading />
         ) : (

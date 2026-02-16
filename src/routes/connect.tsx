@@ -12,16 +12,18 @@ const Connect = () => {
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Connect with Sahil Jindal"
+          "name": "Connect with Sahil Jindal",
+          "description": "Contact Sahil Jindal for music production, composition, and collaboration inquiries.",
+          "url": "https://sahiljindal.com"
         }}
       />
       <div
         id="connect"
         className="flex flex-wrap min-h-[92vh] justify-center md:pt-14"
       >
-        <h1 className="flex w-full justify-center sticky top-1.5 md:hidden pt-5 text-4xl z-[1]">
+        <h2 className="flex w-full justify-center sticky top-1.5 md:hidden pt-5 text-4xl z-[1]">
           Connect
-        </h1>
+        </h2>
         <ConnectForm />
       </div>
     </>
