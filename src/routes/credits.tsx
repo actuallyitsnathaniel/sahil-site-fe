@@ -4,7 +4,6 @@ import pageTransition from "../utilities/motionPage";
 import { useEffect, useState } from "react";
 import { getCreditsPage } from "../api/getCreditsData";
 import Loading from "../components/loading";
-import { formatToHash } from "../utilities/util";
 import SEO from "../components/seo";
 
 export type CreditedWorkType = {
@@ -67,7 +66,7 @@ const Credits = () => {
                         artwork={composerWork.creditedWorkPoster.url}
                         title={composerWork.creditedWorkTitle}
                         workType={composerWork.creditedWorkType}
-                        alt={formatToHash(composerWork.creditedWorkTitle)}
+                        alt={`${composerWork.creditedWorkTitle} poster`}
                         key={`composer-${index}`}
                       />
                     );
@@ -84,7 +83,7 @@ const Credits = () => {
                         artwork={composerWork.creditedWorkPoster.url}
                         title={composerWork.creditedWorkTitle}
                         workType={composerWork.creditedWorkType}
-                        alt={formatToHash(composerWork.creditedWorkTitle)}
+                        alt={`${composerWork.creditedWorkTitle} poster`}
                         key={`music-department-${index}`}
                       />
                     );
