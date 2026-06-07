@@ -48,11 +48,11 @@ const AboutMe = () => {
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "ProfilePage",
-          "mainEntity": {
+          mainEntity: {
             "@type": "Person",
-            "name": "Sahil Jindal",
-            "jobTitle": "Music Producer & Composer"
-          }
+            name: "Sahil Jindal",
+            jobTitle: "Music Producer & Composer",
+          },
         }}
       />
       <div id="about-me" className="h-full md:pt-14">
@@ -65,7 +65,7 @@ const AboutMe = () => {
           <div className="py-16">
             {about?.aboutPhotos[0] && (
               <img
-                className="hidden w-4/5 md:w-3/5 mx-auto flex-shrink"
+                className="w-4/5 md:w-2/5 mx-auto flex-shrink rounded-xl drop-shadow-xl"
                 src={about.aboutPhotos[0].url}
                 alt="Sahil Jindal"
               />
