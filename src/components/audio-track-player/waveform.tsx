@@ -13,6 +13,42 @@ const PLAYED_COLOR = "rgba(255, 255, 255, 0.87)";
 const UNPLAYED_COLOR = "rgba(255, 255, 255, 0.25)";
 const HOVER_COLOR = "rgba(255, 255, 255, 0.45)";
 
+// "Generate" reveal: bars snap in left-to-right once decoding finishes.
+// Each bar's own grow is short relative to the sweep spread, so only a
+// narrow band of bars is mid-transition at once — they pop in distinctly
+// one after another rather than the whole shape smoothly stretching.
+const REVEAL_BAR_DURATION_MS = 180;
+const REVEAL_SWEEP_MS = 900;
+const REVEAL_OVERSHOOT = 1.18;
+
+// Snappy overshoot: rises past 1, then settles back — reinforces the
+// "popping into place" feel for each individual bar.
+const easeOutBack = (t: number) => {
+  if (t >= 1) return 1;
+  if (t <= 0) return 0;
+  const peak = REVEAL_OVERSHOOT;
+  if (t < 0.6) {
+    const p = t / 0.6;
+    return peak * (1 - Math.pow(1 - p, 2));
+  }
+  const p = (t - 0.6) / 0.4;
+  return peak + (1 - peak) * (1 - Math.pow(1 - p, 2));
+};
+
+const revealFactorForBar = (
+  index: number,
+  revealStart: number | null,
+  now: number
+) => {
+  if (revealStart === null) return 1;
+
+  const barStartDelay = (index / BAR_COUNT) * REVEAL_SWEEP_MS;
+  const elapsed = now - revealStart - barStartDelay;
+  if (elapsed <= 0) return 0;
+  const rawProgress = Math.min(1, elapsed / REVEAL_BAR_DURATION_MS);
+  return easeOutBack(rawProgress);
+};
+
 type AudioContextWindow = Window &
   typeof globalThis & { webkitAudioContext?: typeof AudioContext };
 
@@ -65,6 +101,7 @@ const Waveform = ({
   const audioContextRef = useRef<AudioContext | null>(null);
   const playAnimationRef = useRef<number | null>(null);
   const requestIdRef = useRef(0);
+  const revealStartRef = useRef<number | null>(null);
 
   const [peaks, setPeaks] = useState<number[]>(flatPeaks);
   const [hoverRatio, setHoverRatio] = useState<number | null>(null);
@@ -89,6 +126,7 @@ const Waveform = ({
         const audioBuffer = await context.decodeAudioData(arrayBuffer);
 
         if (requestIdRef.current === requestId) {
+          revealStartRef.current = performance.now();
           setPeaks(computePeaks(audioBuffer));
         }
       } catch (error) {
@@ -123,9 +161,13 @@ const Waveform = ({
     const barWidth = width / BAR_COUNT;
     const gap = barWidth * BAR_GAP_RATIO;
     const playedBars = Math.floor(playedRatio * BAR_COUNT);
+    const now = performance.now();
 
     peaks.forEach((peak, index) => {
-      const barHeight = Math.max(2, peak * height);
+      const reveal = revealFactorForBar(index, revealStartRef.current, now);
+      if (reveal <= 0) return;
+
+      const barHeight = Math.max(2, peak * height) * reveal;
       const x = index * barWidth;
       const y = (height - barHeight) / 2;
 

@@ -1,4 +1,5 @@
 import { Dispatch, RefObject, SetStateAction, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 import Play from "../../assets/images/icons/audio-player/play.svg";
 import Pause from "../../assets/images/icons/audio-player/pause.svg";
@@ -70,14 +71,18 @@ export const FloatingPlayPauseButton = ({
 
   const isMobile = windowDimension <= 785;
 
-  return (
+  // Portaled to <body> so its `fixed` positioning resolves against the true
+  // viewport root rather than the per-route `motion.div#appear` wrapper (which
+  // animates `opacity` and therefore creates a containing block/stacking context
+  // that would otherwise trap this button below the nav once off-section).
+  return createPortal(
     <button
       className={`transition-opacity duration-200 appear-slow ${
         currentTrack == -1 && "pointer-events-none opacity-0"
       } ${
         isMobile
-          ? "fixed top-4 left-3 w-16 h-16 flex items-center justify-center text-white z-[1]"
-          : "fixed top-4 left-5 z-[1] w-9 h-9"
+          ? "fixed top-4 left-3 w-16 h-16 flex items-center justify-center text-white z-[3]"
+          : "fixed top-4 left-5 z-[3] w-9 h-9"
       }`}
       onClick={() =>
         HandlePlayback({
@@ -95,6 +100,7 @@ export const FloatingPlayPauseButton = ({
       ) : (
         <img src={Play} alt="Play" className="w-full h-full" />
       )}
-    </button>
+    </button>,
+    document.body
   );
 };
