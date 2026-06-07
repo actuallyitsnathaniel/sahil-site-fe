@@ -55,6 +55,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)", opacity: "0.4" },
           "50%": { transform: "translateY(6px)", opacity: "1" },
         },
+        "scroll-hint-up": {
+          "0%, 100%": { transform: "translateY(0)", opacity: "0.4" },
+          "50%": { transform: "translateY(-6px)", opacity: "1" },
+        },
       },
       animation: {
         "fade-in-left": "logo-left 0.75s ease-in-out",
@@ -63,6 +67,7 @@ export default {
         "appear-slow": "appear-slow 0.9s ease-in-out 0.35s both",
         gradient: "gradient 6s ease-in-out infinite",
         "scroll-hint": "scroll-hint 1.8s ease-in-out infinite",
+        "scroll-hint-up": "scroll-hint-up 1.8s ease-in-out infinite",
         "mobile-menu-span":
           "transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease",
       },

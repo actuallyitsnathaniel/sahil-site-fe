@@ -6,7 +6,17 @@ import { MobileNavButton } from "./mobile-nav-button";
 const DesktopNav = () => {
   return (
     <nav className="transition-transform duration-100 fixed z-[2] top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow bg-gradient-to-b from-emerald-800 from-5% via-15% to-transparent to-110%">
-      <ul className="flex transition-transform duration-100 text-center flex-wrap flex-row py-4 w-screen justify-evenly">
+      {/* `backdrop-filter` blurs its element's full box uniformly — it has no
+          concept of the color gradient layered on top fading to transparent.
+          Without this, the blur itself end abruptly at the nav's bottom edge,
+          producing a hard seam where "blurred" meets "sharp" mid-fade. Masking
+          this dedicated blur layer with the same top-to-bottom fade makes the
+          blur intensity itself taper off in lockstep with the tint. */}
+      <span
+        aria-hidden
+        className="absolute inset-0 backdrop-blur-lg [mask-image:linear-gradient(to_bottom,black_5%,transparent_85%)] [-webkit-mask-image:linear-gradient(to_bottom,black_5%,transparent_85%)]"
+      />
+      <ul className="relative flex transition-transform duration-100 text-center flex-wrap flex-row py-4 w-screen justify-evenly">
         <NavItem text="Home" link={`#home`} />
         <NavItem text="About Me" link={`#about-me`} />
         <NavItem text="Music" link={`#music`} />

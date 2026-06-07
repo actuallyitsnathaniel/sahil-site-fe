@@ -112,6 +112,11 @@ const AudioPlayer = ({ children }: { children: AudioTrackType[] }) => {
       <div className="relative flex flex-col w-full gap-8">
         <div ref={stickySentinelRef} className="h-0" />
         <div className="sticky top-0 z-[1] pt-20 sm:pt-16 md:pt-24 pb-6">
+          {/* Mobile cutout: spans the full strip (the padding above the card included)
+              so the gradient occludes the track list sliding behind the nav/title —
+              see the comment above this section for the full rationale. Hidden on
+              desktop, where the card never slides under a sticky nav and this larger
+              shape would otherwise bleed its gradient above the card's own border. */}
           <div
             className={`absolute inset-x-0 top-0 bottom-6 rounded-b-md overflow-hidden transition-opacity duration-500 md:hidden ${
               isStuck ? "opacity-100" : "opacity-0"
@@ -119,11 +124,16 @@ const AudioPlayer = ({ children }: { children: AudioTrackType[] }) => {
           >
             <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-cyan-900 via-emerald-800 to-emerald-700" />
           </div>
-          <div className="relative">
-            <UnifiedPlayer
-              track={currentTrack === -1 ? null : children[currentTrack]}
-              {...{ duration, audioRef }}
-            />
+          <div className="relative rounded-md overflow-hidden">
+            {/* Desktop background: the same gradient, but clipped to the card's own
+                rounded bounds rather than the wider mobile cutout shape. */}
+            <span className="hidden md:block pointer-events-none absolute inset-0 bg-gradient-to-tr from-cyan-900 via-emerald-800 to-emerald-700" />
+            <div className="relative">
+              <UnifiedPlayer
+                track={currentTrack === -1 ? null : children[currentTrack]}
+                {...{ duration, audioRef }}
+              />
+            </div>
           </div>
         </div>
 
