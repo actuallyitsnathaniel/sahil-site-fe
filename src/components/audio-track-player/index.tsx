@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { FloatingPlayPauseButton } from "./playback";
 import UnifiedPlayer from "./unified-player";
 import TrackList from "./track-list";
+import DownloadDropdown from "./download-dropdown";
 
 export type AudioTrackType = {
   audioTrack: { url: string };
@@ -14,8 +15,46 @@ const AudioPlayer = ({ children }: { children: AudioTrackType[] }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(-1);
   const [duration, setDuration] = useState(0);
+  const [isStuck, setIsStuck] = useState(false);
+  const [isDownloadOpen, setIsDownloadOpen] = useState(false);
+  const [downloadScope, setDownloadScope] = useState<"above" | "selected">("above");
+  const [selectedTracks, setSelectedTracks] = useState<Set<number>>(new Set());
+
+  // Selection circles only make sense — and should only commandeer row clicks —
+  // while the user is actively configuring a download with "Selected Tracks"
+  // chosen. The instant the dropdown closes, the list must revert to its
+  // primary purpose (playback); otherwise the list gets permanently stuck in
+  // "pick tracks" mode with no way back to playing music.
+  const selectionMode = isDownloadOpen && downloadScope === "selected";
+
+  const toggleTrackSelection = (index: number) => {
+    setSelectedTracks((current) => {
+      const next = new Set(current);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  };
 
   const audioRef = useRef<HTMLAudioElement>(null);
+  const stickySentinelRef = useRef<HTMLDivElement>(null);
+
+  // `position: sticky` exposes no "am I currently pinned?" state directly, but
+  // it can be detected with a zero-height sentinel placed immediately before
+  // the sticky element: once that sentinel scrolls past the viewport's top
+  // edge (intersectionRatio drops to 0 with a `top` rootMargin), the sticky
+  // element has just become pinned — and the reverse when it scrolls back in.
+  useEffect(() => {
+    const sentinel = stickySentinelRef.current;
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsStuck(!entry.isIntersecting),
+      { threshold: 0, rootMargin: "-1px 0px 0px 0px" }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
 
   // Centralized load/play orchestration: assigning `src` here keeps `HandlePlayback`
   // a thin "intent" dispatcher regardless of which UI triggered the track change.
@@ -56,44 +95,62 @@ const AudioPlayer = ({ children }: { children: AudioTrackType[] }) => {
           while the player card is pushed down with padding to clear the
           nav/title height and sit visibly beneath it.
 
-          The "clipping window" effect: rather than a translucent backdrop
-          that lets scrolling track text show or fade through (which always
-          looks like a layer stacked on top), this opaque panel uses the same
-          gradient palette as `BackgroundGradient` with `bg-fixed` — pinning
-          it to the viewport exactly like the real background — so the card
-          reads as a seamless continuation of the page rather than a card
-          floating over it. `overflow-hidden` on the sticky wrapper clips the
-          scrolling list cleanly at the card's edges: tracks don't fade or
-          bleed through, they simply vanish behind the "window". */}
+          The "clipping window" effect: a single `absolute inset-0` gradient
+          panel, clipped by ONE `overflow-hidden` shape spanning both the
+          strip behind the nav/title and the card, occludes the track list
+          as it scrolls underneath — a seamless cutout rather than a
+          translucent fade-through.
+
+          That cutout panel only needs to exist while the player is actually
+          pinned ("stuck") under the nav — that's the only moment something
+          could otherwise be seen sliding behind the strip. The `isStuck`
+          state (detected via the sentinel + IntersectionObserver above)
+          drives a `transition-opacity` so the panel fades in exactly as the
+          player sticks, and fades back out as it releases — rather than
+          being permanently present (which read as a static rectangle even
+          when nothing needed hiding) or popping in/out abruptly. */}
       <div className="relative flex flex-col w-full gap-8">
-        <div className="sticky top-0 z-0 pt-20 sm:pt-16 md:pt-24 pb-6">
-          {/* Two opaque `bg-fixed` panels, both painting the exact same
-              viewport-pinned gradient as the page background — visually
-              indistinguishable from each other and from the page itself, so
-              together they read as one continuous surface rather than
-              separate stacked rectangles:
-                1. A full-bleed strip covering the top padding (the area
-                   behind the fixed nav/title) — square corners are fine
-                   here since the nav's own gradient overlays it anyway.
-                2. The card-shaped window (rounded, clipped to its own
-                   bounds) that the player sits in.
-              Anything scrolling underneath simply vanishes behind whichever
-              panel currently covers that screen region — the "magic trick". */}
-          <div className="absolute inset-x-0 top-0 h-20 sm:h-16 md:h-24 bg-fixed bg-gradient-to-tr from-cyan-900 via-emerald-800 to-emerald-700" />
-          <div className="relative rounded-md overflow-hidden">
-            <div className="absolute inset-0 bg-fixed bg-gradient-to-tr from-cyan-900 via-emerald-800 to-emerald-700" />
-            <div className="relative">
-              <UnifiedPlayer
-                track={currentTrack === -1 ? null : children[currentTrack]}
-                {...{ duration, audioRef }}
-              />
-            </div>
+        <div ref={stickySentinelRef} className="h-0" />
+        <div className="sticky top-0 z-[1] pt-20 sm:pt-16 md:pt-24 pb-6">
+          <div
+            className={`absolute inset-x-0 top-0 bottom-6 rounded-b-md overflow-hidden transition-opacity duration-500 md:hidden ${
+              isStuck ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-cyan-900 via-emerald-800 to-emerald-700" />
+          </div>
+          <div className="relative">
+            <UnifiedPlayer
+              track={currentTrack === -1 ? null : children[currentTrack]}
+              {...{ duration, audioRef }}
+            />
           </div>
         </div>
 
         <TrackList
           tracks={children}
-          {...{ currentTrack, setCurrentTrack, isPlaying, setIsPlaying, audioRef }}
+          {...{
+            currentTrack,
+            setCurrentTrack,
+            isPlaying,
+            setIsPlaying,
+            audioRef,
+            selectionMode,
+            selectedTracks,
+            toggleTrackSelection,
+          }}
+        />
+
+        <DownloadDropdown
+          tracks={children}
+          {...{
+            isDownloadOpen,
+            setIsDownloadOpen,
+            downloadScope,
+            setDownloadScope,
+            selectedTracks,
+            setSelectedTracks,
+          }}
         />
       </div>
     </div>

@@ -48,7 +48,7 @@ const Music = () => {
         id="music"
         className="flex flex-col w-full items-center flex-wrap h-full md:pt-14"
       >
-        <h2 className="sticky top-1.5 md:hidden py-5 pb-10 text-4xl text-center z-[1]">
+        <h2 className="sticky top-1.5 md:hidden py-5 pb-10 text-4xl text-center z-[2]">
           Music
         </h2>
         {isLoading ? <Loading /> : <AudioPlayer>{music}</AudioPlayer>}

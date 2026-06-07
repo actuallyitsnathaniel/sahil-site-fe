@@ -11,6 +11,9 @@ const TrackList = ({
   isPlaying,
   setIsPlaying,
   audioRef,
+  selectionMode,
+  selectedTracks,
+  toggleTrackSelection,
 }: {
   tracks: AudioTrackType[];
   currentTrack: number;
@@ -18,6 +21,9 @@ const TrackList = ({
   isPlaying: boolean;
   setIsPlaying: Dispatch<SetStateAction<boolean>>;
   audioRef: RefObject<HTMLAudioElement>;
+  selectionMode: boolean;
+  selectedTracks: Set<number>;
+  toggleTrackSelection: (index: number) => void;
 }) => {
   const [durations, setDurations] = useState<Record<number, number>>({});
   const probedRef = useRef<Record<number, boolean>>({});
@@ -51,18 +57,31 @@ const TrackList = ({
             onMouseEnter={() => probeDuration(index, track.audioTrack.url)}
             onTouchStart={() => probeDuration(index, track.audioTrack.url)}
             onClick={() =>
-              HandlePlayback({
-                index,
-                currentTrack,
-                setCurrentTrack,
-                isPlaying,
-                setIsPlaying,
-                audioRef,
-              })
+              selectionMode
+                ? toggleTrackSelection(index)
+                : HandlePlayback({
+                    index,
+                    currentTrack,
+                    setCurrentTrack,
+                    isPlaying,
+                    setIsPlaying,
+                    audioRef,
+                  })
             }
           >
             <div className="flex flex-col min-w-0">
               <div className="flex flex-row items-center gap-2">
+                {selectionMode && (
+                  <span
+                    className={`flex-shrink-0 flex items-center justify-center w-4 h-4 rounded-full outline outline-2 ${
+                      selectedTracks.has(index) ? "outline-white" : "outline-white/30"
+                    }`}
+                  >
+                    {selectedTracks.has(index) && (
+                      <span className="w-2 h-2 rounded-full bg-white" />
+                    )}
+                  </span>
+                )}
                 {isActive && isPlaying && (
                   <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                 )}
