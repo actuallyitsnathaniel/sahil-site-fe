@@ -1,18 +1,33 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const Chevron = ({ direction, className }: { direction: "up" | "down"; className?: string }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d={direction === "down" ? "M6 9l6 6 6-6" : "M6 15l6-6 6 6"} />
-  </svg>
+const Chevron = ({
+  direction,
+  visible,
+  animationClassName,
+}: {
+  direction: "up" | "down";
+  visible: boolean;
+  animationClassName: string;
+}) => (
+  // Visibility (opacity-0/100) and the infinite pulse (animate-scroll-hint*)
+  // both drive `opacity` — applying them to the same element lets the pulse's
+  // keyframes fight the visibility toggle. Splitting them across a wrapper
+  // (visibility) and the inner svg (pulse) keeps each transition independent,
+  // so toggling visibility never resets or desyncs the continuous animation.
+  <span className={`transition-opacity duration-300 ${visible ? "opacity-100" : "opacity-0"}`}>
+    <svg
+      className={`w-4 h-4 ${animationClassName}`}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d={direction === "down" ? "M6 9l6 6 6-6" : "M6 15l6-6 6 6"} />
+    </svg>
+  </span>
 );
 
 export const ScrollHint = () => {
@@ -48,15 +63,16 @@ export const ScrollHint = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 1 }}
     >
-      {canScrollUp && (
-        <Chevron direction="up" className="w-4 h-4 animate-scroll-hint-up" />
-      )}
+      {/* Both chevrons stay mounted at all times — toggling them in and out
+          would restart their CSS animations independently each time, leaving
+          them perpetually out of phase with one another. Keeping them mounted
+          lets their infinite animations run continuously and in sync; only
+          opacity (and the layout space it occupies) changes with scroll state. */}
+      <Chevron direction="up" visible={canScrollUp} animationClassName="animate-scroll-hint-up" />
       <span className="text-xs tracking-widest uppercase [writing-mode:vertical-lr]">
         Scroll
       </span>
-      {canScrollDown && (
-        <Chevron direction="down" className="w-4 h-4 animate-scroll-hint" />
-      )}
+      <Chevron direction="down" visible={canScrollDown} animationClassName="animate-scroll-hint" />
     </motion.div>
   );
 };
