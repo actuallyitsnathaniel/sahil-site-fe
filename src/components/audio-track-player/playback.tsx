@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, RefObject, SetStateAction, useEffect, useState } from "react";
 
 import Play from "../../assets/images/icons/audio-player/play.svg";
 import Pause from "../../assets/images/icons/audio-player/pause.svg";
@@ -9,46 +9,34 @@ export const HandlePlayback = ({
   setCurrentTrack,
   isPlaying,
   setIsPlaying,
+  audioRef,
 }: {
   index: number;
   currentTrack: number;
   setCurrentTrack: Dispatch<SetStateAction<number>>;
   isPlaying: boolean;
   setIsPlaying: Dispatch<SetStateAction<boolean>>;
+  audioRef: RefObject<HTMLAudioElement>;
 }) => {
-  const selectedAudio = document.getElementById(
-    `audio-${index}`
-  ) as HTMLAudioElement | null;
+  if (index === -1) return;
 
-  const playingAudio = document.getElementById(
-    `audio-${currentTrack}`
-  ) as HTMLAudioElement | null;
-
-  if (!selectedAudio) {
-    console.error(`Audio element for index ${index} not found.`);
+  if (currentTrack !== index) {
+    setCurrentTrack(index);
+    setIsPlaying(true);
     return;
   }
 
-  if (currentTrack !== index) {
-    if (playingAudio) {
-      playingAudio.pause();
-      playingAudio.currentTime = 0;
-    }
-    selectedAudio.play().catch((error) => {
-      console.error("Error playing audio:", error);
-    });
-    setCurrentTrack(index);
-    setIsPlaying(true);
+  const audio = audioRef.current;
+  if (!audio) return;
+
+  if (isPlaying) {
+    audio.pause();
+    setIsPlaying(false);
   } else {
-    if (isPlaying) {
-      selectedAudio.pause();
-      setIsPlaying(false);
-    } else {
-      selectedAudio.play().catch((error) => {
-        console.error("Error resuming audio:", error);
-      });
-      setIsPlaying(true);
-    }
+    audio.play().catch((error) => {
+      console.error("Error resuming audio:", error);
+    });
+    setIsPlaying(true);
   }
 };
 
@@ -57,11 +45,13 @@ export const FloatingPlayPauseButton = ({
   setIsPlaying,
   currentTrack,
   setCurrentTrack,
+  audioRef,
 }: {
   isPlaying: boolean;
   setIsPlaying: Dispatch<SetStateAction<boolean>>;
   currentTrack: number;
   setCurrentTrack: Dispatch<SetStateAction<number>>;
+  audioRef: RefObject<HTMLAudioElement>;
 }) => {
   const [windowDimension, setWindowDimension] = useState(window.innerWidth);
 
@@ -96,6 +86,7 @@ export const FloatingPlayPauseButton = ({
           setCurrentTrack,
           isPlaying,
           setIsPlaying,
+          audioRef,
         })
       }
     >

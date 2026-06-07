@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import AudioTrack from "./audio-track";
 import { FloatingPlayPauseButton } from "./playback";
+import UnifiedPlayer from "./unified-player";
+import TrackList from "./track-list";
 
 export type AudioTrackType = {
   audioTrack: { url: string };
@@ -9,37 +10,56 @@ export type AudioTrackType = {
   trackTitle: string;
 };
 
-const AudioPlayer = ({ children }: { children: [] }) => {
+const AudioPlayer = ({ children }: { children: AudioTrackType[] }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(-1);
+  const [duration, setDuration] = useState(0);
 
-  const AudioTracks = children?.map(
-    (
-      { audioTrack: { url }, trackSource, trackTitle }: AudioTrackType,
-      index
-    ) => {
-      return (
-        <AudioTrack
-          src={url}
-          film={trackSource}
-          title={trackTitle}
-          {...{ currentTrack, setCurrentTrack, isPlaying, setIsPlaying, index }}
-          key={index}
-        />
-      );
-    }
-  );
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  // Centralized load/play orchestration: assigning `src` here keeps `HandlePlayback`
+  // a thin "intent" dispatcher regardless of which UI triggered the track change.
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio || currentTrack === -1) return;
+
+    audio.src = children[currentTrack].audioTrack.url;
+    audio.play().catch((error) => {
+      console.error("Error playing audio:", error);
+    });
+  }, [currentTrack, children]);
+
+  const handleLoadedMetadata = () => {
+    setDuration(audioRef.current?.duration || 0);
+  };
+
+  const handleEnded = () => {
+    setIsPlaying(false);
+  };
 
   return (
-    <div>
-      <FloatingPlayPauseButton
-        {...{ isPlaying, setIsPlaying, currentTrack, setCurrentTrack }}
+    <div className="flex flex-col w-full sm:max-w-3xl mx-auto gap-8">
+      <audio
+        ref={audioRef}
+        preload="none"
+        onLoadedMetadata={handleLoadedMetadata}
+        onEnded={handleEnded}
+        className="hidden"
       />
-      <div className="flex flex-wrap sm:max-w-6xl justify-center">
-        <div className="flex flex-row flex-wrap justify-center gap-16 row-span-3">
-          {AudioTracks}
-        </div>
-      </div>
+
+      <FloatingPlayPauseButton
+        {...{ isPlaying, setIsPlaying, currentTrack, setCurrentTrack, audioRef }}
+      />
+
+      <UnifiedPlayer
+        track={currentTrack === -1 ? null : children[currentTrack]}
+        {...{ currentTrack, setCurrentTrack, isPlaying, setIsPlaying, duration, audioRef }}
+      />
+
+      <TrackList
+        tracks={children}
+        {...{ currentTrack, setCurrentTrack, isPlaying, setIsPlaying, audioRef }}
+      />
     </div>
   );
 };

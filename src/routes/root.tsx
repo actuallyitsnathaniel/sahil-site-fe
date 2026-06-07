@@ -6,6 +6,7 @@ import Credits from "./credits";
 import Music from "./music";
 import Connect from "./connect";
 import { BackgroundGradient } from "../components/background-gradient";
+import { ScrollHint } from "../components/scroll-hint";
 import ScrollToHashElement from "../utilities/ScrollToHashElement";
 
 const Root = () => {
@@ -15,6 +16,7 @@ const Root = () => {
       className="flex flex-wrap flex-col justify-center font-light [&>*]:text-white"
     >
       <BackgroundGradient />
+      <ScrollHint />
       <Home />
       <AboutMe />
       <Music />
