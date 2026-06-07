@@ -5,7 +5,7 @@ import { MobileNavButton } from "./mobile-nav-button";
 
 const DesktopNav = () => {
   return (
-    <nav className="transition-transform duration-100 fixed z-[2] top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow bg-gradient-to-b from-emerald-800 from-5% via-15% to-transparent to-110%">
+    <nav className="transition-transform duration-100 fixed z-[2] top-0 left-0 flex whitespace-nowrap text-2xl animate-appear-slow bg-gradient-to-b from-black from-5% via-15% to-transparent to-110%">
       {/* `backdrop-filter` blurs its element's full box uniformly — it has no
           concept of the color gradient layered on top fading to transparent.
           Without this, the blur itself end abruptly at the nav's bottom edge,
@@ -78,9 +78,9 @@ export const NavBar = () => {
 
   return isMobile ? (
     <>
-      <div className="fixed top-0 h-40 w-screen bg-gradient-to-b from-emerald-800 from-0% to-transparent to-100% pointer-events-none" />
+      <div className="fixed top-0 h-40 w-screen bg-gradient-to-b from-black from-0% to-transparent to-100% pointer-events-none" />
       <div
-        className={`fixed transition-all duration-100 h-screen overflow-visible brightness-80 bg-gradient-to-tr from-transparent via-transparent to-emerald-950  ${
+        className={`fixed transition-all duration-100 h-screen overflow-visible brightness-80 bg-gradient-to-tr from-transparent via-transparent to-black  ${
           !expanded && "hidden"
         }`}
       />

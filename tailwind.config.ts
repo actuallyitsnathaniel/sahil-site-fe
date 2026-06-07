@@ -43,14 +43,6 @@ export default {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
-        gradient: {
-          "0%, 100%": {
-            transform: "translateX(0%)",
-          },
-          "50%": {
-            transform: "translateX(-50%)",
-          },
-        },
         "scroll-hint": {
           "0%, 100%": { transform: "translateY(0)", opacity: "0.4" },
           "50%": { transform: "translateY(6px)", opacity: "1" },
@@ -65,7 +57,6 @@ export default {
         "fade-in-middle": "logo-middle 0.3s ease-in-out",
         "fade-in-right": "logo-right 0.65s ease-in-out",
         "appear-slow": "appear-slow 0.9s ease-in-out 0.35s both",
-        gradient: "gradient 6s ease-in-out infinite",
         "scroll-hint": "scroll-hint 1.8s ease-in-out infinite",
         "scroll-hint-up": "scroll-hint-up 1.8s ease-in-out infinite",
         "mobile-menu-span":

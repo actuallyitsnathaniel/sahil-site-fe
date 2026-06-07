@@ -122,12 +122,12 @@ const AudioPlayer = ({ children }: { children: AudioTrackType[] }) => {
               isStuck ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-cyan-900 via-emerald-800 to-emerald-700" />
+            <span className="pointer-events-none absolute inset-0 bg-black/40 backdrop-blur-md" />
           </div>
           <div className="relative rounded-md overflow-hidden">
-            {/* Desktop background: the same gradient, but clipped to the card's own
-                rounded bounds rather than the wider mobile cutout shape. */}
-            <span className="hidden md:block pointer-events-none absolute inset-0 bg-gradient-to-tr from-cyan-900 via-emerald-800 to-emerald-700" />
+            {/* Desktop background: the same dark glass panel, but clipped to the card's
+                own rounded bounds rather than the wider mobile cutout shape. */}
+            <span className="hidden md:block pointer-events-none absolute inset-0 bg-black/40 backdrop-blur-md" />
             <div className="relative">
               <UnifiedPlayer
                 track={currentTrack === -1 ? null : children[currentTrack]}
