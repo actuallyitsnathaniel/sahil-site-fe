@@ -87,6 +87,12 @@ const computePeaks = (buffer: AudioBuffer): number[] => {
 
 const flatPeaks = () => Array.from({ length: BAR_COUNT }, () => 0.08);
 
+// Decoding a track requires downloading the entire audio file independently of
+// the `<audio>` element's own playback stream. Caching the resulting peaks by
+// URL means revisiting or reselecting a track reuses that work instead of
+// re-downloading and re-decoding the same file from scratch.
+const peaksCache = new Map<string, number[]>();
+
 const Waveform = ({
   src,
   audioRef,
@@ -116,6 +122,13 @@ const Waveform = ({
       return;
     }
 
+    const cached = peaksCache.get(src);
+    if (cached) {
+      revealStartRef.current = performance.now();
+      setPeaks(cached);
+      return;
+    }
+
     const decode = async () => {
       try {
         const context = getAudioContext(audioContextRef);
@@ -126,8 +139,10 @@ const Waveform = ({
         const audioBuffer = await context.decodeAudioData(arrayBuffer);
 
         if (requestIdRef.current === requestId) {
+          const peaks = computePeaks(audioBuffer);
+          peaksCache.set(src, peaks);
           revealStartRef.current = performance.now();
-          setPeaks(computePeaks(audioBuffer));
+          setPeaks(peaks);
         }
       } catch (error) {
         if (requestIdRef.current === requestId) {
