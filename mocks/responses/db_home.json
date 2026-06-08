@@ -1,0 +1,27 @@
+{
+  "data": {
+    "collaborators": [
+      {
+        "Title": "Example Studio",
+        "url": "https://example.com",
+        "Logo": {
+          "url": "https://placehold.co/128x64/ffffff/cccccc?text=Logo"
+        }
+      },
+      {
+        "Title": "Another Partner",
+        "url": null,
+        "Logo": {
+          "url": "https://placehold.co/128x64/ffffff/cccccc?text=Logo"
+        }
+      },
+      {
+        "Title": "Third Collab",
+        "url": "https://example.org",
+        "Logo": {
+          "url": "https://placehold.co/128x64/ffffff/cccccc?text=Logo"
+        }
+      }
+    ]
+  }
+}

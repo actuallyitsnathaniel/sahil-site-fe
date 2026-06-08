@@ -3,8 +3,16 @@ import { prod_url } from "../src/api/util";
 import mockedCredits from "./responses/db_credits.json";
 import mockedMusic from "./responses/db_music.json";
 import mockedAbout from "./responses/db_about.json";
+import mockedHome from "./responses/db_home.json";
 
 export const handlers = [
+  // Home section
+  http.get(`${prod_url}/api/home-section`, () => {
+    return new Response(JSON.stringify(mockedHome), {
+      headers: { "Content-Type": "application/json" },
+    });
+  }),
+
   // About section
   http.get(`${prod_url}/api/about?populate=*"`, (req, res, ctx) => {
     return res(ctx.status(200), ctx.json(mockedAbout));
