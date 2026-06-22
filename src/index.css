@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .link {
+    @apply text-orange-300 underline underline-offset-4 transition-colors;
+  }
+  .link:hover {
+    @apply text-orange-200;
+  }
+  .link:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-orange-300 rounded-sm;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .link {
+      transition: none;
+    }
+  }
+}
+
 @layer utilities {
   .sr-only {
     position: absolute;

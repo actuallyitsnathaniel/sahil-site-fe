@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./index.css";
 import Root from "./routes/root";
+import UsagePolicy from "./routes/usage-policy";
 import ErrorPage from "./error-page";
 
 if (process.env.NODE_ENV === "development") {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/usage-and-ai-policy",
+    element: <UsagePolicy />,
     errorElement: <ErrorPage />,
   },
 ]);
