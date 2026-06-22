@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import { getAboutPage } from "../api/getAboutData";
-import RichTextRenderer from "../components/rich-text-renderer";
+import RichTextRenderer, { type RichTextNode } from "../components/rich-text-renderer";
 import Loading from "../components/loading";
 import pageTransition from "../utilities/motionPage";
 import SEO from "../components/seo";
 
-export type RichTextNode =
-  | { type: "text"; text: string }
-  | { type: "link"; url: string; children: RichTextNode[] }
-  | { type: "paragraph"; children: RichTextNode[] };
+export type { RichTextNode };
 
 export type Photo = {
   url: string;
